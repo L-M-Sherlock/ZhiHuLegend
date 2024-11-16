@@ -8,6 +8,7 @@ nicknames = {
     "ma-qian-zu": "马前卒",
     "huo-hua-de-41": "霍华德",
     "dang.xinran": "立党",
+    # "li-yin-61-82": "李归农",
 }
 
 
@@ -49,11 +50,11 @@ def generate_summary(username: str):
         <meta property="og:title" content="知乎索引">
         <meta property="og:site_name" content="ZhiHu Legend">
         <meta property="og:url" content="https://l-m-sherlock.github.io/ZhiHuLegend/">
-        <meta name="description" property="og:description" content="{username}的知乎文章和回答索引">
+        <meta name="description" property="og:description" content="{nicknames[username]}的知乎文章和回答索引">
         <meta name="google-site-verification" content="U7ZAFUgGNK60mmMqaRygg5vy-k8pwbPbDFXNjDCu7Xk" />
         <meta property="twitter:card" content="summary">
         <meta name="twitter:title" property="og:title" itemprop="name" content="知乎索引">
-        <meta name="twitter:description" property="og:description" itemprop="description" content="{username}的知乎文章和回答索引">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="{nicknames[username]}的知乎文章和回答索引">
     """
         + """
         <style>
