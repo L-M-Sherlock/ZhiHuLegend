@@ -10,6 +10,7 @@ nicknames = {
     "dang.xinran": "立党",
     "li-yin-61-82": "李归农",
     "maple-syrup-41": "tim未来之光",
+    "dantes-15": "勃勃",
 }
 
 
