@@ -8,7 +8,7 @@ nicknames = {
     "ma-qian-zu": "马前卒",
     "huo-hua-de-41": "霍华德",
     "dang.xinran": "立党",
-    # "li-yin-61-82": "李归农",
+    "li-yin-61-82": "李归农",
 }
 
 
