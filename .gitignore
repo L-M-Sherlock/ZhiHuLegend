@@ -1,0 +1,4 @@
+download.py
+*.json
+.env
+.DS_Store
