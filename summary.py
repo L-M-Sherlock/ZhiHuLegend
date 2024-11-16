@@ -158,10 +158,10 @@ def generate_summary(username: str):
     </html>
     """
 
-    Path(f"./html").mkdir(exist_ok=True)
+    Path(f"./docs").mkdir(exist_ok=True)
 
     # Write the HTML file
-    with open(f"./html/{username}.html", "w", encoding="utf-8") as f:
+    with open(f"./docs/{username}.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
 
@@ -212,7 +212,7 @@ def generate_index_html():
     """
 
     # Write the index.html file
-    with open("./html/index.html", "w", encoding="utf-8") as f:
+    with open("./docs/index.html", "w", encoding="utf-8") as f:
         f.write(index_content)
 
 
