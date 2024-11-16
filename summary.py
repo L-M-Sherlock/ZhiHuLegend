@@ -7,6 +7,7 @@ BASE_URL = "https://l-m-sherlock.github.io/ZhiHuLegend"
 nicknames = {
     "ma-qian-zu": "马前卒",
     "huo-hua-de-41": "霍华德",
+    "dang.xinran": "立党",
 }
 
 
@@ -39,8 +40,7 @@ def generate_summary(username: str):
 
     # Generate HTML content with tabs
     html_content = (
-        f"""
-    <!DOCTYPE html>
+        f"""<!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">

@@ -1,4 +1,5 @@
 download.py
 *.json
+*.txt
 .env
 .DS_Store
