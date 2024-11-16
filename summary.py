@@ -187,6 +187,8 @@ def generate_index_html():
             body { max-width: 800px; margin: 0 auto; padding: 20px; }
             .user-list { margin: 20px 0; }
             .user-item { margin: 10px 0; }
+            .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+            .github-badge { margin-bottom: 15px; }
         </style>
     </head>
     <body>
@@ -204,9 +206,16 @@ def generate_index_html():
 
     index_content += """
         </div>
-        <div class="links-section">
-            <h3>友情链接</h3>
-            <a href="https://l-m-sherlock.github.io/ZhiHuArchive/" target="_blank">Thoughts Memo 和叶峻峣的知乎文章和回答备份目录</a>
+        <div class="footer">
+            <div class="github-badge">
+                <a href="https://github.com/l-m-sherlock/ZhiHuLegend" target="_blank">
+                    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZhiHuLegend-blue?logo=github&style=for-the-badge">
+                </a>
+            </div>
+            <div class="links-section">
+                <h3>友情链接</h3>
+                <a href="https://l-m-sherlock.github.io/ZhiHuArchive/" target="_blank">Thoughts Memo 和叶峻峣的知乎文章和回答备份目录</a>
+            </div>
         </div>
     </body>
     </html>
