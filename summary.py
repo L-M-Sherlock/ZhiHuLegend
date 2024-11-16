@@ -9,6 +9,7 @@ nicknames = {
     "huo-hua-de-41": "霍华德",
     "dang.xinran": "立党",
     "li-yin-61-82": "李归农",
+    "maple-syrup-41": "tim未来之光",
 }
 
 
@@ -30,6 +31,7 @@ def generate_summary(username: str):
                 data["file_stem"] = file.stem
                 if "error" in data:
                     print(data["error"], file.stem)
+                    file.unlink()
                     continue
                 answers.append(data)
             except json.JSONDecodeError:
