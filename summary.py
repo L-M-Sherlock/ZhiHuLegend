@@ -12,6 +12,7 @@ nicknames = {
     "maple-syrup-41": "tim未来之光",
     "dantes-15": "勃勃",
     "miloyip": "Milo Yip",
+    "Himself65": "扩散性百万甜面包",
 }
 
 
