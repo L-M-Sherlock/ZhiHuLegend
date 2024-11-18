@@ -13,6 +13,7 @@ nicknames = {
     "dantes-15": "勃勃",
     "miloyip": "Milo Yip",
     "Himself65": "扩散性百万甜面包",
+    "sinya": "李新野",
 }
 
 
