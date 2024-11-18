@@ -14,6 +14,7 @@ nicknames = {
     "miloyip": "Milo Yip",
     "Himself65": "扩散性百万甜面包",
     "sinya": "李新野",
+    "Deceiver-Kil": "Deceiver",
 }
 
 
