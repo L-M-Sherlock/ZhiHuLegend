@@ -109,6 +109,8 @@ def generate_summary(username: str):
     <body>
     """
         + f"""
+        <p><a href="./">← 返回封神榜</a></p>
+        <hr>
         <h1>{nicknames[username]}的知乎索引</h1>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 ({len(answers)})</button>
@@ -160,8 +162,6 @@ def generate_summary(username: str):
 
     html_content += """
         </div>
-        <hr>
-        <p><a href="./">← 返回目录</a></p>
     </body>
     </html>
     """
