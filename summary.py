@@ -16,6 +16,7 @@ nicknames = {
     "sinya": "李新野",
     "Deceiver-Kil": "Deceiver",
     "excalibur-11-11": "Coldstream",
+    "gong-ke-75": "山高县",
 }
 
 
@@ -57,7 +58,7 @@ def generate_summary(username: str):
         <meta property="og:type" content="website">
         <meta property="og:title" content="{nicknames[username]}的知乎索引">
         <meta property="og:site_name" content="ZhiHu Legend">
-        <meta property="og:url" content="https://l-m-sherlock.github.io/ZhiHuLegend/">
+        <meta property="og:url" content="https://l-m-sherlock.github.io/ZhiHuLegend/{username}.html">
         <meta name="description" property="og:description" content="{nicknames[username]}的知乎文章和回答索引">
         <meta name="google-site-verification" content="U7ZAFUgGNK60mmMqaRygg5vy-k8pwbPbDFXNjDCu7Xk" />
         <meta property="twitter:card" content="summary">
