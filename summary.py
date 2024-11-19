@@ -251,3 +251,11 @@ for username in nicknames:
 
 # Generate index.html after all summary pages are created
 generate_index_html()
+
+# Generate sitemap.txt
+with open("./docs/sitemap.txt", "w", encoding="utf-8") as f:
+    # Write base URL
+    f.write("https://l-m-sherlock.github.io/ZhiHuLegend/\n")
+    # Write each user's page URL
+    for username in nicknames:
+        f.write(f"https://l-m-sherlock.github.io/ZhiHuLegend/{username}.html\n")
