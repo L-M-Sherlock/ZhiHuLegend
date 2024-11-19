@@ -15,6 +15,7 @@ nicknames = {
     "Himself65": "扩散性百万甜面包",
     "sinya": "李新野",
     "Deceiver-Kil": "Deceiver",
+    "excalibur-11-11": "Coldstream",
 }
 
 
@@ -106,8 +107,7 @@ def generate_summary(username: str):
             }
         </script>
     </head>
-    <body>
-    """
+    <body>"""
         + f"""
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
@@ -204,6 +204,20 @@ def generate_index_html():
                 <img src="https://img.shields.io/github/stars/l-m-sherlock/ZhiHuLegend?style=social" alt="GitHub stars">
             </a>
         </p>
+        
+        <div class="introduction">
+            <p>本项目旨在收集知乎上各位被知乎封禁或自主销号的大佬的回答和文章，并生成索引页面。</p>
+            <p>本项目不存储任何数据，所有索引页面均基于公开可访问的知乎数据生成。</p>
+            <p>欢迎各位读者提名更多的大佬，要求如下：</p>
+            <ul>
+                <li>被知乎封禁或自主销号</li>
+                <li>有足够多的回答和文章</li>
+                <li>内容还可以在知乎访问</li>
+            </ul>
+        </div>
+
+        <hr>
+        
         <div class="user-list">
     """
 
