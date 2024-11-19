@@ -17,6 +17,7 @@ nicknames = {
     "Deceiver-Kil": "Deceiver",
     "excalibur-11-11": "Coldstream",
     "gong-ke-75": "山高县",
+    "volunteertravel": "东南亚漂",
 }
 
 
