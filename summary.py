@@ -18,6 +18,7 @@ nicknames = {
     "excalibur-11-11": "Coldstream",
     "gong-ke-75": "山高县",
     "volunteertravel": "东南亚漂",
+    "xbjf": "玄不救非氪不改命"
 }
 
 
@@ -55,7 +56,7 @@ def generate_summary(username: str):
     <html>
     <head>
         <meta charset="UTF-8">
-        <title>知乎索引</title>
+        <title>{nicknames[username]}的知乎索引</title>
         <meta property="og:type" content="website">
         <meta property="og:title" content="{nicknames[username]}的知乎索引">
         <meta property="og:site_name" content="ZhiHu Legend">
