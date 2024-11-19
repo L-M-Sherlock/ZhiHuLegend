@@ -55,13 +55,13 @@ def generate_summary(username: str):
         <meta charset="UTF-8">
         <title>知乎索引</title>
         <meta property="og:type" content="website">
-        <meta property="og:title" content="知乎索引">
+        <meta property="og:title" content="{nicknames[username]}的知乎索引">
         <meta property="og:site_name" content="ZhiHu Legend">
         <meta property="og:url" content="https://l-m-sherlock.github.io/ZhiHuLegend/">
         <meta name="description" property="og:description" content="{nicknames[username]}的知乎文章和回答索引">
         <meta name="google-site-verification" content="U7ZAFUgGNK60mmMqaRygg5vy-k8pwbPbDFXNjDCu7Xk" />
         <meta property="twitter:card" content="summary">
-        <meta name="twitter:title" property="og:title" itemprop="name" content="知乎索引">
+        <meta name="twitter:title" property="og:title" itemprop="name" content="{nicknames[username]}的知乎索引">
         <meta name="twitter:description" property="og:description" itemprop="description" content="{nicknames[username]}的知乎文章和回答索引">
     """
         + """
