@@ -18,7 +18,8 @@ nicknames = {
     "excalibur-11-11": "Coldstream",
     "gong-ke-75": "山高县",
     "volunteertravel": "东南亚漂",
-    "xbjf": "玄不救非氪不改命"
+    "xbjf": "玄不救非氪不改命",
+    "deng-bo-yun": "邓铂鋆",
 }
 
 
