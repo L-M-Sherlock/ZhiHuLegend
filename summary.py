@@ -21,6 +21,8 @@ nicknames = {
     "xbjf": "玄不救非氪不改命",
     "deng-bo-yun": "邓铂鋆",
     "fang-liang-0423": "方亮",
+    "liu-jin-ze-71-59": "liu-jin-ze",
+    "Sicherchen": "Sicherchen",
 }
 
 
