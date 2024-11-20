@@ -20,6 +20,7 @@ nicknames = {
     "volunteertravel": "东南亚漂",
     "xbjf": "玄不救非氪不改命",
     "deng-bo-yun": "邓铂鋆",
+    "fang-liang-0423": "方亮",
 }
 
 
