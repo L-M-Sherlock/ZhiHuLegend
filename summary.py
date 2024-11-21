@@ -25,6 +25,7 @@ nicknames = {
     "Sicherchen": "安玲",
     "yu-feng-78-98": "御风",
     "fangkc": "方可成",
+    "zhang-zha-60-7": "zhang zha",
 }
 
 
