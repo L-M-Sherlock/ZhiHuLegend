@@ -24,6 +24,7 @@ nicknames = {
     "liu-jin-ze-71-59": "刘金泽",
     "Sicherchen": "安玲",
     "yu-feng-78-98": "御风",
+    "fangkc": "方可成",
 }
 
 
