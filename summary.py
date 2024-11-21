@@ -28,6 +28,7 @@ nicknames = {
     "zhang-zha-60-7": "zhang zha",
     "shinianhanshuang": "十年寒霜",
     "zhijiangchuan": "松平信纲",
+    "hun-luan-feng-bao-33": "弗兰德斯",
 }
 
 
