@@ -26,6 +26,7 @@ nicknames = {
     "yu-feng-78-98": "御风",
     "fangkc": "方可成",
     "zhang-zha-60-7": "zhang zha",
+    "shinianhanshuang": "十年寒霜",
 }
 
 
