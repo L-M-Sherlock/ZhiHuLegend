@@ -39,6 +39,25 @@
             .tab-content.active {
                 display: block;
             }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
         </style>
         <script>
             function openTab(evt, tabName) {
@@ -53,12 +72,39 @@
                 document.getElementById(tabName).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
         </script>
     </head>
     <body>
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
         <h1>方可成的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 (115)</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 (57)</button>
@@ -68,691 +114,691 @@
             <h2>回答</h2>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/125515001" class="">如何评价勒庞的《乌合之众》？</a>
+                <a href="https://www.zhihu.com/answer/125515001" class="">如何评价勒庞的《乌合之众》？</a>
                 <span class="votes">(12110 赞同)</span>
                 <span class="created_time">(2016-10-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/81348572" class="">如何评价 2016 年奥斯卡最佳影片《聚焦》(Spotlight)？</a>
+                <a href="https://www.zhihu.com/answer/81348572" class="">如何评价 2016 年奥斯卡最佳影片《聚焦》(Spotlight)？</a>
                 <span class="votes">(3349 赞同)</span>
                 <span class="created_time">(2016-01-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88163195" class="">如何写好一篇毕业论文？</a>
+                <a href="https://www.zhihu.com/answer/88163195" class="">如何写好一篇毕业论文？</a>
                 <span class="votes">(3110 赞同)</span>
                 <span class="created_time">(2016-02-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/102097306" class="">你一直保留的新闻资讯类网络平台有哪些？</a>
+                <a href="https://www.zhihu.com/answer/102097306" class="">你一直保留的新闻资讯类网络平台有哪些？</a>
                 <span class="votes">(2000 赞同)</span>
                 <span class="created_time">(2016-05-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15867765" class="">怎么看凤凰周刊的《我们为什么反感南方系》？</a>
+                <a href="https://www.zhihu.com/answer/15867765" class="">怎么看凤凰周刊的《我们为什么反感南方系》？</a>
                 <span class="votes">(1010 赞同)</span>
                 <span class="created_time">(2013-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/132798769" class="">电子邮件自动回复礼貌吗？</a>
+                <a href="https://www.zhihu.com/answer/132798769" class="">电子邮件自动回复礼貌吗？</a>
                 <span class="votes">(782 赞同)</span>
                 <span class="created_time">(2016-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/122314219" class="">如何评价《抄王茂军日记拼贴成的〈1986生死漂流〉，吹嘘得让人脸红》一文？</a>
+                <a href="https://www.zhihu.com/answer/122314219" class="">如何评价《抄王茂军日记拼贴成的〈1986生死漂流〉，吹嘘得让人脸红》一文？</a>
                 <span class="votes">(767 赞同)</span>
                 <span class="created_time">(2016-09-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/245721818" class="">新闻传播学的新生，入学前有什么“书单”推荐？</a>
+                <a href="https://www.zhihu.com/answer/245721818" class="">新闻传播学的新生，入学前有什么“书单”推荐？</a>
                 <span class="votes">(727 赞同)</span>
                 <span class="created_time">(2017-10-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/517146649" class="">如何评论微信朋友圈爆红的文章：《在这个从小赢到大的女生面前，杨超越真的不算锦鲤》？</a>
+                <a href="https://www.zhihu.com/answer/517146649" class="">如何评论微信朋友圈爆红的文章：《在这个从小赢到大的女生面前，杨超越真的不算锦鲤》？</a>
                 <span class="votes">(608 赞同)</span>
                 <span class="created_time">(2018-10-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/121885486" class="">中国杂志的稿费平均水平怎样？与美国相比如何？</a>
+                <a href="https://www.zhihu.com/answer/121885486" class="">中国杂志的稿费平均水平怎样？与美国相比如何？</a>
                 <span class="votes">(472 赞同)</span>
                 <span class="created_time">(2016-09-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/325890909" class="">如何评价唐纳德·特朗普颁发的 2017 年假新闻奖？</a>
+                <a href="https://www.zhihu.com/answer/325890909" class="">如何评价唐纳德·特朗普颁发的 2017 年假新闻奖？</a>
                 <span class="votes">(438 赞同)</span>
                 <span class="created_time">(2018-02-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/334319872" class="">如何评价第 90 届奥斯卡最佳影片提名电影《华盛顿邮报》？</a>
+                <a href="https://www.zhihu.com/answer/334319872" class="">如何评价第 90 届奥斯卡最佳影片提名电影《华盛顿邮报》？</a>
                 <span class="votes">(354 赞同)</span>
                 <span class="created_time">(2018-03-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/154546198" class="">你最担心下一代人会对哪些我们熟知的东西一无所知？</a>
+                <a href="https://www.zhihu.com/answer/154546198" class="">你最担心下一代人会对哪些我们熟知的东西一无所知？</a>
                 <span class="votes">(341 赞同)</span>
                 <span class="created_time">(2017-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/21336401" class="">政见（http://cnpolitics.org/）是个怎样的团队？是如何运作的？</a>
+                <a href="https://www.zhihu.com/answer/21336401" class="">政见（http://cnpolitics.org/）是个怎样的团队？是如何运作的？</a>
                 <span class="votes">(321 赞同)</span>
                 <span class="created_time">(2014-01-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14122720" class="">政治到底有什么用？</a>
+                <a href="https://www.zhihu.com/answer/14122720" class="">政治到底有什么用？</a>
                 <span class="votes">(319 赞同)</span>
                 <span class="created_time">(2012-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/131818073" class="">硕士期间没有选到一个好的导师，是不是读博搞学术这些就彻底没希望了？</a>
+                <a href="https://www.zhihu.com/answer/131818073" class="">硕士期间没有选到一个好的导师，是不是读博搞学术这些就彻底没希望了？</a>
                 <span class="votes">(310 赞同)</span>
                 <span class="created_time">(2016-11-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/26522134" class="">为什么新闻资讯引用专家言论时，经常不明确说明是哪位专家？这种做法合理么？</a>
+                <a href="https://www.zhihu.com/answer/26522134" class="">为什么新闻资讯引用专家言论时，经常不明确说明是哪位专家？这种做法合理么？</a>
                 <span class="votes">(309 赞同)</span>
                 <span class="created_time">(2014-06-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/21369202" class="">写作是一门可习得的技能吗？</a>
+                <a href="https://www.zhihu.com/answer/21369202" class="">写作是一门可习得的技能吗？</a>
                 <span class="votes">(279 赞同)</span>
                 <span class="created_time">(2014-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15291119" class="">中国在国际上是否被孤立？为什么？</a>
+                <a href="https://www.zhihu.com/answer/15291119" class="">中国在国际上是否被孤立？为什么？</a>
                 <span class="votes">(275 赞同)</span>
                 <span class="created_time">(2012-09-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13314730" class="">北大博士生冯军旗的论文《中县干部》是否有悖学术伦理？</a>
+                <a href="https://www.zhihu.com/answer/13314730" class="">北大博士生冯军旗的论文《中县干部》是否有悖学术伦理？</a>
                 <span class="votes">(253 赞同)</span>
                 <span class="created_time">(2011-11-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/16676264" class="">你为什么进入媒体？你为什么至今依然留在媒体？</a>
+                <a href="https://www.zhihu.com/answer/16676264" class="">你为什么进入媒体？你为什么至今依然留在媒体？</a>
                 <span class="votes">(218 赞同)</span>
                 <span class="created_time">(2013-04-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14132085" class="">现今中国人的种族歧视严重吗？</a>
+                <a href="https://www.zhihu.com/answer/14132085" class="">现今中国人的种族歧视严重吗？</a>
                 <span class="votes">(218 赞同)</span>
                 <span class="created_time">(2012-03-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14050939" class="">在信息爆炸的社会里，你一般是利用什么时间去看新闻？每天会花多少时间去浏览新闻？你用什么方式获取高质量的新闻？</a>
+                <a href="https://www.zhihu.com/answer/14050939" class="">在信息爆炸的社会里，你一般是利用什么时间去看新闻？每天会花多少时间去浏览新闻？你用什么方式获取高质量的新闻？</a>
                 <span class="votes">(209 赞同)</span>
                 <span class="created_time">(2012-03-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/386190648" class="">在《经济研究》，《管理世界》和《中国社会科学》等国内顶级期刊以及ssci发表论文是一种怎样的体验？</a>
+                <a href="https://www.zhihu.com/answer/386190648" class="">在《经济研究》，《管理世界》和《中国社会科学》等国内顶级期刊以及ssci发表论文是一种怎样的体验？</a>
                 <span class="votes">(189 赞同)</span>
                 <span class="created_time">(2018-05-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/124042210" class="">如何评价 GQ 中国的文章《耶鲁村官秦玥飞：权力的局外人》？</a>
+                <a href="https://www.zhihu.com/answer/124042210" class="">如何评价 GQ 中国的文章《耶鲁村官秦玥飞：权力的局外人》？</a>
                 <span class="votes">(173 赞同)</span>
                 <span class="created_time">(2016-09-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87457974" class="">如何看待2月20日全美各大城市华人游行对华裔警察Peter Liang的支持？</a>
+                <a href="https://www.zhihu.com/answer/87457974" class="">如何看待2月20日全美各大城市华人游行对华裔警察Peter Liang的支持？</a>
                 <span class="votes">(168 赞同)</span>
                 <span class="created_time">(2016-02-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/78098111" class="">你见过哪些令你瞠目结舌的神逻辑？</a>
+                <a href="https://www.zhihu.com/answer/78098111" class="">你见过哪些令你瞠目结舌的神逻辑？</a>
                 <span class="votes">(161 赞同)</span>
                 <span class="created_time">(2015-12-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/90242914" class="">iOS 和 Mac 上比较好的写作类 App 有哪些?</a>
+                <a href="https://www.zhihu.com/answer/90242914" class="">iOS 和 Mac 上比较好的写作类 App 有哪些?</a>
                 <span class="votes">(160 赞同)</span>
                 <span class="created_time">(2016-03-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13416422" class="">山西某些民众烧南方刊物，为什么？</a>
+                <a href="https://www.zhihu.com/answer/13416422" class="">山西某些民众烧南方刊物，为什么？</a>
                 <span class="votes">(144 赞同)</span>
                 <span class="created_time">(2011-11-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/116179155" class="">性别差异是否影响到政治立场？占多大比重？</a>
+                <a href="https://www.zhihu.com/answer/116179155" class="">性别差异是否影响到政治立场？占多大比重？</a>
                 <span class="votes">(125 赞同)</span>
                 <span class="created_time">(2016-08-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/20134164" class="">纽约有《纽约书评》，伦敦有《伦敦书评》，巴黎有《巴黎评论》，中国有类似的刊物吗？</a>
+                <a href="https://www.zhihu.com/answer/20134164" class="">纽约有《纽约书评》，伦敦有《伦敦书评》，巴黎有《巴黎评论》，中国有类似的刊物吗？</a>
                 <span class="votes">(119 赞同)</span>
                 <span class="created_time">(2013-11-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186544130" class="">重填高考志愿，你还会选择所学的专业吗？</a>
+                <a href="https://www.zhihu.com/answer/186544130" class="">重填高考志愿，你还会选择所学的专业吗？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2017-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14481579" class="">作为个体的人，在互联网时代还会发生什么变化？是更强大了还是更脆弱了？是更有主见还是在越来越智能的网络服务中“被决策”？科技与人性的平衡边界是什么？</a>
+                <a href="https://www.zhihu.com/answer/14481579" class="">作为个体的人，在互联网时代还会发生什么变化？是更强大了还是更脆弱了？是更有主见还是在越来越智能的网络服务中“被决策”？科技与人性的平衡边界是什么？</a>
                 <span class="votes">(100 赞同)</span>
                 <span class="created_time">(2012-05-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/513000791" class="">你有哪些心中珍藏值得推荐的好书？</a>
+                <a href="https://www.zhihu.com/answer/513000791" class="">你有哪些心中珍藏值得推荐的好书？</a>
                 <span class="votes">(99 赞同)</span>
                 <span class="created_time">(2018-10-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/387674070" class="">有哪些时间管理的好习惯？</a>
+                <a href="https://www.zhihu.com/answer/387674070" class="">有哪些时间管理的好习惯？</a>
                 <span class="votes">(95 赞同)</span>
                 <span class="created_time">(2018-05-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/241230961" class="">你拍过最棒的延时摄影视频是哪个？</a>
+                <a href="https://www.zhihu.com/answer/241230961" class="">你拍过最棒的延时摄影视频是哪个？</a>
                 <span class="votes">(95 赞同)</span>
                 <span class="created_time">(2017-10-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/96522810" class="">美国有哪些不出名但很不错的书店?</a>
+                <a href="https://www.zhihu.com/answer/96522810" class="">美国有哪些不出名但很不错的书店?</a>
                 <span class="votes">(94 赞同)</span>
                 <span class="created_time">(2016-04-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13123860" class="">在传统的党报当记者，都是写一些有关政府活动啊、领导会议、工程进展之类的报道，对于成为一名出色的记者是不是作用不大？</a>
+                <a href="https://www.zhihu.com/answer/13123860" class="">在传统的党报当记者，都是写一些有关政府活动啊、领导会议、工程进展之类的报道，对于成为一名出色的记者是不是作用不大？</a>
                 <span class="votes">(94 赞同)</span>
                 <span class="created_time">(2011-09-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14786998" class="">前任北大校长周其凤留给外界的印象有哪些？</a>
+                <a href="https://www.zhihu.com/answer/14786998" class="">前任北大校长周其凤留给外界的印象有哪些？</a>
                 <span class="votes">(91 赞同)</span>
                 <span class="created_time">(2012-07-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/386234888" class="">说说你们觉得北大学生有哪些精神特质?</a>
+                <a href="https://www.zhihu.com/answer/386234888" class="">说说你们觉得北大学生有哪些精神特质?</a>
                 <span class="votes">(78 赞同)</span>
                 <span class="created_time">(2018-05-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14249020" class="">南方报系是怎么形成的，它是如何运营的？</a>
+                <a href="https://www.zhihu.com/answer/14249020" class="">南方报系是怎么形成的，它是如何运营的？</a>
                 <span class="votes">(72 赞同)</span>
                 <span class="created_time">(2012-04-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/24252936" class="">《南方周末》文化版的投稿邮箱是什么？</a>
+                <a href="https://www.zhihu.com/answer/24252936" class="">《南方周末》文化版的投稿邮箱是什么？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2014-04-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15488332" class="">对于新闻人来说，是真相重要还是销量重要？</a>
+                <a href="https://www.zhihu.com/answer/15488332" class="">对于新闻人来说，是真相重要还是销量重要？</a>
                 <span class="votes">(58 赞同)</span>
                 <span class="created_time">(2012-10-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13223762" class="">如何成就一篇出色的人物访谈报道？</a>
+                <a href="https://www.zhihu.com/answer/13223762" class="">如何成就一篇出色的人物访谈报道？</a>
                 <span class="votes">(53 赞同)</span>
                 <span class="created_time">(2011-10-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14360299" class="">孔庆东是「没文化的流氓」吗？为什么他也能做教授？</a>
+                <a href="https://www.zhihu.com/answer/14360299" class="">孔庆东是「没文化的流氓」吗？为什么他也能做教授？</a>
                 <span class="votes">(52 赞同)</span>
                 <span class="created_time">(2012-05-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13720301" class="">《南方周末》因为大尺度真实报道社会敏感事件，主管人员经常被撤，这会影响南周的真实公正么？</a>
+                <a href="https://www.zhihu.com/answer/13720301" class="">《南方周末》因为大尺度真实报道社会敏感事件，主管人员经常被撤，这会影响南周的真实公正么？</a>
                 <span class="votes">(46 赞同)</span>
                 <span class="created_time">(2012-01-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/129756710" class="">如何评价知乎的新产品「知乎 Live」？</a>
+                <a href="https://www.zhihu.com/answer/129756710" class="">如何评价知乎的新产品「知乎 Live」？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2016-11-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15441469" class="">当了解中国现实政治时，如何超越政治八卦和宫廷权斗？</a>
+                <a href="https://www.zhihu.com/answer/15441469" class="">当了解中国现实政治时，如何超越政治八卦和宫廷权斗？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2012-10-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13200190" class="">看些娱乐、访谈类节目可以提升个人理解、表达能力吗？</a>
+                <a href="https://www.zhihu.com/answer/13200190" class="">看些娱乐、访谈类节目可以提升个人理解、表达能力吗？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2011-10-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/123886231" class="">如何看待 2016 年 9 月 26 号（美国东部时区）美国总统大选的第一场电视辩论？</a>
+                <a href="https://www.zhihu.com/answer/123886231" class="">如何看待 2016 年 9 月 26 号（美国东部时区）美国总统大选的第一场电视辩论？</a>
                 <span class="votes">(40 赞同)</span>
                 <span class="created_time">(2016-09-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/201188232" class="">记者不如律师吗？</a>
+                <a href="https://www.zhihu.com/answer/201188232" class="">记者不如律师吗？</a>
                 <span class="votes">(37 赞同)</span>
                 <span class="created_time">(2017-07-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13879138" class="">南方科技大学现状如何？（2012年）</a>
+                <a href="https://www.zhihu.com/answer/13879138" class="">南方科技大学现状如何？（2012年）</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2012-02-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/24473061" class="">为什么报道的新闻几乎是“丑闻陋习”？</a>
+                <a href="https://www.zhihu.com/answer/24473061" class="">为什么报道的新闻几乎是“丑闻陋习”？</a>
                 <span class="votes">(34 赞同)</span>
                 <span class="created_time">(2014-04-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13086878" class="">为什么外国报刊在中国招聘的本土新闻工作人员只能称为“助理记者”，并且没有在文章中署名的权利？</a>
+                <a href="https://www.zhihu.com/answer/13086878" class="">为什么外国报刊在中国招聘的本土新闻工作人员只能称为“助理记者”，并且没有在文章中署名的权利？</a>
                 <span class="votes">(33 赞同)</span>
                 <span class="created_time">(2011-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13407469" class="">豆瓣有哪些你不喜欢的用户体验细节？</a>
+                <a href="https://www.zhihu.com/answer/13407469" class="">豆瓣有哪些你不喜欢的用户体验细节？</a>
                 <span class="votes">(31 赞同)</span>
                 <span class="created_time">(2011-11-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13746691" class="">记者内幕调查常用的方法有哪些？查证并突破关键证据有哪些经验？</a>
+                <a href="https://www.zhihu.com/answer/13746691" class="">记者内幕调查常用的方法有哪些？查证并突破关键证据有哪些经验？</a>
                 <span class="votes">(30 赞同)</span>
                 <span class="created_time">(2012-01-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15278740" class="">如何看待某些毫无意义的吉尼斯世界纪录？</a>
+                <a href="https://www.zhihu.com/answer/15278740" class="">如何看待某些毫无意义的吉尼斯世界纪录？</a>
                 <span class="votes">(27 赞同)</span>
                 <span class="created_time">(2012-09-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/81821449" class="">在社会美誉度低、广受吐槽的行业/单位工作是种怎样的体验？</a>
+                <a href="https://www.zhihu.com/answer/81821449" class="">在社会美誉度低、广受吐槽的行业/单位工作是种怎样的体验？</a>
                 <span class="votes">(26 赞同)</span>
                 <span class="created_time">(2016-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13400414" class="">现在的媒体从业人员（记者、编辑，纸媒、电视、网络等）的正常待遇怎么样？</a>
+                <a href="https://www.zhihu.com/answer/13400414" class="">现在的媒体从业人员（记者、编辑，纸媒、电视、网络等）的正常待遇怎么样？</a>
                 <span class="votes">(25 赞同)</span>
                 <span class="created_time">(2011-11-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13902304" class="">立人大学是什么？</a>
+                <a href="https://www.zhihu.com/answer/13902304" class="">立人大学是什么？</a>
                 <span class="votes">(25 赞同)</span>
                 <span class="created_time">(2012-02-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12304515" class="">中小学课本里的文言文有哪些令人印象深刻？</a>
+                <a href="https://www.zhihu.com/answer/12304515" class="">中小学课本里的文言文有哪些令人印象深刻？</a>
                 <span class="votes">(24 赞同)</span>
                 <span class="created_time">(2011-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14301742" class="">关于南方科技大学，您有什么看法和期待？</a>
+                <a href="https://www.zhihu.com/answer/14301742" class="">关于南方科技大学，您有什么看法和期待？</a>
                 <span class="votes">(23 赞同)</span>
                 <span class="created_time">(2012-04-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13505178" class="">如何评价蒋方舟写的《纪事中国2011》？</a>
+                <a href="https://www.zhihu.com/answer/13505178" class="">如何评价蒋方舟写的《纪事中国2011》？</a>
                 <span class="votes">(22 赞同)</span>
                 <span class="created_time">(2011-12-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186540890" class="">政见团队/专栏还有机会重启吗？</a>
+                <a href="https://www.zhihu.com/answer/186540890" class="">政见团队/专栏还有机会重启吗？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2017-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/147216285" class="">如果念与新闻学和体育传媒等专业毫不相关的专业,如何在日后成为一名体育记者-?</a>
+                <a href="https://www.zhihu.com/answer/147216285" class="">如果念与新闻学和体育传媒等专业毫不相关的专业,如何在日后成为一名体育记者-?</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2017-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14704092" class="">被派往战时利比亚采访的央视记者需要具备哪些能力？如何成为一名战地记者？</a>
+                <a href="https://www.zhihu.com/answer/14704092" class="">被派往战时利比亚采访的央视记者需要具备哪些能力？如何成为一名战地记者？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2012-06-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/388563441" class="">中国留学生在美国如何申请欧洲申根签证?</a>
+                <a href="https://www.zhihu.com/answer/388563441" class="">中国留学生在美国如何申请欧洲申根签证?</a>
                 <span class="votes">(20 赞同)</span>
                 <span class="created_time">(2018-05-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15867728" class="">國內知名報社比較認可的傳媒學院有哪些？</a>
+                <a href="https://www.zhihu.com/answer/15867728" class="">國內知名報社比較認可的傳媒學院有哪些？</a>
                 <span class="votes">(20 赞同)</span>
                 <span class="created_time">(2013-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/24501361" class="">资本主义国家的共产党和类似党派生存状况如何？</a>
+                <a href="https://www.zhihu.com/answer/24501361" class="">资本主义国家的共产党和类似党派生存状况如何？</a>
                 <span class="votes">(18 赞同)</span>
                 <span class="created_time">(2014-04-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/24211913" class="">为什么南方报业没有上市？</a>
+                <a href="https://www.zhihu.com/answer/24211913" class="">为什么南方报业没有上市？</a>
                 <span class="votes">(15 赞同)</span>
                 <span class="created_time">(2014-04-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13381149" class="">我是学财务的本科生，但是想做记者这个想法是否现实？</a>
+                <a href="https://www.zhihu.com/answer/13381149" class="">我是学财务的本科生，但是想做记者这个想法是否现实？</a>
                 <span class="votes">(14 赞同)</span>
                 <span class="created_time">(2011-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14223479" class="">记者提高讲故事能力最好的方法是什么？</a>
+                <a href="https://www.zhihu.com/answer/14223479" class="">记者提高讲故事能力最好的方法是什么？</a>
                 <span class="votes">(13 赞同)</span>
                 <span class="created_time">(2012-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15290887" class="">新闻稿的采访手记如何撰写？</a>
+                <a href="https://www.zhihu.com/answer/15290887" class="">新闻稿的采访手记如何撰写？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2012-09-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/20062971" class="">为什么知名的新闻网站会发布错误新闻，以2014年放假安排为例？</a>
+                <a href="https://www.zhihu.com/answer/20062971" class="">为什么知名的新闻网站会发布错误新闻，以2014年放假安排为例？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2013-11-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/16676602" class="">拥有微信公众平台账号的创业者或爱好者，其微信运营和营销情况如何？</a>
+                <a href="https://www.zhihu.com/answer/16676602" class="">拥有微信公众平台账号的创业者或爱好者，其微信运营和营销情况如何？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2013-04-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15518161" class="">互联网上最新的内容是从哪里产生的，为什么门户网站都在转载？如何查看一篇文章的最早出处？</a>
+                <a href="https://www.zhihu.com/answer/15518161" class="">互联网上最新的内容是从哪里产生的，为什么门户网站都在转载？如何查看一篇文章的最早出处？</a>
                 <span class="votes">(10 赞同)</span>
                 <span class="created_time">(2012-11-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15648043" class="">有哪些你钟爱的小语种歌曲？</a>
+                <a href="https://www.zhihu.com/answer/15648043" class="">有哪些你钟爱的小语种歌曲？</a>
                 <span class="votes">(10 赞同)</span>
                 <span class="created_time">(2012-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15875593" class="">南方周末的编辑去年让我今年去做实习生，我该不该当真？需要做什么准备？</a>
+                <a href="https://www.zhihu.com/answer/15875593" class="">南方周末的编辑去年让我今年去做实习生，我该不该当真？需要做什么准备？</a>
                 <span class="votes">(9 赞同)</span>
                 <span class="created_time">(2013-01-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13802450" class="">如何花最少的钱过一个不那么寒酸的情人节？</a>
+                <a href="https://www.zhihu.com/answer/13802450" class="">如何花最少的钱过一个不那么寒酸的情人节？</a>
                 <span class="votes">(9 赞同)</span>
                 <span class="created_time">(2012-02-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/20296221" class="">如何评价豆瓣于 2013 年 9 月 17 日上线的新改版的「豆瓣东西」？</a>
+                <a href="https://www.zhihu.com/answer/20296221" class="">如何评价豆瓣于 2013 年 9 月 17 日上线的新改版的「豆瓣东西」？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2013-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/16681018" class="">如何评价微博红人「留几手」？</a>
+                <a href="https://www.zhihu.com/answer/16681018" class="">如何评价微博红人「留几手」？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2013-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/29613293" class="">报纸上某一图的右下方小字提示图的来源为cep图cep是什么意思？</a>
+                <a href="https://www.zhihu.com/answer/29613293" class="">报纸上某一图的右下方小字提示图的来源为cep图cep是什么意思？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2014-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13086895" class="">你的枕边书有哪些推荐？</a>
+                <a href="https://www.zhihu.com/answer/13086895" class="">你的枕边书有哪些推荐？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2011-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12716700" class="">采访时应该注意些什么呢？</a>
+                <a href="https://www.zhihu.com/answer/12716700" class="">采访时应该注意些什么呢？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2011-06-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/16676303" class="">为什么报纸几乎不装订？</a>
+                <a href="https://www.zhihu.com/answer/16676303" class="">为什么报纸几乎不装订？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2013-04-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13541073" class="">匿名信源的使用原则是怎样的？</a>
+                <a href="https://www.zhihu.com/answer/13541073" class="">匿名信源的使用原则是怎样的？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2011-12-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14059720" class="">南方报业集团旗下的报刊各自都有什么特点和定位？</a>
+                <a href="https://www.zhihu.com/answer/14059720" class="">南方报业集团旗下的报刊各自都有什么特点和定位？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2012-03-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12377744" class="">旅行中，带什么书上路比较好？</a>
+                <a href="https://www.zhihu.com/answer/12377744" class="">旅行中，带什么书上路比较好？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2011-04-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15108905" class="">怎么样看待南周对“绿茶验尿”的后续报道？该如何回应？</a>
+                <a href="https://www.zhihu.com/answer/15108905" class="">怎么样看待南周对“绿茶验尿”的后续报道？该如何回应？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2012-08-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/124043497" class="">如何可以加入政见这个学习团体？</a>
+                <a href="https://www.zhihu.com/answer/124043497" class="">如何可以加入政见这个学习团体？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2016-09-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14989500" class="">许巍有哪些歌曲/歌词曾经打动过你？</a>
+                <a href="https://www.zhihu.com/answer/14989500" class="">许巍有哪些歌曲/歌词曾经打动过你？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2012-07-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14778560" class="">同样是在微博上发表争议言论，杨锐和曹林华的结局为何如此不同？</a>
+                <a href="https://www.zhihu.com/answer/14778560" class="">同样是在微博上发表争议言论，杨锐和曹林华的结局为何如此不同？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2012-07-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13541054" class="">在媒体人眼中，《东方早报》是一份什么样的报纸？</a>
+                <a href="https://www.zhihu.com/answer/13541054" class="">在媒体人眼中，《东方早报》是一份什么样的报纸？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2011-12-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14249075" class="">新闻类网站该不该为自己的不真实报道和选择性报道负责？</a>
+                <a href="https://www.zhihu.com/answer/14249075" class="">新闻类网站该不该为自己的不真实报道和选择性报道负责？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2012-04-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13590752" class="">为什么应用分类时常把新闻和天气分到一组？</a>
+                <a href="https://www.zhihu.com/answer/13590752" class="">为什么应用分类时常把新闻和天气分到一组？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2011-12-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13793950" class="">记者是如何就敏感话题进行采访的呢？</a>
+                <a href="https://www.zhihu.com/answer/13793950" class="">记者是如何就敏感话题进行采访的呢？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2012-02-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15090110" class="">记者怎样增加采访的引导和把控能力，得到自己想要的东西？</a>
+                <a href="https://www.zhihu.com/answer/15090110" class="">记者怎样增加采访的引导和把控能力，得到自己想要的东西？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2012-08-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14056767" class="">如何处理主编和编辑对于同一篇稿件持截然相反看法的情况？</a>
+                <a href="https://www.zhihu.com/answer/14056767" class="">如何处理主编和编辑对于同一篇稿件持截然相反看法的情况？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2012-03-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15125179" class="">“领土神圣不可侵犯”是什么时候被人们认同的？</a>
+                <a href="https://www.zhihu.com/answer/15125179" class="">“领土神圣不可侵犯”是什么时候被人们认同的？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2012-08-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13161106" class="">知乎这类问答社区的兴起会不会对博客书写积极性造成影响？</a>
+                <a href="https://www.zhihu.com/answer/13161106" class="">知乎这类问答社区的兴起会不会对博客书写积极性造成影响？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2011-09-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13936834" class="">南方报业 2012 有校园招聘么？</a>
+                <a href="https://www.zhihu.com/answer/13936834" class="">南方报业 2012 有校园招聘么？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2012-02-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15658655" class="">我妈总是认为我的理想是异想天开，怎么办？</a>
+                <a href="https://www.zhihu.com/answer/15658655" class="">我妈总是认为我的理想是异想天开，怎么办？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2012-11-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12301619" class="">你最喜欢的一篇或几篇文字是？</a>
+                <a href="https://www.zhihu.com/answer/12301619" class="">你最喜欢的一篇或几篇文字是？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2011-04-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15229492" class="">如何看待 2012 年 7 月 12 日的《南方周末》中的「文科综合自测题」？</a>
+                <a href="https://www.zhihu.com/answer/15229492" class="">如何看待 2012 年 7 月 12 日的《南方周末》中的「文科综合自测题」？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2012-09-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15648105" class="">有哪些政治讽刺类的电影？</a>
+                <a href="https://www.zhihu.com/answer/15648105" class="">有哪些政治讽刺类的电影？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2012-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12330193" class="">出版商和作者们是不是应该积极去面对来自互联网的侵蚀？</a>
+                <a href="https://www.zhihu.com/answer/12330193" class="">出版商和作者们是不是应该积极去面对来自互联网的侵蚀？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2011-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13086919" class="">二三线城市的发展可观吗？现一线城市基本饱和了吗？</a>
+                <a href="https://www.zhihu.com/answer/13086919" class="">二三线城市的发展可观吗？现一线城市基本饱和了吗？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2011-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13632124" class="">北京公交“中门上，前后门下”是否科学？为什么北京公交有乘务员？</a>
+                <a href="https://www.zhihu.com/answer/13632124" class="">北京公交“中门上，前后门下”是否科学？为什么北京公交有乘务员？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2012-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/12300731" class="">翟明磊是谁？</a>
+                <a href="https://www.zhihu.com/answer/12300731" class="">翟明磊是谁？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2011-04-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/14730089" class="">怎样迅速了解陌生地区的风土人情？</a>
+                <a href="https://www.zhihu.com/answer/14730089" class="">怎样迅速了解陌生地区的风土人情？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2012-06-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13651573" class="">把地域门户网站跟地域报纸结合起来，前景如何？可以有哪些突破点？</a>
+                <a href="https://www.zhihu.com/answer/13651573" class="">把地域门户网站跟地域报纸结合起来，前景如何？可以有哪些突破点？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2012-01-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13486670" class="">关于民主人权普世价值，有什么好的书籍推荐？</a>
+                <a href="https://www.zhihu.com/answer/13486670" class="">关于民主人权普世价值，有什么好的书籍推荐？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2011-12-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13135557" class="">杜婷是谁?</a>
+                <a href="https://www.zhihu.com/answer/13135557" class="">杜婷是谁?</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2011-09-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/15108992" class="">《南方周末》6 月 28 日A3版，部分地区报纸仅印着「SO WHAT」俩词，而部分地区却印着「viaggo菲翔」俩词，这背后是场营销战还是什么？</a>
+                <a href="https://www.zhihu.com/answer/15108992" class="">《南方周末》6 月 28 日A3版，部分地区报纸仅印着「SO WHAT」俩词，而部分地区却印着「viaggo菲翔」俩词，这背后是场营销战还是什么？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2012-08-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/13305782" class="">《南方周末》的历史上有没有开过天窗？开过几次？分别因为什么？</a>
+                <a href="https://www.zhihu.com/answer/13305782" class="">《南方周末》的历史上有没有开过天窗？开过几次？分别因为什么？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2011-11-04)</span>
             </div>
@@ -762,343 +808,343 @@
             <h2>文章</h2>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21649922" class="">为什么互联网的英语应该是“internet”，而不是“Internet”？</a>
+                <a href="https://zhuanlan.zhihu.com/p/21649922" class="">为什么互联网的英语应该是“internet”，而不是“Internet”？</a>
                 <span class="votes">(5267 赞同)</span>
                 <span class="created_time">(2016-07-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20514450" class="">我们想做的，不过是拆掉知识的高墙</a>
+                <a href="https://zhuanlan.zhihu.com/p/20514450" class="">我们想做的，不过是拆掉知识的高墙</a>
                 <span class="votes">(2385 赞同)</span>
                 <span class="created_time">(2016-01-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/29401245" class="">这款神器，帮你迅速了解西方媒体的可信度和倾向性</a>
+                <a href="https://zhuanlan.zhihu.com/p/29401245" class="">这款神器，帮你迅速了解西方媒体的可信度和倾向性</a>
                 <span class="votes">(1317 赞同)</span>
                 <span class="created_time">(2017-09-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20562683" class="">新年治治你的写作拖延症吧！药方在这里，拿好不谢</a>
+                <a href="https://zhuanlan.zhihu.com/p/20562683" class="">新年治治你的写作拖延症吧！药方在这里，拿好不谢</a>
                 <span class="votes">(1038 赞同)</span>
                 <span class="created_time">(2016-02-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20528545" class="">“帝吧出征”变“两岸交友”：爱情能跨越阵营分歧吗？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20528545" class="">“帝吧出征”变“两岸交友”：爱情能跨越阵营分歧吗？</a>
                 <span class="votes">(612 赞同)</span>
                 <span class="created_time">(2016-01-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21306522" class="">新闻业都要死了，为什么还要读新闻学院？</a>
+                <a href="https://zhuanlan.zhihu.com/p/21306522" class="">新闻业都要死了，为什么还要读新闻学院？</a>
                 <span class="votes">(593 赞同)</span>
                 <span class="created_time">(2016-06-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20475728" class="">“自媒体”已经走向了它的反面</a>
+                <a href="https://zhuanlan.zhihu.com/p/20475728" class="">“自媒体”已经走向了它的反面</a>
                 <span class="votes">(563 赞同)</span>
                 <span class="created_time">(2016-01-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21739790" class="">美国人终于找到了能阻止川普上台的人：哈利・波特</a>
+                <a href="https://zhuanlan.zhihu.com/p/21739790" class="">美国人终于找到了能阻止川普上台的人：哈利・波特</a>
                 <span class="votes">(418 赞同)</span>
                 <span class="created_time">(2016-07-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20727233" class="">威权政府为什么要“玩转”社交媒体？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20727233" class="">威权政府为什么要“玩转”社交媒体？</a>
                 <span class="votes">(367 赞同)</span>
                 <span class="created_time">(2016-04-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20565259" class="">为什么美国媒体会公开支持某一位总统候选人？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20565259" class="">为什么美国媒体会公开支持某一位总统候选人？</a>
                 <span class="votes">(364 赞同)</span>
                 <span class="created_time">(2016-02-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20940731" class="">免费下载 ｜《粉丝公众》：迷影、追剧的网民改造着中国社会的模样</a>
+                <a href="https://zhuanlan.zhihu.com/p/20940731" class="">免费下载 ｜《粉丝公众》：迷影、追剧的网民改造着中国社会的模样</a>
                 <span class="votes">(325 赞同)</span>
                 <span class="created_time">(2016-05-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22624761" class="">如何收看美国总统大选辩论（方式汇总）</a>
+                <a href="https://zhuanlan.zhihu.com/p/22624761" class="">如何收看美国总统大选辩论（方式汇总）</a>
                 <span class="votes">(276 赞同)</span>
                 <span class="created_time">(2016-09-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/19667833" class="">这些欢(qi)乐(pa)的研究，是真的吗？</a>
+                <a href="https://zhuanlan.zhihu.com/p/19667833" class="">这些欢(qi)乐(pa)的研究，是真的吗？</a>
                 <span class="votes">(270 赞同)</span>
                 <span class="created_time">(2014-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/71844281" class="">算法导致“茧房”和“回音室”？学术研究的结果可能和你想象的不一样</a>
+                <a href="https://zhuanlan.zhihu.com/p/71844281" class="">算法导致“茧房”和“回音室”？学术研究的结果可能和你想象的不一样</a>
                 <span class="votes">(264 赞同)</span>
                 <span class="created_time">(2019-07-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22095168" class="">日本记者为什么不做调查报道？｜日本媒体笔记之三</a>
+                <a href="https://zhuanlan.zhihu.com/p/22095168" class="">日本记者为什么不做调查报道？｜日本媒体笔记之三</a>
                 <span class="votes">(215 赞同)</span>
                 <span class="created_time">(2016-08-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/28084094" class="">谷歌 “收买教授”、“腐蚀学术”：事情没那么简单</a>
+                <a href="https://zhuanlan.zhihu.com/p/28084094" class="">谷歌 “收买教授”、“腐蚀学术”：事情没那么简单</a>
                 <span class="votes">(213 赞同)</span>
                 <span class="created_time">(2017-07-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21717844" class="">“I（我）”为什么总是要大写？而you/he/she都不大写？</a>
+                <a href="https://zhuanlan.zhihu.com/p/21717844" class="">“I（我）”为什么总是要大写？而you/he/she都不大写？</a>
                 <span class="votes">(212 赞同)</span>
                 <span class="created_time">(2016-07-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/24516583" class="">这是一门被嫌弃的学科，但我推荐你来读</a>
+                <a href="https://zhuanlan.zhihu.com/p/24516583" class="">这是一门被嫌弃的学科，但我推荐你来读</a>
                 <span class="votes">(211 赞同)</span>
                 <span class="created_time">(2016-12-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/24556694" class="">“我看见这一代最杰出的头脑毁于骗点击”</a>
+                <a href="https://zhuanlan.zhihu.com/p/24556694" class="">“我看见这一代最杰出的头脑毁于骗点击”</a>
                 <span class="votes">(201 赞同)</span>
                 <span class="created_time">(2016-12-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20449845" class="">电子书时代，你为什么还需要书架？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20449845" class="">电子书时代，你为什么还需要书架？</a>
                 <span class="votes">(199 赞同)</span>
                 <span class="created_time">(2015-12-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22792380" class="">从报纸中发现真相，的确是个难以掌握的本领</a>
+                <a href="https://zhuanlan.zhihu.com/p/22792380" class="">从报纸中发现真相，的确是个难以掌握的本领</a>
                 <span class="votes">(171 赞同)</span>
                 <span class="created_time">(2016-10-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/25385747" class="">如何进入一个不熟悉的领域？</a>
+                <a href="https://zhuanlan.zhihu.com/p/25385747" class="">如何进入一个不熟悉的领域？</a>
                 <span class="votes">(141 赞同)</span>
                 <span class="created_time">(2017-02-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20561847" class="">乐谈｜什么亚克西？——春晚歌曲背后的地缘政治</a>
+                <a href="https://zhuanlan.zhihu.com/p/20561847" class="">乐谈｜什么亚克西？——春晚歌曲背后的地缘政治</a>
                 <span class="votes">(132 赞同)</span>
                 <span class="created_time">(2016-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20519681" class="">【内部资料公开】政见团队的文章是怎样写出来的？什么样的投稿会被接受？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20519681" class="">【内部资料公开】政见团队的文章是怎样写出来的？什么样的投稿会被接受？</a>
                 <span class="votes">(122 赞同)</span>
                 <span class="created_time">(2016-01-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/19652368" class="">为什么美国最左的城市种族不平等最严重？</a>
+                <a href="https://zhuanlan.zhihu.com/p/19652368" class="">为什么美国最左的城市种族不平等最严重？</a>
                 <span class="votes">(121 赞同)</span>
                 <span class="created_time">(2014-01-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/25662308" class="">欧洲富裕的秘密：一个活跃的思想市场</a>
+                <a href="https://zhuanlan.zhihu.com/p/25662308" class="">欧洲富裕的秘密：一个活跃的思想市场</a>
                 <span class="votes">(115 赞同)</span>
                 <span class="created_time">(2017-03-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21380975" class="">《朝日新闻》的新闻实验｜日本媒体笔记之一</a>
+                <a href="https://zhuanlan.zhihu.com/p/21380975" class="">《朝日新闻》的新闻实验｜日本媒体笔记之一</a>
                 <span class="votes">(112 赞同)</span>
                 <span class="created_time">(2016-06-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/61003521" class="">让世界变得好一点，需要更优质的信息</a>
+                <a href="https://zhuanlan.zhihu.com/p/61003521" class="">让世界变得好一点，需要更优质的信息</a>
                 <span class="votes">(105 赞同)</span>
                 <span class="created_time">(2019-04-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20595746" class="">你家小区的围墙为什么要拆了？因为中国城市规划的范式变了</a>
+                <a href="https://zhuanlan.zhihu.com/p/20595746" class="">你家小区的围墙为什么要拆了？因为中国城市规划的范式变了</a>
                 <span class="votes">(101 赞同)</span>
                 <span class="created_time">(2016-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/62586523" class="">快评2019年普利策新闻奖：在一个暴力的年代里坚持说出真相</a>
+                <a href="https://zhuanlan.zhihu.com/p/62586523" class="">快评2019年普利策新闻奖：在一个暴力的年代里坚持说出真相</a>
                 <span class="votes">(99 赞同)</span>
                 <span class="created_time">(2019-04-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20437800" class="">这些人脸被识别成了猫，这些猫脸被识别成了人</a>
+                <a href="https://zhuanlan.zhihu.com/p/20437800" class="">这些人脸被识别成了猫，这些猫脸被识别成了人</a>
                 <span class="votes">(93 赞同)</span>
                 <span class="created_time">(2015-12-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20440893" class="">18世纪的书居然长得跟智能手机屏幕一样？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20440893" class="">18世纪的书居然长得跟智能手机屏幕一样？</a>
                 <span class="votes">(84 赞同)</span>
                 <span class="created_time">(2015-12-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/26551657" class="">新闻实验室会员通讯试读</a>
+                <a href="https://zhuanlan.zhihu.com/p/26551657" class="">新闻实验室会员通讯试读</a>
                 <span class="votes">(81 赞同)</span>
                 <span class="created_time">(2017-04-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/25104095" class="">为什么美国国父要当一名邮政局长？</a>
+                <a href="https://zhuanlan.zhihu.com/p/25104095" class="">为什么美国国父要当一名邮政局长？</a>
                 <span class="votes">(67 赞同)</span>
                 <span class="created_time">(2017-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/26080222" class="">申请总结：美国新闻专业研究生项目最看重什么？</a>
+                <a href="https://zhuanlan.zhihu.com/p/26080222" class="">申请总结：美国新闻专业研究生项目最看重什么？</a>
                 <span class="votes">(65 赞同)</span>
                 <span class="created_time">(2017-03-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20521612" class="">【乐谈】音乐圈生存法则：为何台上总是老面孔？什么人最吃香？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20521612" class="">【乐谈】音乐圈生存法则：为何台上总是老面孔？什么人最吃香？</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2016-01-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22943212" class="">方可成 的 Live －－ 新闻传播专业生存指南</a>
+                <a href="https://zhuanlan.zhihu.com/p/22943212" class="">方可成 的 Live －－ 新闻传播专业生存指南</a>
                 <span class="votes">(61 赞同)</span>
                 <span class="created_time">(2016-10-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20571598" class="">普利策奖得主的5条采访写作心得</a>
+                <a href="https://zhuanlan.zhihu.com/p/20571598" class="">普利策奖得主的5条采访写作心得</a>
                 <span class="votes">(57 赞同)</span>
                 <span class="created_time">(2016-02-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20571574" class="">爱人最后沦落为亲人：“七年之痒”是真的吗？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20571574" class="">爱人最后沦落为亲人：“七年之痒”是真的吗？</a>
                 <span class="votes">(56 赞同)</span>
                 <span class="created_time">(2016-02-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20545559" class="">政见团队还缺一个人，这个人也许就是你</a>
+                <a href="https://zhuanlan.zhihu.com/p/20545559" class="">政见团队还缺一个人，这个人也许就是你</a>
                 <span class="votes">(52 赞同)</span>
                 <span class="created_time">(2016-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20475723" class="">中国的黑客，你们在哪里？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20475723" class="">中国的黑客，你们在哪里？</a>
                 <span class="votes">(47 赞同)</span>
                 <span class="created_time">(2016-01-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22279244" class="">王健林的一亿元小目标为什么会引发一场创作大赛？</a>
+                <a href="https://zhuanlan.zhihu.com/p/22279244" class="">王健林的一亿元小目标为什么会引发一场创作大赛？</a>
                 <span class="votes">(45 赞同)</span>
                 <span class="created_time">(2016-09-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22373582" class="">方可成的 Live －－ 学新闻传播，该出国读书吗？</a>
+                <a href="https://zhuanlan.zhihu.com/p/22373582" class="">方可成的 Live －－ 学新闻传播，该出国读书吗？</a>
                 <span class="votes">(44 赞同)</span>
                 <span class="created_time">(2016-09-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20775108" class="">英国想要退出欧盟，原来是这么回事</a>
+                <a href="https://zhuanlan.zhihu.com/p/20775108" class="">英国想要退出欧盟，原来是这么回事</a>
                 <span class="votes">(42 赞同)</span>
                 <span class="created_time">(2016-04-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20638260" class="">AlphaGo赢了，人类输了吗？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20638260" class="">AlphaGo赢了，人类输了吗？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2016-03-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20671490" class="">谈谈“愤怒”</a>
+                <a href="https://zhuanlan.zhihu.com/p/20671490" class="">谈谈“愤怒”</a>
                 <span class="votes">(34 赞同)</span>
                 <span class="created_time">(2016-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22329881" class="">如果你是传媒从业者、研究者、新闻传播相关专业学生……</a>
+                <a href="https://zhuanlan.zhihu.com/p/22329881" class="">如果你是传媒从业者、研究者、新闻传播相关专业学生……</a>
                 <span class="votes">(33 赞同)</span>
                 <span class="created_time">(2016-09-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20690451" class="">听你的声音，耳朵会怀孕？｜政见播客招募主播</a>
+                <a href="https://zhuanlan.zhihu.com/p/20690451" class="">听你的声音，耳朵会怀孕？｜政见播客招募主播</a>
                 <span class="votes">(31 赞同)</span>
                 <span class="created_time">(2016-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/25223130" class="">宾大 3 人谈：传播学的多元魅力（免费赠书）</a>
+                <a href="https://zhuanlan.zhihu.com/p/25223130" class="">宾大 3 人谈：传播学的多元魅力（免费赠书）</a>
                 <span class="votes">(29 赞同)</span>
                 <span class="created_time">(2017-02-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/23215322" class="">方可成 的 Live －－ 攻心术：美国大选竞选广告鉴赏</a>
+                <a href="https://zhuanlan.zhihu.com/p/23215322" class="">方可成 的 Live －－ 攻心术：美国大选竞选广告鉴赏</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2016-10-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/24449111" class="">新闻实验室会员通讯目录（2017.10.16更新）</a>
+                <a href="https://zhuanlan.zhihu.com/p/24449111" class="">新闻实验室会员通讯目录（2017.10.16更新）</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2016-12-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/21544829" class="">赫芬顿邮报想在日本做什么｜日本媒体笔记之二</a>
+                <a href="https://zhuanlan.zhihu.com/p/21544829" class="">赫芬顿邮报想在日本做什么｜日本媒体笔记之二</a>
                 <span class="votes">(25 赞同)</span>
                 <span class="created_time">(2016-07-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20633646" class="">测测你是否有潜质成为政见主编</a>
+                <a href="https://zhuanlan.zhihu.com/p/20633646" class="">测测你是否有潜质成为政见主编</a>
                 <span class="votes">(17 赞同)</span>
                 <span class="created_time">(2016-03-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20696249" class="">愚人节姿势：整蛊也要搞学术，坑爹不忘学知识</a>
+                <a href="https://zhuanlan.zhihu.com/p/20696249" class="">愚人节姿势：整蛊也要搞学术，坑爹不忘学知识</a>
                 <span class="votes">(13 赞同)</span>
                 <span class="created_time">(2016-04-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/22712232" class="">也许你错过了这十封信</a>
+                <a href="https://zhuanlan.zhihu.com/p/22712232" class="">也许你错过了这十封信</a>
                 <span class="votes">(10 赞同)</span>
                 <span class="created_time">(2016-09-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/29265546" class="">这一场 Live，让你学会选择阅读西方媒体</a>
+                <a href="https://zhuanlan.zhihu.com/p/29265546" class="">这一场 Live，让你学会选择阅读西方媒体</a>
                 <span class="votes">(10 赞同)</span>
                 <span class="created_time">(2017-09-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/20434665" class="">写个比喻句吧，你会把互联网比作什么？</a>
+                <a href="https://zhuanlan.zhihu.com/p/20434665" class="">写个比喻句吧，你会把互联网比作什么？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2015-12-21)</span>
             </div>

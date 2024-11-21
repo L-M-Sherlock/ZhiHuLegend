@@ -39,6 +39,25 @@
             .tab-content.active {
                 display: block;
             }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
         </style>
         <script>
             function openTab(evt, tabName) {
@@ -53,12 +72,39 @@
                 document.getElementById(tabName).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
         </script>
     </head>
     <body>
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
         <h1>十年寒霜的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 (198)</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 (0)</button>
@@ -68,1189 +114,1189 @@
             <h2>回答</h2>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88576984" class="">有哪些「迷信」看似荒谬，实则有科学依据？</a>
+                <a href="https://www.zhihu.com/answer/88576984" class="">有哪些「迷信」看似荒谬，实则有科学依据？</a>
                 <span class="votes">(12717 赞同)</span>
                 <span class="created_time">(2016-02-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/72634400" class="">为什么很多人对历史课本嗤之以鼻？</a>
+                <a href="https://www.zhihu.com/answer/72634400" class="">为什么很多人对历史课本嗤之以鼻？</a>
                 <span class="votes">(8369 赞同)</span>
                 <span class="created_time">(2015-11-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/153911453" class="">辱母案大众为何舆论一边倒？</a>
+                <a href="https://www.zhihu.com/answer/153911453" class="">辱母案大众为何舆论一边倒？</a>
                 <span class="votes">(4870 赞同)</span>
                 <span class="created_time">(2017-03-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/74179962" class="">遭遇强奸后我应该怎么处理？</a>
+                <a href="https://www.zhihu.com/answer/74179962" class="">遭遇强奸后我应该怎么处理？</a>
                 <span class="votes">(3557 赞同)</span>
                 <span class="created_time">(2015-11-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/151925609" class="">「国际劳动妇女节」的「妇女」是否太过容易被误解，以致传播不力？</a>
+                <a href="https://www.zhihu.com/answer/151925609" class="">「国际劳动妇女节」的「妇女」是否太过容易被误解，以致传播不力？</a>
                 <span class="votes">(3119 赞同)</span>
                 <span class="created_time">(2017-03-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57604245" class="">相比韩国和日本，中国女性在社会上地位是不是更高？</a>
+                <a href="https://www.zhihu.com/answer/57604245" class="">相比韩国和日本，中国女性在社会上地位是不是更高？</a>
                 <span class="votes">(2645 赞同)</span>
                 <span class="created_time">(2015-08-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/75094169" class="">两岸统一后蒋介石的墓会怎么安排？</a>
+                <a href="https://www.zhihu.com/answer/75094169" class="">两岸统一后蒋介石的墓会怎么安排？</a>
                 <span class="votes">(2553 赞同)</span>
                 <span class="created_time">(2015-12-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/38379893" class="">为什么在中国传统社会中，母亲的兄弟（舅舅）扮演很重要的地位？</a>
+                <a href="https://www.zhihu.com/answer/38379893" class="">为什么在中国传统社会中，母亲的兄弟（舅舅）扮演很重要的地位？</a>
                 <span class="votes">(2425 赞同)</span>
                 <span class="created_time">(2015-01-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/44282663" class="">如何看待「我感激抗日战争的战士们，对于国共内战的战士只能说尊重但不感激」？</a>
+                <a href="https://www.zhihu.com/answer/44282663" class="">如何看待「我感激抗日战争的战士们，对于国共内战的战士只能说尊重但不感激」？</a>
                 <span class="votes">(2373 赞同)</span>
                 <span class="created_time">(2015-04-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/222921020" class="">为何中国不能实行跟美国一样无户籍限制的政策？</a>
+                <a href="https://www.zhihu.com/answer/222921020" class="">为何中国不能实行跟美国一样无户籍限制的政策？</a>
                 <span class="votes">(2157 赞同)</span>
                 <span class="created_time">(2017-08-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/106300192" class="">手术麻醉完成 医生说机器坏了，然后人又被推出来了，医院应该承担怎样的责任？</a>
+                <a href="https://www.zhihu.com/answer/106300192" class="">手术麻醉完成 医生说机器坏了，然后人又被推出来了，医院应该承担怎样的责任？</a>
                 <span class="votes">(1969 赞同)</span>
                 <span class="created_time">(2016-06-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/77228914" class="">如果没有美国的参战，二战时日本会击垮中国吗？</a>
+                <a href="https://www.zhihu.com/answer/77228914" class="">如果没有美国的参战，二战时日本会击垮中国吗？</a>
                 <span class="votes">(1962 赞同)</span>
                 <span class="created_time">(2015-12-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/75255917" class="">如果破壁人崔永元遇到面壁人张召忠，故事会怎样发展？</a>
+                <a href="https://www.zhihu.com/answer/75255917" class="">如果破壁人崔永元遇到面壁人张召忠，故事会怎样发展？</a>
                 <span class="votes">(1708 赞同)</span>
                 <span class="created_time">(2015-12-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/73720155" class="">八年抗战里，37，38年，国军虽英勇但节节败退。为什么日军没有一鼓作气打下去，而是让战争转为战略相持？</a>
+                <a href="https://www.zhihu.com/answer/73720155" class="">八年抗战里，37，38年，国军虽英勇但节节败退。为什么日军没有一鼓作气打下去，而是让战争转为战略相持？</a>
                 <span class="votes">(1704 赞同)</span>
                 <span class="created_time">(2015-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/223480303" class="">为什么部分国人追捧资本主义？</a>
+                <a href="https://www.zhihu.com/answer/223480303" class="">为什么部分国人追捧资本主义？</a>
                 <span class="votes">(1505 赞同)</span>
                 <span class="created_time">(2017-08-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/69554270" class="">如何看待山东聊城某小学取消一年级二年级的数学课？</a>
+                <a href="https://www.zhihu.com/answer/69554270" class="">如何看待山东聊城某小学取消一年级二年级的数学课？</a>
                 <span class="votes">(1310 赞同)</span>
                 <span class="created_time">(2015-10-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/477761011" class="">如何看待滴滴再次出现温州女孩搭乘顺风车遇害事件？有哪些措施能避免此类事件发生？</a>
+                <a href="https://www.zhihu.com/answer/477761011" class="">如何看待滴滴再次出现温州女孩搭乘顺风车遇害事件？有哪些措施能避免此类事件发生？</a>
                 <span class="votes">(1277 赞同)</span>
                 <span class="created_time">(2018-08-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/408395045" class="">如果崔永元曝光的大小合同是真，那涉事人员需补缴多少税？有坐牢风险吗？</a>
+                <a href="https://www.zhihu.com/answer/408395045" class="">如果崔永元曝光的大小合同是真，那涉事人员需补缴多少税？有坐牢风险吗？</a>
                 <span class="votes">(1251 赞同)</span>
                 <span class="created_time">(2018-06-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/140728744" class="">很多被停产企业的工人反对治理雾霾，他们是文明社会的敌人吗？</a>
+                <a href="https://www.zhihu.com/answer/140728744" class="">很多被停产企业的工人反对治理雾霾，他们是文明社会的敌人吗？</a>
                 <span class="votes">(1227 赞同)</span>
                 <span class="created_time">(2017-01-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/60602221" class="">什么叫「低智商的善良」？</a>
+                <a href="https://www.zhihu.com/answer/60602221" class="">什么叫「低智商的善良」？</a>
                 <span class="votes">(1207 赞同)</span>
                 <span class="created_time">(2015-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/69737234" class="">历史课上，说太平天国运动失败说明农民阶级救不了中国，维新运动说明改良派救不了中国。这样的逻辑是否有错?</a>
+                <a href="https://www.zhihu.com/answer/69737234" class="">历史课上，说太平天国运动失败说明农民阶级救不了中国，维新运动说明改良派救不了中国。这样的逻辑是否有错?</a>
                 <span class="votes">(1168 赞同)</span>
                 <span class="created_time">(2015-10-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/58346037" class="">为什么要分社和资，无产、资产两方面的阶级利益都维护不就得了？</a>
+                <a href="https://www.zhihu.com/answer/58346037" class="">为什么要分社和资，无产、资产两方面的阶级利益都维护不就得了？</a>
                 <span class="votes">(994 赞同)</span>
                 <span class="created_time">(2015-08-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/86925726" class="">如何看待取消高校及医院的事业编制？</a>
+                <a href="https://www.zhihu.com/answer/86925726" class="">如何看待取消高校及医院的事业编制？</a>
                 <span class="votes">(964 赞同)</span>
                 <span class="created_time">(2016-02-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/116023435" class="">毛泽东的诗词放在五代，南北宋会是什么水平？</a>
+                <a href="https://www.zhihu.com/answer/116023435" class="">毛泽东的诗词放在五代，南北宋会是什么水平？</a>
                 <span class="votes">(960 赞同)</span>
                 <span class="created_time">(2016-08-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/446383131" class="">穷人和富人会进化为两种生物么？有生殖隔离的那种？</a>
+                <a href="https://www.zhihu.com/answer/446383131" class="">穷人和富人会进化为两种生物么？有生殖隔离的那种？</a>
                 <span class="votes">(907 赞同)</span>
                 <span class="created_time">(2018-07-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/123906761" class="">国民党败退台湾后，为何历史教科书上给出的结论是资本主义在中国行不通？有无证据或逻辑推理进行佐证？</a>
+                <a href="https://www.zhihu.com/answer/123906761" class="">国民党败退台湾后，为何历史教科书上给出的结论是资本主义在中国行不通？有无证据或逻辑推理进行佐证？</a>
                 <span class="votes">(898 赞同)</span>
                 <span class="created_time">(2016-09-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/77985086" class="">是否可以以牺牲一个人的代价而救一百个人？</a>
+                <a href="https://www.zhihu.com/answer/77985086" class="">是否可以以牺牲一个人的代价而救一百个人？</a>
                 <span class="votes">(849 赞同)</span>
                 <span class="created_time">(2015-12-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/84363556" class="">如何评价五十年代苏联对华 156 工程的意义?</a>
+                <a href="https://www.zhihu.com/answer/84363556" class="">如何评价五十年代苏联对华 156 工程的意义?</a>
                 <span class="votes">(844 赞同)</span>
                 <span class="created_time">(2016-02-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/472081865" class="">怎么看待医学界急诊泰斗李谋秋老师被外卖员骑车撞伤离世一事？</a>
+                <a href="https://www.zhihu.com/answer/472081865" class="">怎么看待医学界急诊泰斗李谋秋老师被外卖员骑车撞伤离世一事？</a>
                 <span class="votes">(836 赞同)</span>
                 <span class="created_time">(2018-08-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/52537109" class="">为什么狗会有「人权」？</a>
+                <a href="https://www.zhihu.com/answer/52537109" class="">为什么狗会有「人权」？</a>
                 <span class="votes">(819 赞同)</span>
                 <span class="created_time">(2015-06-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/115170535" class="">在美国或西方国家也是凭关系办事儿吗？</a>
+                <a href="https://www.zhihu.com/answer/115170535" class="">在美国或西方国家也是凭关系办事儿吗？</a>
                 <span class="votes">(808 赞同)</span>
                 <span class="created_time">(2016-08-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/68005036" class="">孙悟空西天取经所经历的九九八十一难中，除了弗利萨、沙鲁、魔人布欧还有谁？</a>
+                <a href="https://www.zhihu.com/answer/68005036" class="">孙悟空西天取经所经历的九九八十一难中，除了弗利萨、沙鲁、魔人布欧还有谁？</a>
                 <span class="votes">(799 赞同)</span>
                 <span class="created_time">(2015-10-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/118638876" class="">民警或者持枪巡警在遇到暴力犯罪时鸣枪示警后仍然得不到压制效果，为什么不能朝嫌疑人开枪？</a>
+                <a href="https://www.zhihu.com/answer/118638876" class="">民警或者持枪巡警在遇到暴力犯罪时鸣枪示警后仍然得不到压制效果，为什么不能朝嫌疑人开枪？</a>
                 <span class="votes">(772 赞同)</span>
                 <span class="created_time">(2016-08-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/61274425" class="">是否应该取消对穷人的补贴和福利以激励他们上进？</a>
+                <a href="https://www.zhihu.com/answer/61274425" class="">是否应该取消对穷人的补贴和福利以激励他们上进？</a>
                 <span class="votes">(712 赞同)</span>
                 <span class="created_time">(2015-08-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/49357535" class="">复旦是否经常引起较大的社会争议？如果是，为什么？</a>
+                <a href="https://www.zhihu.com/answer/49357535" class="">复旦是否经常引起较大的社会争议？如果是，为什么？</a>
                 <span class="votes">(646 赞同)</span>
                 <span class="created_time">(2015-05-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/162085608" class="">德国为什么不对1900年侵华道歉反思？</a>
+                <a href="https://www.zhihu.com/answer/162085608" class="">德国为什么不对1900年侵华道歉反思？</a>
                 <span class="votes">(631 赞同)</span>
                 <span class="created_time">(2017-04-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/74868312" class="">为什么有些人对太平天国起义很有看法？</a>
+                <a href="https://www.zhihu.com/answer/74868312" class="">为什么有些人对太平天国起义很有看法？</a>
                 <span class="votes">(519 赞同)</span>
                 <span class="created_time">(2015-12-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/101118345" class="">怎么看待山东青州公交车司机把轿车司机碾烂腿事件？</a>
+                <a href="https://www.zhihu.com/answer/101118345" class="">怎么看待山东青州公交车司机把轿车司机碾烂腿事件？</a>
                 <span class="votes">(498 赞同)</span>
                 <span class="created_time">(2016-05-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/94223275" class="">中国为什么警力严重不足？</a>
+                <a href="https://www.zhihu.com/answer/94223275" class="">中国为什么警力严重不足？</a>
                 <span class="votes">(487 赞同)</span>
                 <span class="created_time">(2016-04-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/287485619" class="">如何看待男子报警寻找出走的12岁妻子？</a>
+                <a href="https://www.zhihu.com/answer/287485619" class="">如何看待男子报警寻找出走的12岁妻子？</a>
                 <span class="votes">(466 赞同)</span>
                 <span class="created_time">(2018-01-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/157898410" class="">若前苏联重视发展轻工业而不是重工业会如何？</a>
+                <a href="https://www.zhihu.com/answer/157898410" class="">若前苏联重视发展轻工业而不是重工业会如何？</a>
                 <span class="votes">(435 赞同)</span>
                 <span class="created_time">(2017-04-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57766496" class="">如何评价“群众办寿宴需满70周岁”？</a>
+                <a href="https://www.zhihu.com/answer/57766496" class="">如何评价“群众办寿宴需满70周岁”？</a>
                 <span class="votes">(405 赞同)</span>
                 <span class="created_time">(2015-08-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/71888750" class="">现在的中国还「民智未开」么？</a>
+                <a href="https://www.zhihu.com/answer/71888750" class="">现在的中国还「民智未开」么？</a>
                 <span class="votes">(405 赞同)</span>
                 <span class="created_time">(2015-11-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/71855536" class="">上世纪初的中国真的不适合资本主义吗？</a>
+                <a href="https://www.zhihu.com/answer/71855536" class="">上世纪初的中国真的不适合资本主义吗？</a>
                 <span class="votes">(401 赞同)</span>
                 <span class="created_time">(2015-11-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/113719681" class="">如何看待中穆网文章《无神论是人类道德败坏的根源》？</a>
+                <a href="https://www.zhihu.com/answer/113719681" class="">如何看待中穆网文章《无神论是人类道德败坏的根源》？</a>
                 <span class="votes">(382 赞同)</span>
                 <span class="created_time">(2016-07-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/445880870" class="">知识是打破阶级的最佳武器，那为什么今天获取知识越来越方便，而整个社会的阶级固化越来越严重？</a>
+                <a href="https://www.zhihu.com/answer/445880870" class="">知识是打破阶级的最佳武器，那为什么今天获取知识越来越方便，而整个社会的阶级固化越来越严重？</a>
                 <span class="votes">(371 赞同)</span>
                 <span class="created_time">(2018-07-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/83633531" class="">写不出数据结构的人是不是不适合编程？</a>
+                <a href="https://www.zhihu.com/answer/83633531" class="">写不出数据结构的人是不是不适合编程？</a>
                 <span class="votes">(355 赞同)</span>
                 <span class="created_time">(2016-01-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/90204191" class="">遇到大病（尤指费用高昂但可能治愈的疾病），贫者能做的是否只是等死？</a>
+                <a href="https://www.zhihu.com/answer/90204191" class="">遇到大病（尤指费用高昂但可能治愈的疾病），贫者能做的是否只是等死？</a>
                 <span class="votes">(350 赞同)</span>
                 <span class="created_time">(2016-03-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/456212416" class="">为什么女权主义从几年前的政治正确红线沦落到今天被大众质疑甚至踩的地步?</a>
+                <a href="https://www.zhihu.com/answer/456212416" class="">为什么女权主义从几年前的政治正确红线沦落到今天被大众质疑甚至踩的地步?</a>
                 <span class="votes">(344 赞同)</span>
                 <span class="created_time">(2018-07-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/454315152" class="">为什么政治经济学在高校地位没有「西方经济学」重要？</a>
+                <a href="https://www.zhihu.com/answer/454315152" class="">为什么政治经济学在高校地位没有「西方经济学」重要？</a>
                 <span class="votes">(332 赞同)</span>
                 <span class="created_time">(2018-07-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88020416" class="">如何看待新闻“高校尖子生保研失败 只因本科非211出身”？</a>
+                <a href="https://www.zhihu.com/answer/88020416" class="">如何看待新闻“高校尖子生保研失败 只因本科非211出身”？</a>
                 <span class="votes">(331 赞同)</span>
                 <span class="created_time">(2016-02-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/99799640" class="">如何评价《媒体人，请放下你恶意的偏见！男子出院后右肾"失踪"的真相!附院方声明！》？</a>
+                <a href="https://www.zhihu.com/answer/99799640" class="">如何评价《媒体人，请放下你恶意的偏见！男子出院后右肾"失踪"的真相!附院方声明！》？</a>
                 <span class="votes">(329 赞同)</span>
                 <span class="created_time">(2016-05-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/119706857" class="">现阶段只有私有制才能调动人的积极性吗？</a>
+                <a href="https://www.zhihu.com/answer/119706857" class="">现阶段只有私有制才能调动人的积极性吗？</a>
                 <span class="votes">(324 赞同)</span>
                 <span class="created_time">(2016-08-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57095375" class="">中国的社会问题究竟是和欧美国家『都一样』，还是『国情不同』？</a>
+                <a href="https://www.zhihu.com/answer/57095375" class="">中国的社会问题究竟是和欧美国家『都一样』，还是『国情不同』？</a>
                 <span class="votes">(312 赞同)</span>
                 <span class="created_time">(2015-07-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/70910386" class="">淘宝买衣服，确认收货后发现双十一有折扣，要求退差价被拒绝。商家有没有问题？</a>
+                <a href="https://www.zhihu.com/answer/70910386" class="">淘宝买衣服，确认收货后发现双十一有折扣，要求退差价被拒绝。商家有没有问题？</a>
                 <span class="votes">(311 赞同)</span>
                 <span class="created_time">(2015-11-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/293142456" class="">若没有清军入关，明内阁制度和资本主义萌芽会进一步发展吗，中国可能跳过半殖半封过渡到君主立宪/共和吗？</a>
+                <a href="https://www.zhihu.com/answer/293142456" class="">若没有清军入关，明内阁制度和资本主义萌芽会进一步发展吗，中国可能跳过半殖半封过渡到君主立宪/共和吗？</a>
                 <span class="votes">(305 赞同)</span>
                 <span class="created_time">(2018-01-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/235689678" class="">如何看待个别中国蒙古族使用蒙古国国旗？</a>
+                <a href="https://www.zhihu.com/answer/235689678" class="">如何看待个别中国蒙古族使用蒙古国国旗？</a>
                 <span class="votes">(292 赞同)</span>
                 <span class="created_time">(2017-09-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56124709" class="">如何评价某些网友呼吁用「叛国罪」和《国家安全法》来惩罚打伤爱国青年侯聚森的人，却被公安部门拒绝？</a>
+                <a href="https://www.zhihu.com/answer/56124709" class="">如何评价某些网友呼吁用「叛国罪」和《国家安全法》来惩罚打伤爱国青年侯聚森的人，却被公安部门拒绝？</a>
                 <span class="votes">(292 赞同)</span>
                 <span class="created_time">(2015-07-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/85295805" class="">历史上发生过哪些著名的「老司机翻车」事件？</a>
+                <a href="https://www.zhihu.com/answer/85295805" class="">历史上发生过哪些著名的「老司机翻车」事件？</a>
                 <span class="votes">(281 赞同)</span>
                 <span class="created_time">(2016-02-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/108112945" class="">如何看待江西高中教科书称女孩婚前性行为“会被‘征服’她的男孩认为她‘下贱’”?</a>
+                <a href="https://www.zhihu.com/answer/108112945" class="">如何看待江西高中教科书称女孩婚前性行为“会被‘征服’她的男孩认为她‘下贱’”?</a>
                 <span class="votes">(272 赞同)</span>
                 <span class="created_time">(2016-06-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/103638885" class="">当下中国有哪些反智主义的现象？</a>
+                <a href="https://www.zhihu.com/answer/103638885" class="">当下中国有哪些反智主义的现象？</a>
                 <span class="votes">(258 赞同)</span>
                 <span class="created_time">(2016-05-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/421871422" class="">法律应坚持「宁杀错不放过」还是「宁放过不杀错」？</a>
+                <a href="https://www.zhihu.com/answer/421871422" class="">法律应坚持「宁杀错不放过」还是「宁放过不杀错」？</a>
                 <span class="votes">(251 赞同)</span>
                 <span class="created_time">(2018-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/163621954" class="">如何看待在双方同意的前提下，香港父女乱伦，被判有罪？</a>
+                <a href="https://www.zhihu.com/answer/163621954" class="">如何看待在双方同意的前提下，香港父女乱伦，被判有罪？</a>
                 <span class="votes">(230 赞同)</span>
                 <span class="created_time">(2017-05-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88185868" class="">历史上，普通百姓是否有尊严？</a>
+                <a href="https://www.zhihu.com/answer/88185868" class="">历史上，普通百姓是否有尊严？</a>
                 <span class="votes">(228 赞同)</span>
                 <span class="created_time">(2016-02-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/348676680" class="">为什么剥削没有被资本家之间竞争消除？</a>
+                <a href="https://www.zhihu.com/answer/348676680" class="">为什么剥削没有被资本家之间竞争消除？</a>
                 <span class="votes">(228 赞同)</span>
                 <span class="created_time">(2018-03-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/92135292" class="">老人就医的时候，一定要要求他们必须说普通话吗？</a>
+                <a href="https://www.zhihu.com/answer/92135292" class="">老人就医的时候，一定要要求他们必须说普通话吗？</a>
                 <span class="votes">(225 赞同)</span>
                 <span class="created_time">(2016-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/73886901" class="">华尔街究竟犯下了什么罪？为什么美国上下对他们喊打喊杀？这么做真的好吗？</a>
+                <a href="https://www.zhihu.com/answer/73886901" class="">华尔街究竟犯下了什么罪？为什么美国上下对他们喊打喊杀？这么做真的好吗？</a>
                 <span class="votes">(218 赞同)</span>
                 <span class="created_time">(2015-11-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/61022886" class="">如何看待四川清江杀狗令？</a>
+                <a href="https://www.zhihu.com/answer/61022886" class="">如何看待四川清江杀狗令？</a>
                 <span class="votes">(216 赞同)</span>
                 <span class="created_time">(2015-08-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/122865993" class="">如何看待「中国取消农业与非农业户口区别」？</a>
+                <a href="https://www.zhihu.com/answer/122865993" class="">如何看待「中国取消农业与非农业户口区别」？</a>
                 <span class="votes">(214 赞同)</span>
                 <span class="created_time">(2016-09-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/43130698" class="">所谓“被逼成自干五”或“被五毛”是什么情况？</a>
+                <a href="https://www.zhihu.com/answer/43130698" class="">所谓“被逼成自干五”或“被五毛”是什么情况？</a>
                 <span class="votes">(214 赞同)</span>
                 <span class="created_time">(2015-03-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/84358788" class="">如何评价深圳 13 岁阿玛尼少年在两会呼吁「不要让一张考卷决定未来」？</a>
+                <a href="https://www.zhihu.com/answer/84358788" class="">如何评价深圳 13 岁阿玛尼少年在两会呼吁「不要让一张考卷决定未来」？</a>
                 <span class="votes">(211 赞同)</span>
                 <span class="created_time">(2016-02-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/90251576" class="">我们无法战胜民科吗？</a>
+                <a href="https://www.zhihu.com/answer/90251576" class="">我们无法战胜民科吗？</a>
                 <span class="votes">(209 赞同)</span>
                 <span class="created_time">(2016-03-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/70062491" class="">站在巨人的肩膀上，如果巨人错了呢？</a>
+                <a href="https://www.zhihu.com/answer/70062491" class="">站在巨人的肩膀上，如果巨人错了呢？</a>
                 <span class="votes">(208 赞同)</span>
                 <span class="created_time">(2015-10-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/98678810" class="">在「魏则西事件」中，除了抵制百度，还有哪些更重要的事情？</a>
+                <a href="https://www.zhihu.com/answer/98678810" class="">在「魏则西事件」中，除了抵制百度，还有哪些更重要的事情？</a>
                 <span class="votes">(207 赞同)</span>
                 <span class="created_time">(2016-05-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/42335480" class="">当代中国奶农倒掉牛奶和美国资本主义倒掉牛奶有什么不同？</a>
+                <a href="https://www.zhihu.com/answer/42335480" class="">当代中国奶农倒掉牛奶和美国资本主义倒掉牛奶有什么不同？</a>
                 <span class="votes">(205 赞同)</span>
                 <span class="created_time">(2015-03-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/79891191" class="">怎么看待甘肃永昌 2015 年 12 月 28 日发生的少女超市偷窃后坠楼事件？</a>
+                <a href="https://www.zhihu.com/answer/79891191" class="">怎么看待甘肃永昌 2015 年 12 月 28 日发生的少女超市偷窃后坠楼事件？</a>
                 <span class="votes">(187 赞同)</span>
                 <span class="created_time">(2016-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/406985963" class="">国人法律意识淡薄的原因在哪里？</a>
+                <a href="https://www.zhihu.com/answer/406985963" class="">国人法律意识淡薄的原因在哪里？</a>
                 <span class="votes">(180 赞同)</span>
                 <span class="created_time">(2018-06-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/53392879" class="">有哪些值得用的日本货？</a>
+                <a href="https://www.zhihu.com/answer/53392879" class="">有哪些值得用的日本货？</a>
                 <span class="votes">(179 赞同)</span>
                 <span class="created_time">(2015-07-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/86743941" class="">如果你是《饥饿游戏》中的「斯诺」总统你会怎样维持这个社会？</a>
+                <a href="https://www.zhihu.com/answer/86743941" class="">如果你是《饥饿游戏》中的「斯诺」总统你会怎样维持这个社会？</a>
                 <span class="votes">(177 赞同)</span>
                 <span class="created_time">(2016-02-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/52622886" class="">为何十二名中国留学生在美国殴打虐待他人被判终生监禁而我国类似事件的处理方式通常却是批评教育民事赔偿？</a>
+                <a href="https://www.zhihu.com/answer/52622886" class="">为何十二名中国留学生在美国殴打虐待他人被判终生监禁而我国类似事件的处理方式通常却是批评教育民事赔偿？</a>
                 <span class="votes">(177 赞同)</span>
                 <span class="created_time">(2015-06-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/50826548" class="">一个成年男子真的有能力强奸一个健康女子吗？</a>
+                <a href="https://www.zhihu.com/answer/50826548" class="">一个成年男子真的有能力强奸一个健康女子吗？</a>
                 <span class="votes">(173 赞同)</span>
                 <span class="created_time">(2015-06-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/108773163" class="">如何评价挪威人布雷维克？</a>
+                <a href="https://www.zhihu.com/answer/108773163" class="">如何评价挪威人布雷维克？</a>
                 <span class="votes">(172 赞同)</span>
                 <span class="created_time">(2016-07-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/68376307" class="">为什么越来越多的人不信任中医（传统医学）？</a>
+                <a href="https://www.zhihu.com/answer/68376307" class="">为什么越来越多的人不信任中医（传统医学）？</a>
                 <span class="votes">(169 赞同)</span>
                 <span class="created_time">(2015-10-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/64749950" class="">为什么选择留在农村种地的中国农民越来越少？</a>
+                <a href="https://www.zhihu.com/answer/64749950" class="">为什么选择留在农村种地的中国农民越来越少？</a>
                 <span class="votes">(168 赞同)</span>
                 <span class="created_time">(2015-09-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/89080995" class="">乞讨本身有错么？</a>
+                <a href="https://www.zhihu.com/answer/89080995" class="">乞讨本身有错么？</a>
                 <span class="votes">(166 赞同)</span>
                 <span class="created_time">(2016-03-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/83434676" class="">如何看待女子怒骂黄牛将300元挂号费炒到4500事件？</a>
+                <a href="https://www.zhihu.com/answer/83434676" class="">如何看待女子怒骂黄牛将300元挂号费炒到4500事件？</a>
                 <span class="votes">(165 赞同)</span>
                 <span class="created_time">(2016-01-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/223849377" class="">如何评价风靡一时的微信公众号文章《对员工宽容的公司，都死了》？</a>
+                <a href="https://www.zhihu.com/answer/223849377" class="">如何评价风靡一时的微信公众号文章《对员工宽容的公司，都死了》？</a>
                 <span class="votes">(164 赞同)</span>
                 <span class="created_time">(2017-09-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/70591406" class="">就像有很多人不理解古代臣民为什么会听从君主一人一样，我们现在的哪些制度或做法会让后人感觉不理解呢？</a>
+                <a href="https://www.zhihu.com/answer/70591406" class="">就像有很多人不理解古代臣民为什么会听从君主一人一样，我们现在的哪些制度或做法会让后人感觉不理解呢？</a>
                 <span class="votes">(162 赞同)</span>
                 <span class="created_time">(2015-11-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/75601795" class="">作为程序员，你是如何在工作以后找到女朋友的？</a>
+                <a href="https://www.zhihu.com/answer/75601795" class="">作为程序员，你是如何在工作以后找到女朋友的？</a>
                 <span class="votes">(160 赞同)</span>
                 <span class="created_time">(2015-12-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/73500176" class="">你在读历史时读到过哪些关于政治的大实话？</a>
+                <a href="https://www.zhihu.com/answer/73500176" class="">你在读历史时读到过哪些关于政治的大实话？</a>
                 <span class="votes">(157 赞同)</span>
                 <span class="created_time">(2015-11-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/83557603" class="">如何看待北京医院票贩子 300 挂号票卖 4500，被女子怒斥？</a>
+                <a href="https://www.zhihu.com/answer/83557603" class="">如何看待北京医院票贩子 300 挂号票卖 4500，被女子怒斥？</a>
                 <span class="votes">(149 赞同)</span>
                 <span class="created_time">(2016-01-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/352667381" class="">大家是不是因为恐惧才黑女权，女权主义是不是和极端组织一样，名声越臭、反对的人越多、越妖魔化越说明成功？</a>
+                <a href="https://www.zhihu.com/answer/352667381" class="">大家是不是因为恐惧才黑女权，女权主义是不是和极端组织一样，名声越臭、反对的人越多、越妖魔化越说明成功？</a>
                 <span class="votes">(149 赞同)</span>
                 <span class="created_time">(2018-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/71859621" class="">如何客观地评价中国在世界的地位？</a>
+                <a href="https://www.zhihu.com/answer/71859621" class="">如何客观地评价中国在世界的地位？</a>
                 <span class="votes">(146 赞同)</span>
                 <span class="created_time">(2015-11-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/82769631" class="">如何评价英国公民为中国台湾问题请愿？</a>
+                <a href="https://www.zhihu.com/answer/82769631" class="">如何评价英国公民为中国台湾问题请愿？</a>
                 <span class="votes">(146 赞同)</span>
                 <span class="created_time">(2016-01-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/66933165" class="">如何看待网友对「北京夫妻超生6人」的反对鄙夷讽刺的评论？</a>
+                <a href="https://www.zhihu.com/answer/66933165" class="">如何看待网友对「北京夫妻超生6人」的反对鄙夷讽刺的评论？</a>
                 <span class="votes">(145 赞同)</span>
                 <span class="created_time">(2015-10-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/95091205" class="">如何评价蔡英文关于肯尼亚遣返台籍涉案人员至大陆的言论？</a>
+                <a href="https://www.zhihu.com/answer/95091205" class="">如何评价蔡英文关于肯尼亚遣返台籍涉案人员至大陆的言论？</a>
                 <span class="votes">(144 赞同)</span>
                 <span class="created_time">(2016-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/58607216" class="">对于《等着我》里面被拐卖强奸的妇女不愿意认孩子，什么才是正确的三观？</a>
+                <a href="https://www.zhihu.com/answer/58607216" class="">对于《等着我》里面被拐卖强奸的妇女不愿意认孩子，什么才是正确的三观？</a>
                 <span class="votes">(144 赞同)</span>
                 <span class="created_time">(2015-08-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/74044938" class="">如何看待崔永元在微博挂出农大女学生的行为？</a>
+                <a href="https://www.zhihu.com/answer/74044938" class="">如何看待崔永元在微博挂出农大女学生的行为？</a>
                 <span class="votes">(143 赞同)</span>
                 <span class="created_time">(2015-11-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88783042" class="">如何评价新出台的首部《反家暴法》？</a>
+                <a href="https://www.zhihu.com/answer/88783042" class="">如何评价新出台的首部《反家暴法》？</a>
                 <span class="votes">(142 赞同)</span>
                 <span class="created_time">(2016-03-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/80440772" class="">中国古代允许女子入学接受教育吗？</a>
+                <a href="https://www.zhihu.com/answer/80440772" class="">中国古代允许女子入学接受教育吗？</a>
                 <span class="votes">(141 赞同)</span>
                 <span class="created_time">(2016-01-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/427033473" class="">既然说八股制使官员变为皇帝的奴才，为什么大明还能出现像徐阶，张居正一样的人才？文官集团还敢与皇帝作对？</a>
+                <a href="https://www.zhihu.com/answer/427033473" class="">既然说八股制使官员变为皇帝的奴才，为什么大明还能出现像徐阶，张居正一样的人才？文官集团还敢与皇帝作对？</a>
                 <span class="votes">(140 赞同)</span>
                 <span class="created_time">(2018-06-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57900239" class="">在生产力不发达的阶段，没有人权是因为人的价值低于人的消耗吗？</a>
+                <a href="https://www.zhihu.com/answer/57900239" class="">在生产力不发达的阶段，没有人权是因为人的价值低于人的消耗吗？</a>
                 <span class="votes">(138 赞同)</span>
                 <span class="created_time">(2015-08-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/68420546" class="">如果中国受到武力入侵，警察需要做什么？</a>
+                <a href="https://www.zhihu.com/answer/68420546" class="">如果中国受到武力入侵，警察需要做什么？</a>
                 <span class="votes">(137 赞同)</span>
                 <span class="created_time">(2015-10-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/352777948" class="">Java 实习生（月薪 3k-5k 水平）应具备哪些知识、能力？</a>
+                <a href="https://www.zhihu.com/answer/352777948" class="">Java 实习生（月薪 3k-5k 水平）应具备哪些知识、能力？</a>
                 <span class="votes">(137 赞同)</span>
                 <span class="created_time">(2018-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/80028861" class="">英雄变恶龙这段话怎么解读？</a>
+                <a href="https://www.zhihu.com/answer/80028861" class="">英雄变恶龙这段话怎么解读？</a>
                 <span class="votes">(131 赞同)</span>
                 <span class="created_time">(2016-01-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/69434351" class="">当孩子问起什么是“文化大革命”时，我们能说些什么？</a>
+                <a href="https://www.zhihu.com/answer/69434351" class="">当孩子问起什么是“文化大革命”时，我们能说些什么？</a>
                 <span class="votes">(129 赞同)</span>
                 <span class="created_time">(2015-10-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/453623576" class="">是不是只要女性觉得男性让自己不舒服就是男性性骚扰？</a>
+                <a href="https://www.zhihu.com/answer/453623576" class="">是不是只要女性觉得男性让自己不舒服就是男性性骚扰？</a>
                 <span class="votes">(129 赞同)</span>
                 <span class="created_time">(2018-07-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/62480580" class="">沙滩叙利亚儿童浮尸这样的难民悲剧，能否成为难民选择涌进德国现象的合理化原因？</a>
+                <a href="https://www.zhihu.com/answer/62480580" class="">沙滩叙利亚儿童浮尸这样的难民悲剧，能否成为难民选择涌进德国现象的合理化原因？</a>
                 <span class="votes">(125 赞同)</span>
                 <span class="created_time">(2015-09-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/233445664" class="">如今流行说封建社会在秦帝国建立的时候就已经结束，为什么有教科书还把之后称为封建社会？</a>
+                <a href="https://www.zhihu.com/answer/233445664" class="">如今流行说封建社会在秦帝国建立的时候就已经结束，为什么有教科书还把之后称为封建社会？</a>
                 <span class="votes">(122 赞同)</span>
                 <span class="created_time">(2017-09-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/131109004" class="">如何看待特朗普公开招聘 4000 名政府高官职位？</a>
+                <a href="https://www.zhihu.com/answer/131109004" class="">如何看待特朗普公开招聘 4000 名政府高官职位？</a>
                 <span class="votes">(120 赞同)</span>
                 <span class="created_time">(2016-11-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/49273323" class="">如何看待「中国是母亲，香港是孩子」的比喻？</a>
+                <a href="https://www.zhihu.com/answer/49273323" class="">如何看待「中国是母亲，香港是孩子」的比喻？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2015-05-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/74786881" class="">我在中国境内被外国人强奸，该怎么办？</a>
+                <a href="https://www.zhihu.com/answer/74786881" class="">我在中国境内被外国人强奸，该怎么办？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2015-12-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/89062328" class="">假如有学生色诱不成，污蔑异性教授猥亵他/她该怎么办？</a>
+                <a href="https://www.zhihu.com/answer/89062328" class="">假如有学生色诱不成，污蔑异性教授猥亵他/她该怎么办？</a>
                 <span class="votes">(111 赞同)</span>
                 <span class="created_time">(2016-03-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/61041480" class="">如何评价武陟一汉民因煽动民族仇恨、民族歧视获刑二年，而村民冲击政府机关无罪？</a>
+                <a href="https://www.zhihu.com/answer/61041480" class="">如何评价武陟一汉民因煽动民族仇恨、民族歧视获刑二年，而村民冲击政府机关无罪？</a>
                 <span class="votes">(110 赞同)</span>
                 <span class="created_time">(2015-08-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/109265642" class="">如何评价文章「刘慈欣：为了生存，我们该不该吃掉一个美女？」？</a>
+                <a href="https://www.zhihu.com/answer/109265642" class="">如何评价文章「刘慈欣：为了生存，我们该不该吃掉一个美女？」？</a>
                 <span class="votes">(109 赞同)</span>
                 <span class="created_time">(2016-07-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/523614452" class="">如何看待重庆公交车坠江事故原因为“乘客与司机激烈争执互殴致车辆失控”？</a>
+                <a href="https://www.zhihu.com/answer/523614452" class="">如何看待重庆公交车坠江事故原因为“乘客与司机激烈争执互殴致车辆失控”？</a>
                 <span class="votes">(108 赞同)</span>
                 <span class="created_time">(2018-11-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/117330585" class="">如果你是马蓉和宋喆的公关团队，该如何化解这次婚内出轨遭到全民谩骂的危机？</a>
+                <a href="https://www.zhihu.com/answer/117330585" class="">如果你是马蓉和宋喆的公关团队，该如何化解这次婚内出轨遭到全民谩骂的危机？</a>
                 <span class="votes">(106 赞同)</span>
                 <span class="created_time">(2016-08-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/89893260" class="">怎么看待大众司机违章变道，被比亚迪司机碰翻一事？</a>
+                <a href="https://www.zhihu.com/answer/89893260" class="">怎么看待大众司机违章变道，被比亚迪司机碰翻一事？</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2016-03-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56090280" class="">如何评价《中国伐木工被缅甸判无期徒刑》？</a>
+                <a href="https://www.zhihu.com/answer/56090280" class="">如何评价《中国伐木工被缅甸判无期徒刑》？</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2015-07-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/65033780" class="">加入中国共产党有什么用？为什么这么多的人加入中国共产党？</a>
+                <a href="https://www.zhihu.com/answer/65033780" class="">加入中国共产党有什么用？为什么这么多的人加入中国共产党？</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2015-09-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57771974" class="">网络上那多人暗讽，明骂政府，算不算精神毒瘾?</a>
+                <a href="https://www.zhihu.com/answer/57771974" class="">网络上那多人暗讽，明骂政府，算不算精神毒瘾?</a>
                 <span class="votes">(101 赞同)</span>
                 <span class="created_time">(2015-08-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/73680428" class="">如何看待小学生直播 LOL 月入三万这件事？</a>
+                <a href="https://www.zhihu.com/answer/73680428" class="">如何看待小学生直播 LOL 月入三万这件事？</a>
                 <span class="votes">(100 赞同)</span>
                 <span class="created_time">(2015-11-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/72955261" class="">为什么二战后国际社会禁止在战争中使用“达姆弹”等武器？战争的目的不就是使用任何方式消灭对方吗？</a>
+                <a href="https://www.zhihu.com/answer/72955261" class="">为什么二战后国际社会禁止在战争中使用“达姆弹”等武器？战争的目的不就是使用任何方式消灭对方吗？</a>
                 <span class="votes">(99 赞同)</span>
                 <span class="created_time">(2015-11-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/513378229" class="">宁波高新区一男子因邻居狗吠协商未果，入室杀人导致三死一伤。如何看待这一行为本身以及对社会的影响？</a>
+                <a href="https://www.zhihu.com/answer/513378229" class="">宁波高新区一男子因邻居狗吠协商未果，入室杀人导致三死一伤。如何看待这一行为本身以及对社会的影响？</a>
                 <span class="votes">(98 赞同)</span>
                 <span class="created_time">(2018-10-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/46344626" class="">为什么知乎里讨论抗日战争很激烈，讨论文革却一边倒？</a>
+                <a href="https://www.zhihu.com/answer/46344626" class="">为什么知乎里讨论抗日战争很激烈，讨论文革却一边倒？</a>
                 <span class="votes">(97 赞同)</span>
                 <span class="created_time">(2015-04-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87824060" class="">秦朝、隋朝和新莽都有强大的武力和很多开创性的贡献，为什么却都不牢靠？</a>
+                <a href="https://www.zhihu.com/answer/87824060" class="">秦朝、隋朝和新莽都有强大的武力和很多开创性的贡献，为什么却都不牢靠？</a>
                 <span class="votes">(93 赞同)</span>
                 <span class="created_time">(2016-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57180300" class="">如何评价该文《人民日报刊文评郜艳敏事件：别消费他人的不幸，避免二次伤害》？</a>
+                <a href="https://www.zhihu.com/answer/57180300" class="">如何评价该文《人民日报刊文评郜艳敏事件：别消费他人的不幸，避免二次伤害》？</a>
                 <span class="votes">(92 赞同)</span>
                 <span class="created_time">(2015-07-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/345550269" class="">如果社会如「水至清」会怎样？</a>
+                <a href="https://www.zhihu.com/answer/345550269" class="">如果社会如「水至清」会怎样？</a>
                 <span class="votes">(91 赞同)</span>
                 <span class="created_time">(2018-03-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/75962316" class="">汉服从人们的日常着装发展到现在很少人知道到底经历了什么?</a>
+                <a href="https://www.zhihu.com/answer/75962316" class="">汉服从人们的日常着装发展到现在很少人知道到底经历了什么?</a>
                 <span class="votes">(91 赞同)</span>
                 <span class="created_time">(2015-12-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/312708082" class="">为什么这么多文科生想转行做 IT？</a>
+                <a href="https://www.zhihu.com/answer/312708082" class="">为什么这么多文科生想转行做 IT？</a>
                 <span class="votes">(91 赞同)</span>
                 <span class="created_time">(2018-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88873016" class="">如何看待澎湃新闻《薛仁明：我们被科学主义洗脑得多彻底，连拿三柱香都觉得愚蠢》？</a>
+                <a href="https://www.zhihu.com/answer/88873016" class="">如何看待澎湃新闻《薛仁明：我们被科学主义洗脑得多彻底，连拿三柱香都觉得愚蠢》？</a>
                 <span class="votes">(88 赞同)</span>
                 <span class="created_time">(2016-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/66919731" class="">社会主义和资本主义的根本冲突是什么？</a>
+                <a href="https://www.zhihu.com/answer/66919731" class="">社会主义和资本主义的根本冲突是什么？</a>
                 <span class="votes">(87 赞同)</span>
                 <span class="created_time">(2015-10-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/55409200" class="">爱国究竟要怎么爱？</a>
+                <a href="https://www.zhihu.com/answer/55409200" class="">爱国究竟要怎么爱？</a>
                 <span class="votes">(87 赞同)</span>
                 <span class="created_time">(2015-07-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/69747579" class="">怎么评价被称为「中国最小诗人」的梁胜杰？</a>
+                <a href="https://www.zhihu.com/answer/69747579" class="">怎么评价被称为「中国最小诗人」的梁胜杰？</a>
                 <span class="votes">(86 赞同)</span>
                 <span class="created_time">(2015-10-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87996706" class="">社科领域有哪些民科的例子？</a>
+                <a href="https://www.zhihu.com/answer/87996706" class="">社科领域有哪些民科的例子？</a>
                 <span class="votes">(84 赞同)</span>
                 <span class="created_time">(2016-02-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57175827" class="">如何评价该报道《郜艳敏：应该追究人贩子，而不是我家人》？</a>
+                <a href="https://www.zhihu.com/answer/57175827" class="">如何评价该报道《郜艳敏：应该追究人贩子，而不是我家人》？</a>
                 <span class="votes">(83 赞同)</span>
                 <span class="created_time">(2015-07-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/99782274" class="">如何看待广东省人民医院口腔科主任被砍事件？</a>
+                <a href="https://www.zhihu.com/answer/99782274" class="">如何看待广东省人民医院口腔科主任被砍事件？</a>
                 <span class="votes">(79 赞同)</span>
                 <span class="created_time">(2016-05-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/89571745" class="">为什么经常出现数理天才，却少有化学天才呢？</a>
+                <a href="https://www.zhihu.com/answer/89571745" class="">为什么经常出现数理天才，却少有化学天才呢？</a>
                 <span class="votes">(79 赞同)</span>
                 <span class="created_time">(2016-03-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/63870088" class="">随着科技发展，武力差距越来越大，是不是起义或者说反抗这种事会越来越难？</a>
+                <a href="https://www.zhihu.com/answer/63870088" class="">随着科技发展，武力差距越来越大，是不是起义或者说反抗这种事会越来越难？</a>
                 <span class="votes">(77 赞同)</span>
                 <span class="created_time">(2015-09-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/71061693" class="">如何评价环球时报的《莫用翻旧账否定今天的中俄关系》?</a>
+                <a href="https://www.zhihu.com/answer/71061693" class="">如何评价环球时报的《莫用翻旧账否定今天的中俄关系》?</a>
                 <span class="votes">(77 赞同)</span>
                 <span class="created_time">(2015-11-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/68830558" class="">中药怎么才能喝出咖啡的感觉？</a>
+                <a href="https://www.zhihu.com/answer/68830558" class="">中药怎么才能喝出咖啡的感觉？</a>
                 <span class="votes">(73 赞同)</span>
                 <span class="created_time">(2015-10-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/68011774" class="">共产主义好不好？</a>
+                <a href="https://www.zhihu.com/answer/68011774" class="">共产主义好不好？</a>
                 <span class="votes">(71 赞同)</span>
                 <span class="created_time">(2015-10-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/37911001" class="">为什么底层出身的帝王建国后都要杀戮功臣？</a>
+                <a href="https://www.zhihu.com/answer/37911001" class="">为什么底层出身的帝王建国后都要杀戮功臣？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2015-01-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/54494760" class="">如何评价「公安部25年来首次高调救市 调查10余家机构」？</a>
+                <a href="https://www.zhihu.com/answer/54494760" class="">如何评价「公安部25年来首次高调救市 调查10余家机构」？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2015-07-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/88580127" class="">如何评价昌平法官被杀案大部分网友叫好的评论？</a>
+                <a href="https://www.zhihu.com/answer/88580127" class="">如何评价昌平法官被杀案大部分网友叫好的评论？</a>
                 <span class="votes">(68 赞同)</span>
                 <span class="created_time">(2016-02-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/53266067" class="">地理科学大一学生即将分专业，“人文地理与城乡规划专业”和“地理信息系统（科学）”专业哪一个更好？</a>
+                <a href="https://www.zhihu.com/answer/53266067" class="">地理科学大一学生即将分专业，“人文地理与城乡规划专业”和“地理信息系统（科学）”专业哪一个更好？</a>
                 <span class="votes">(66 赞同)</span>
                 <span class="created_time">(2015-06-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/82445279" class="">如何看待 2016 年 1 月 18 日的天津出租车行业罢工？</a>
+                <a href="https://www.zhihu.com/answer/82445279" class="">如何看待 2016 年 1 月 18 日的天津出租车行业罢工？</a>
                 <span class="votes">(65 赞同)</span>
                 <span class="created_time">(2016-01-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/46995553" class="">现在世界上还有多少国家有地主，为什么不搞土地改革斗地主？</a>
+                <a href="https://www.zhihu.com/answer/46995553" class="">现在世界上还有多少国家有地主，为什么不搞土地改革斗地主？</a>
                 <span class="votes">(64 赞同)</span>
                 <span class="created_time">(2015-05-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/64965142" class="">对文科生来说，有哪些自然科学类书籍是值得一读的？</a>
+                <a href="https://www.zhihu.com/answer/64965142" class="">对文科生来说，有哪些自然科学类书籍是值得一读的？</a>
                 <span class="votes">(64 赞同)</span>
                 <span class="created_time">(2015-09-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/55886330" class="">如果在梦里为所欲为，无恶不作，你自己会遭受道德的谴责么？</a>
+                <a href="https://www.zhihu.com/answer/55886330" class="">如果在梦里为所欲为，无恶不作，你自己会遭受道德的谴责么？</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2015-07-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/67706380" class="">如何看待在北大召开的世界马克思主义大会？</a>
+                <a href="https://www.zhihu.com/answer/67706380" class="">如何看待在北大召开的世界马克思主义大会？</a>
                 <span class="votes">(62 赞同)</span>
                 <span class="created_time">(2015-10-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/55965434" class="">为什么大学里要学毛概马原而不学法律知识呢？</a>
+                <a href="https://www.zhihu.com/answer/55965434" class="">为什么大学里要学毛概马原而不学法律知识呢？</a>
                 <span class="votes">(62 赞同)</span>
                 <span class="created_time">(2015-07-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/70935488" class="">如何评价敌人赞成的我们就反对 敌人反对的我们就赞成？</a>
+                <a href="https://www.zhihu.com/answer/70935488" class="">如何评价敌人赞成的我们就反对 敌人反对的我们就赞成？</a>
                 <span class="votes">(59 赞同)</span>
                 <span class="created_time">(2015-11-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/94065217" class="">为什么这个社会大多教育公民（特别是弱势群体）怎样避免侵害，却极少教育公民（包括潜在罪犯）不实施侵害？</a>
+                <a href="https://www.zhihu.com/answer/94065217" class="">为什么这个社会大多教育公民（特别是弱势群体）怎样避免侵害，却极少教育公民（包括潜在罪犯）不实施侵害？</a>
                 <span class="votes">(56 赞同)</span>
                 <span class="created_time">(2016-04-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/67883206" class="">有人说无论我同不同意他人他的观点，都会尊重其说话的权利。那么对于宗教，恐怖组织民主国家是如何做的呢？</a>
+                <a href="https://www.zhihu.com/answer/67883206" class="">有人说无论我同不同意他人他的观点，都会尊重其说话的权利。那么对于宗教，恐怖组织民主国家是如何做的呢？</a>
                 <span class="votes">(55 赞同)</span>
                 <span class="created_time">(2015-10-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/90078955" class="">如何才能击败AlphaGo？</a>
+                <a href="https://www.zhihu.com/answer/90078955" class="">如何才能击败AlphaGo？</a>
                 <span class="votes">(52 赞同)</span>
                 <span class="created_time">(2016-03-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56224680" class="">百度的初心是什么？</a>
+                <a href="https://www.zhihu.com/answer/56224680" class="">百度的初心是什么？</a>
                 <span class="votes">(49 赞同)</span>
                 <span class="created_time">(2015-07-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/39489499" class="">女性面对性骚扰时该如何保护自己，尤其是职场性骚扰？</a>
+                <a href="https://www.zhihu.com/answer/39489499" class="">女性面对性骚扰时该如何保护自己，尤其是职场性骚扰？</a>
                 <span class="votes">(48 赞同)</span>
                 <span class="created_time">(2015-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/72042961" class="">当前西方的资本主义是如何潜在压榨劳动人民的？</a>
+                <a href="https://www.zhihu.com/answer/72042961" class="">当前西方的资本主义是如何潜在压榨劳动人民的？</a>
                 <span class="votes">(46 赞同)</span>
                 <span class="created_time">(2015-11-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87847070" class="">为什么街区制在之前被很多知友认为是解决堵车的良方，非常支持。但当国家出台街区制之后知友们又大多反对呢？</a>
+                <a href="https://www.zhihu.com/answer/87847070" class="">为什么街区制在之前被很多知友认为是解决堵车的良方，非常支持。但当国家出台街区制之后知友们又大多反对呢？</a>
                 <span class="votes">(45 赞同)</span>
                 <span class="created_time">(2016-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/64887296" class="">如何看待警方认定安徽女生撞老人的依据为“因女生离老人最近”？</a>
+                <a href="https://www.zhihu.com/answer/64887296" class="">如何看待警方认定安徽女生撞老人的依据为“因女生离老人最近”？</a>
                 <span class="votes">(42 赞同)</span>
                 <span class="created_time">(2015-09-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/69428863" class="">如何成为一名合格的社会主义接班人？</a>
+                <a href="https://www.zhihu.com/answer/69428863" class="">如何成为一名合格的社会主义接班人？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2015-10-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57875807" class="">「溥仪眼镜」为何愿意用一个亡国之君作为品牌？</a>
+                <a href="https://www.zhihu.com/answer/57875807" class="">「溥仪眼镜」为何愿意用一个亡国之君作为品牌？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2015-08-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/489484164" class="">如何看待少年娘则国娘这一言论？</a>
+                <a href="https://www.zhihu.com/answer/489484164" class="">如何看待少年娘则国娘这一言论？</a>
                 <span class="votes">(40 赞同)</span>
                 <span class="created_time">(2018-09-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56795747" class="">怎么评价有人在知乎恶意引导侯聚森事件舆论？</a>
+                <a href="https://www.zhihu.com/answer/56795747" class="">怎么评价有人在知乎恶意引导侯聚森事件舆论？</a>
                 <span class="votes">(38 赞同)</span>
                 <span class="created_time">(2015-07-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/89568910" class="">如何看待「高三男生对同班女生下春药，并在事后威胁如果告发就下砒霜」的欺凌事件？</a>
+                <a href="https://www.zhihu.com/answer/89568910" class="">如何看待「高三男生对同班女生下春药，并在事后威胁如果告发就下砒霜」的欺凌事件？</a>
                 <span class="votes">(38 赞同)</span>
                 <span class="created_time">(2016-03-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56958296" class="">中华人民共和国公民能真正为「最美乡村教师候选郜艳敏」做什么？</a>
+                <a href="https://www.zhihu.com/answer/56958296" class="">中华人民共和国公民能真正为「最美乡村教师候选郜艳敏」做什么？</a>
                 <span class="votes">(37 赞同)</span>
                 <span class="created_time">(2015-07-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/511160085" class="">如何评价「你首先是一个中国人」？</a>
+                <a href="https://www.zhihu.com/answer/511160085" class="">如何评价「你首先是一个中国人」？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2018-10-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/83752267" class="">黄牛存在真是因为挂号费低吗？</a>
+                <a href="https://www.zhihu.com/answer/83752267" class="">黄牛存在真是因为挂号费低吗？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2016-01-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/63725513" class="">为什么入党前的培训不讲资本论这类经典？</a>
+                <a href="https://www.zhihu.com/answer/63725513" class="">为什么入党前的培训不讲资本论这类经典？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2015-09-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/61179529" class="">如何看待最近那么多村民路人哄抢他人财物这一现象？</a>
+                <a href="https://www.zhihu.com/answer/61179529" class="">如何看待最近那么多村民路人哄抢他人财物这一现象？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2015-08-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/55992660" class="">怎么看待微博上有人喜欢张口闭口骂别人圣母婊？</a>
+                <a href="https://www.zhihu.com/answer/55992660" class="">怎么看待微博上有人喜欢张口闭口骂别人圣母婊？</a>
                 <span class="votes">(35 赞同)</span>
                 <span class="created_time">(2015-07-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/62645256" class="">如何看待南京宝马案司机被定为急性短暂性精神障碍？</a>
+                <a href="https://www.zhihu.com/answer/62645256" class="">如何看待南京宝马案司机被定为急性短暂性精神障碍？</a>
                 <span class="votes">(33 赞同)</span>
                 <span class="created_time">(2015-09-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87853234" class="">《寂寞空庭春欲晚》中康熙和纳兰容若一起长大，历史上也是吗？</a>
+                <a href="https://www.zhihu.com/answer/87853234" class="">《寂寞空庭春欲晚》中康熙和纳兰容若一起长大，历史上也是吗？</a>
                 <span class="votes">(32 赞同)</span>
                 <span class="created_time">(2016-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/48618865" class="">请问这种大学生被流动烧烤摊小贩殴打事件怎么处理比较合适？</a>
+                <a href="https://www.zhihu.com/answer/48618865" class="">请问这种大学生被流动烧烤摊小贩殴打事件怎么处理比较合适？</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2015-05-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/92185137" class="">「眼睛是心灵的窗户」这句话有什么科学依据么？</a>
+                <a href="https://www.zhihu.com/answer/92185137" class="">「眼睛是心灵的窗户」这句话有什么科学依据么？</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2016-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/49819055" class="">怎么理解刘伯温的预言“江南千条水，云贵万重山，五百年后看，云贵胜江南”？</a>
+                <a href="https://www.zhihu.com/answer/49819055" class="">怎么理解刘伯温的预言“江南千条水，云贵万重山，五百年后看，云贵胜江南”？</a>
                 <span class="votes">(27 赞同)</span>
                 <span class="created_time">(2015-06-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/52680877" class="">如何看9.3日抗日战争胜利70周年阅兵？</a>
+                <a href="https://www.zhihu.com/answer/52680877" class="">如何看9.3日抗日战争胜利70周年阅兵？</a>
                 <span class="votes">(27 赞同)</span>
                 <span class="created_time">(2015-06-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/80443297" class="">如何评价快播总裁CEO王欣「技术本身并不可耻」这句话？</a>
+                <a href="https://www.zhihu.com/answer/80443297" class="">如何评价快播总裁CEO王欣「技术本身并不可耻」这句话？</a>
                 <span class="votes">(26 赞同)</span>
                 <span class="created_time">(2016-01-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/64752895" class="">如何评价 74% 的网友支持聘用有能力但持假文凭的人？</a>
+                <a href="https://www.zhihu.com/answer/64752895" class="">如何评价 74% 的网友支持聘用有能力但持假文凭的人？</a>
                 <span class="votes">(26 赞同)</span>
                 <span class="created_time">(2015-09-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/47913272" class="">庆安火车站案件执行职务致死，这在法律上怎么算？</a>
+                <a href="https://www.zhihu.com/answer/47913272" class="">庆安火车站案件执行职务致死，这在法律上怎么算？</a>
                 <span class="votes">(26 赞同)</span>
                 <span class="created_time">(2015-05-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/50560800" class="">一年一度的玉林狗肉节又要到了，未来狗肉节何去何从？</a>
+                <a href="https://www.zhihu.com/answer/50560800" class="">一年一度的玉林狗肉节又要到了，未来狗肉节何去何从？</a>
                 <span class="votes">(24 赞同)</span>
                 <span class="created_time">(2015-06-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/62681036" class="">如何看待港台明星因阅兵当天没发微博，评论中被骂或取关？</a>
+                <a href="https://www.zhihu.com/answer/62681036" class="">如何看待港台明星因阅兵当天没发微博，评论中被骂或取关？</a>
                 <span class="votes">(23 赞同)</span>
                 <span class="created_time">(2015-09-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/37978477" class="">两亿美元和两条生命，哪个重要？</a>
+                <a href="https://www.zhihu.com/answer/37978477" class="">两亿美元和两条生命，哪个重要？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2015-01-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/56231334" class="">为什么金融、IT工程师年薪比资深土木工程师高很多？</a>
+                <a href="https://www.zhihu.com/answer/56231334" class="">为什么金融、IT工程师年薪比资深土木工程师高很多？</a>
                 <span class="votes">(20 赞同)</span>
                 <span class="created_time">(2015-07-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/87836136" class="">如何看待川普呼吁不要用iPhone，用三星?</a>
+                <a href="https://www.zhihu.com/answer/87836136" class="">如何看待川普呼吁不要用iPhone，用三星?</a>
                 <span class="votes">(19 赞同)</span>
                 <span class="created_time">(2016-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/50653090" class="">吴晓波说“今天的知识青年良心，一半存在于律师界，一半存在于传媒界”，你怎么看？</a>
+                <a href="https://www.zhihu.com/answer/50653090" class="">吴晓波说“今天的知识青年良心，一半存在于律师界，一半存在于传媒界”，你怎么看？</a>
                 <span class="votes">(18 赞同)</span>
                 <span class="created_time">(2015-06-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/57039501" class="">中修的马克思主义是从哪里来的？</a>
+                <a href="https://www.zhihu.com/answer/57039501" class="">中修的马克思主义是从哪里来的？</a>
                 <span class="votes">(16 赞同)</span>
                 <span class="created_time">(2015-07-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/39473887" class="">如何看待「班里成绩差的同学入社会后会牛」的说法？</a>
+                <a href="https://www.zhihu.com/answer/39473887" class="">如何看待「班里成绩差的同学入社会后会牛」的说法？</a>
                 <span class="votes">(15 赞同)</span>
                 <span class="created_time">(2015-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/49383875" class="">为什么会有大学生相信明显不靠谱的美国阴谋论？</a>
+                <a href="https://www.zhihu.com/answer/49383875" class="">为什么会有大学生相信明显不靠谱的美国阴谋论？</a>
                 <span class="votes">(15 赞同)</span>
                 <span class="created_time">(2015-05-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/54157921" class="">相声为什么没有悲剧？</a>
+                <a href="https://www.zhihu.com/answer/54157921" class="">相声为什么没有悲剧？</a>
                 <span class="votes">(12 赞同)</span>
                 <span class="created_time">(2015-07-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/39481778" class="">如果一个男生愿意翻你空间猜你密码代表他喜欢自己吗？</a>
+                <a href="https://www.zhihu.com/answer/39481778" class="">如果一个男生愿意翻你空间猜你密码代表他喜欢自己吗？</a>
                 <span class="votes">(9 赞同)</span>
                 <span class="created_time">(2015-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/38120659" class="">汉朝之后为什么诸侯王的谥号不广为流传了？</a>
+                <a href="https://www.zhihu.com/answer/38120659" class="">汉朝之后为什么诸侯王的谥号不广为流传了？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2015-01-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/51946279" class="">为什么都说程序员找不到女朋友，但是身边程序猿的却没一个单身的？</a>
+                <a href="https://www.zhihu.com/answer/51946279" class="">为什么都说程序员找不到女朋友，但是身边程序猿的却没一个单身的？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2015-06-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/39483714" class="">如何才能在没有年终奖的情况下还可以热情饱满的工作?</a>
+                <a href="https://www.zhihu.com/answer/39483714" class="">如何才能在没有年终奖的情况下还可以热情饱满的工作?</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2015-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/47560058" class="">汶川地震时，你在做什么？</a>
+                <a href="https://www.zhihu.com/answer/47560058" class="">汶川地震时，你在做什么？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2015-05-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/19389542" class="">一名建筑师如何看待城市规划？</a>
+                <a href="https://www.zhihu.com/answer/19389542" class="">一名建筑师如何看待城市规划？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2013-10-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/19389901" class="">《万万没想到》这类影片，除了迎合娱乐大众，你还能感受到什么？</a>
+                <a href="https://www.zhihu.com/answer/19389901" class="">《万万没想到》这类影片，除了迎合娱乐大众，你还能感受到什么？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2013-10-14)</span>
             </div>

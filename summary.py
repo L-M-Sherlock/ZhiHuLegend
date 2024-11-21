@@ -104,6 +104,25 @@ def generate_summary(username: str):
             .tab-content.active {
                 display: block;
             }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
         </style>
         <script>
             function openTab(evt, tabName) {
@@ -118,6 +137,18 @@ def generate_summary(username: str):
                 document.getElementById(tabName).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
         </script>
     </head>
     <body>"""
@@ -125,6 +156,21 @@ def generate_summary(username: str):
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
         <h1>{nicknames[username]}的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 ({len(answers)})</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 ({len(articles)})</button>
@@ -148,7 +194,7 @@ def generate_summary(username: str):
 
         html_content += f"""
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/{answer['file_stem']}" class="{censored_class}">{question_title}{censored_text}</a>
+                <a href="https://www.zhihu.com/answer/{answer['file_stem']}" class="{censored_class}">{question_title}{censored_text}</a>
                 <span class="votes">({answer['voteup_count']} 赞同)</span>
                 <span class="created_time">({datetime.fromtimestamp(answer['created_time']).strftime('%Y-%m-%d')})</span>
             </div>
@@ -167,7 +213,7 @@ def generate_summary(username: str):
         censored_text = " (censored)" if is_censored else ""
         html_content += f"""
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/{article['file_stem']}" class="{censored_class}">{article['title']}{censored_text}</a>
+                <a href="https://zhuanlan.zhihu.com/p/{article['file_stem']}" class="{censored_class}">{article['title']}{censored_text}</a>
                 <span class="votes">({article['voteup_count']} 赞同)</span>
                 <span class="created_time">({datetime.fromtimestamp(article['created']).strftime('%Y-%m-%d')})</span>
             </div>

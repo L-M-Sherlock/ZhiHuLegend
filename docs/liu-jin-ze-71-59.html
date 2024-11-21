@@ -39,6 +39,25 @@
             .tab-content.active {
                 display: block;
             }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
         </style>
         <script>
             function openTab(evt, tabName) {
@@ -53,12 +72,39 @@
                 document.getElementById(tabName).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
         </script>
     </head>
     <body>
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
         <h1>刘金泽的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 (71)</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 (1)</button>
@@ -68,427 +114,427 @@
             <h2>回答</h2>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2074787143" class="">为什么中国的学院派学者这么喜欢看不起民哲？</a>
+                <a href="https://www.zhihu.com/answer/2074787143" class="">为什么中国的学院派学者这么喜欢看不起民哲？</a>
                 <span class="votes">(814 赞同)</span>
                 <span class="created_time">(2021-08-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/322566718" class="">周国平是一个哲学家吗？</a>
+                <a href="https://www.zhihu.com/answer/322566718" class="">周国平是一个哲学家吗？</a>
                 <span class="votes">(541 赞同)</span>
                 <span class="created_time">(2018-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2662948909" class="">学哲学专业的人和看哲学著作研究哲学的哲学爱好者有什么本质的区别？</a>
+                <a href="https://www.zhihu.com/answer/2662948909" class="">学哲学专业的人和看哲学著作研究哲学的哲学爱好者有什么本质的区别？</a>
                 <span class="votes">(524 赞同)</span>
                 <span class="created_time">(2022-09-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342970411" class="">你给哪些牛人发过邮件？有哪些结果？</a>
+                <a href="https://www.zhihu.com/answer/2342970411" class="">你给哪些牛人发过邮件？有哪些结果？</a>
                 <span class="votes">(518 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2234543569" class="">如何看待「一个农民工思考海德格尔是再正常不过的事｜谷雨」一文?</a>
+                <a href="https://www.zhihu.com/answer/2234543569" class="">如何看待「一个农民工思考海德格尔是再正常不过的事｜谷雨」一文?</a>
                 <span class="votes">(260 赞同)</span>
                 <span class="created_time">(2021-11-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2327637871" class="">学哲学会降低文学能力吗？</a>
+                <a href="https://www.zhihu.com/answer/2327637871" class="">学哲学会降低文学能力吗？</a>
                 <span class="votes">(239 赞同)</span>
                 <span class="created_time">(2022-01-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888091284" class="">哲学专业为什么没有那么多劝退贴？</a>
+                <a href="https://www.zhihu.com/answer/888091284" class="">哲学专业为什么没有那么多劝退贴？</a>
                 <span class="votes">(206 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/324681257" class="">如何评价道德相对主义？</a>
+                <a href="https://www.zhihu.com/answer/324681257" class="">如何评价道德相对主义？</a>
                 <span class="votes">(151 赞同)</span>
                 <span class="created_time">(2018-02-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2381798195" class="">国内外有哪些斯宾诺莎的研究著作值得研读？</a>
+                <a href="https://www.zhihu.com/answer/2381798195" class="">国内外有哪些斯宾诺莎的研究著作值得研读？</a>
                 <span class="votes">(150 赞同)</span>
                 <span class="created_time">(2022-03-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/686150917" class="">柏拉图「洞穴比喻」的具体内涵是什么？</a>
+                <a href="https://www.zhihu.com/answer/686150917" class="">柏拉图「洞穴比喻」的具体内涵是什么？</a>
                 <span class="votes">(130 赞同)</span>
                 <span class="created_time">(2019-05-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/322736407" class="">为什么很多学西哲的人看不起学马哲和中哲的？</a>
+                <a href="https://www.zhihu.com/answer/322736407" class="">为什么很多学西哲的人看不起学马哲和中哲的？</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2018-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342961619" class="">所有学科中，废除哲学是不是影响最小的？</a>
+                <a href="https://www.zhihu.com/answer/2342961619" class="">所有学科中，废除哲学是不是影响最小的？</a>
                 <span class="votes">(74 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2983993231" class="">我国大学生主修的是马哲，像西方国家学习的哲学体系是什么？内容区别大吗？</a>
+                <a href="https://www.zhihu.com/answer/2983993231" class="">我国大学生主修的是马哲，像西方国家学习的哲学体系是什么？内容区别大吗？</a>
                 <span class="votes">(61 赞同)</span>
                 <span class="created_time">(2023-04-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2495570290" class="">北大哲学系的李猛老师是一个怎样的人？</a>
+                <a href="https://www.zhihu.com/answer/2495570290" class="">北大哲学系的李猛老师是一个怎样的人？</a>
                 <span class="votes">(60 赞同)</span>
                 <span class="created_time">(2022-05-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/684550488" class="">该怎么评价列奥 施特劳斯？</a>
+                <a href="https://www.zhihu.com/answer/684550488" class="">该怎么评价列奥 施特劳斯？</a>
                 <span class="votes">(59 赞同)</span>
                 <span class="created_time">(2019-05-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2330720142" class="">INTP与INTJ智商哪个高（平均及高智商分布）？</a>
+                <a href="https://www.zhihu.com/answer/2330720142" class="">INTP与INTJ智商哪个高（平均及高智商分布）？</a>
                 <span class="votes">(58 赞同)</span>
                 <span class="created_time">(2022-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/897002302" class="">什么是「日子人」？</a>
+                <a href="https://www.zhihu.com/answer/897002302" class="">什么是「日子人」？</a>
                 <span class="votes">(57 赞同)</span>
                 <span class="created_time">(2019-11-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2527654740" class="">我父母五十多没有存款，他们还要拖后腿，感觉生活迷茫，该怎么办?</a>
+                <a href="https://www.zhihu.com/answer/2527654740" class="">我父母五十多没有存款，他们还要拖后腿，感觉生活迷茫，该怎么办?</a>
                 <span class="votes">(57 赞同)</span>
                 <span class="created_time">(2022-06-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2164969241" class="">请问我去选哲学专业合适吗？</a>
+                <a href="https://www.zhihu.com/answer/2164969241" class="">请问我去选哲学专业合适吗？</a>
                 <span class="votes">(53 赞同)</span>
                 <span class="created_time">(2021-10-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/338992960" class="">为什么施特劳斯和施派（Leo Strauss and the Straussians）在中国这么火？</a>
+                <a href="https://www.zhihu.com/answer/338992960" class="">为什么施特劳斯和施派（Leo Strauss and the Straussians）在中国这么火？</a>
                 <span class="votes">(45 赞同)</span>
                 <span class="created_time">(2018-03-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2405443615" class="">为什么有人说罗素的《西方哲学史》不适合当成哲学史的专业读物？</a>
+                <a href="https://www.zhihu.com/answer/2405443615" class="">为什么有人说罗素的《西方哲学史》不适合当成哲学史的专业读物？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2022-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2205120522" class="">著名哲学家李泽厚去世，享年 91 周岁，他有哪些值得铭记的学术贡献？</a>
+                <a href="https://www.zhihu.com/answer/2205120522" class="">著名哲学家李泽厚去世，享年 91 周岁，他有哪些值得铭记的学术贡献？</a>
                 <span class="votes">(33 赞同)</span>
                 <span class="created_time">(2021-11-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1332710591" class="">非专业哲学爱好者与民哲有何区别？</a>
+                <a href="https://www.zhihu.com/answer/1332710591" class="">非专业哲学爱好者与民哲有何区别？</a>
                 <span class="votes">(30 赞同)</span>
                 <span class="created_time">(2020-07-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2427361958" class="">学习哲学有什么坏处？</a>
+                <a href="https://www.zhihu.com/answer/2427361958" class="">学习哲学有什么坏处？</a>
                 <span class="votes">(27 赞同)</span>
                 <span class="created_time">(2022-04-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2662912666" class="">为什么千辛万苦考公务员，但考上公务员以后，并没有想象中那么快乐？</a>
+                <a href="https://www.zhihu.com/answer/2662912666" class="">为什么千辛万苦考公务员，但考上公务员以后，并没有想象中那么快乐？</a>
                 <span class="votes">(23 赞同)</span>
                 <span class="created_time">(2022-09-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2491313349" class="">如何看待周国平说的“学哲学是女人的不幸，更是哲学的不幸”？</a>
+                <a href="https://www.zhihu.com/answer/2491313349" class="">如何看待周国平说的“学哲学是女人的不幸，更是哲学的不幸”？</a>
                 <span class="votes">(22 赞同)</span>
                 <span class="created_time">(2022-05-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2338105337" class="">这世界是必然的，还是偶然的。？</a>
+                <a href="https://www.zhihu.com/answer/2338105337" class="">这世界是必然的，还是偶然的。？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2022-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2394189804" class="">上大学上了也有半年多了，每天感觉很无趣。有什么值得做的事情？</a>
+                <a href="https://www.zhihu.com/answer/2394189804" class="">上大学上了也有半年多了，每天感觉很无趣。有什么值得做的事情？</a>
                 <span class="votes">(19 赞同)</span>
                 <span class="created_time">(2022-03-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2389522076" class="">有什么是你追了很多女生都失败后才知道的？</a>
+                <a href="https://www.zhihu.com/answer/2389522076" class="">有什么是你追了很多女生都失败后才知道的？</a>
                 <span class="votes">(19 赞同)</span>
                 <span class="created_time">(2022-03-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1324976593" class="">为什么柏拉图的哲学在现在还有这么高的研究价值？</a>
+                <a href="https://www.zhihu.com/answer/1324976593" class="">为什么柏拉图的哲学在现在还有这么高的研究价值？</a>
                 <span class="votes">(18 赞同)</span>
                 <span class="created_time">(2020-07-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2337892073" class="">海德格尔的ereignis到底是什么？</a>
+                <a href="https://www.zhihu.com/answer/2337892073" class="">海德格尔的ereignis到底是什么？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2022-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/382230568" class="">艺术和科学哪个更接近真理？</a>
+                <a href="https://www.zhihu.com/answer/382230568" class="">艺术和科学哪个更接近真理？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2018-05-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/323374039" class="">如何看待外卖小哥研究《西方哲学史》时捎带送餐？</a>
+                <a href="https://www.zhihu.com/answer/323374039" class="">如何看待外卖小哥研究《西方哲学史》时捎带送餐？</a>
                 <span class="votes">(11 赞同)</span>
                 <span class="created_time">(2018-02-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/283217260" class="">为什么维特根斯坦让他的学生不要走学术研究这条路？</a>
+                <a href="https://www.zhihu.com/answer/283217260" class="">为什么维特根斯坦让他的学生不要走学术研究这条路？</a>
                 <span class="votes">(10 赞同)</span>
                 <span class="created_time">(2017-12-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1332271667" class="">学哲学真的不好找工作吗？</a>
+                <a href="https://www.zhihu.com/answer/1332271667" class="">学哲学真的不好找工作吗？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2020-07-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888110499" class="">如何系统自学哲学？</a>
+                <a href="https://www.zhihu.com/answer/888110499" class="">如何系统自学哲学？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1362388445" class="">我是女性，非常想学哲学，但是很多人都说女性不能学哲学，我该怎么办？</a>
+                <a href="https://www.zhihu.com/answer/1362388445" class="">我是女性，非常想学哲学，但是很多人都说女性不能学哲学，我该怎么办？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2020-07-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2487214182" class="">读很多书，并没有变得很好，读书的意义在哪里？</a>
+                <a href="https://www.zhihu.com/answer/2487214182" class="">读很多书，并没有变得很好，读书的意义在哪里？</a>
                 <span class="votes">(6 赞同)</span>
                 <span class="created_time">(2022-05-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888094727" class="">如何判断一个人哲学天赋的高低？</a>
+                <a href="https://www.zhihu.com/answer/888094727" class="">如何判断一个人哲学天赋的高低？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342979355" class="">如果学哲学只看哲学原典，会出现什么问题吗？</a>
+                <a href="https://www.zhihu.com/answer/2342979355" class="">如果学哲学只看哲学原典，会出现什么问题吗？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/352153451" class="">知乎在中国哲学话题有哪些回答不错的用户？</a>
+                <a href="https://www.zhihu.com/answer/352153451" class="">知乎在中国哲学话题有哪些回答不错的用户？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2018-03-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888105612" class="">「哲学」专业是一门什么样的专业？</a>
+                <a href="https://www.zhihu.com/answer/888105612" class="">「哲学」专业是一门什么样的专业？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/382889671" class="">如何在生活中进行现象学直观？</a>
+                <a href="https://www.zhihu.com/answer/382889671" class="">如何在生活中进行现象学直观？</a>
                 <span class="votes">(5 赞同)</span>
                 <span class="created_time">(2018-05-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342981134" class="">喜欢哲学的男生不会有情绪吗？</a>
+                <a href="https://www.zhihu.com/answer/2342981134" class="">喜欢哲学的男生不会有情绪吗？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888106953" class="">如何看待喜欢哲学的男生？</a>
+                <a href="https://www.zhihu.com/answer/888106953" class="">如何看待喜欢哲学的男生？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/360281672" class="">有什么让你拍案叫绝的哲学书？</a>
+                <a href="https://www.zhihu.com/answer/360281672" class="">有什么让你拍案叫绝的哲学书？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2018-04-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342955705" class="">想与intj共同成长，互相成就，该如何发展？</a>
+                <a href="https://www.zhihu.com/answer/2342955705" class="">想与intj共同成长，互相成就，该如何发展？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/358588337" class="">网络梗究竟通过什么途径传播呢？</a>
+                <a href="https://www.zhihu.com/answer/358588337" class="">网络梗究竟通过什么途径传播呢？</a>
                 <span class="votes">(4 赞同)</span>
                 <span class="created_time">(2018-04-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/342129515" class="">第二十四届世界哲学大会是否应该讨论如何拿起知识产权法律武器通过双向维权给哲学、思想祛魅（暂定）？</a>
+                <a href="https://www.zhihu.com/answer/342129515" class="">第二十四届世界哲学大会是否应该讨论如何拿起知识产权法律武器通过双向维权给哲学、思想祛魅（暂定）？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2018-03-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888087034" class="">如何拯救一个有思想深度的虚无主义者？</a>
+                <a href="https://www.zhihu.com/answer/888087034" class="">如何拯救一个有思想深度的虚无主义者？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2330726494" class="">INTJ如何完成深层次的进阶？</a>
+                <a href="https://www.zhihu.com/answer/2330726494" class="">INTJ如何完成深层次的进阶？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2022-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2330724627" class="">什么样的环境才会形成INTJ人格？</a>
+                <a href="https://www.zhihu.com/answer/2330724627" class="">什么样的环境才会形成INTJ人格？</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2022-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1165406160" class="">一个高二学生开始研究哲学（不打算报哲学专业）合适吗?</a>
+                <a href="https://www.zhihu.com/answer/1165406160" class="">一个高二学生开始研究哲学（不打算报哲学专业）合适吗?</a>
                 <span class="votes">(3 赞同)</span>
                 <span class="created_time">(2020-04-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342973731" class="">如果人类变得绝对理性，世界会变成什么样？</a>
+                <a href="https://www.zhihu.com/answer/2342973731" class="">如果人类变得绝对理性，世界会变成什么样？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2355184342" class="">为什么会觉得INTJ 很危险？</a>
+                <a href="https://www.zhihu.com/answer/2355184342" class="">为什么会觉得INTJ 很危险？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2022-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2343618105" class="">怎样判断自己适不适合读博？</a>
+                <a href="https://www.zhihu.com/answer/2343618105" class="">怎样判断自己适不适合读博？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/342126641" class="">怎么看待人生的无聊？</a>
+                <a href="https://www.zhihu.com/answer/342126641" class="">怎么看待人生的无聊？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2018-03-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2338134300" class="">中国的学习哲学的学者都在做什么？</a>
+                <a href="https://www.zhihu.com/answer/2338134300" class="">中国的学习哲学的学者都在做什么？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342978550" class="">《纯粹理性批判》能够在近代以后哲全部哲学著作中排行何处？</a>
+                <a href="https://www.zhihu.com/answer/2342978550" class="">《纯粹理性批判》能够在近代以后哲全部哲学著作中排行何处？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342972562" class="">INTJ会喜欢ENFJ吗?</a>
+                <a href="https://www.zhihu.com/answer/2342972562" class="">INTJ会喜欢ENFJ吗?</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342977078" class="">你认为尼采、叔本华真的算是真正的哲学家吗？</a>
+                <a href="https://www.zhihu.com/answer/2342977078" class="">你认为尼采、叔本华真的算是真正的哲学家吗？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/342128880" class="">男人靠金钱地位吸引女人和女人靠外貌吸引男人有什么不同？</a>
+                <a href="https://www.zhihu.com/answer/342128880" class="">男人靠金钱地位吸引女人和女人靠外貌吸引男人有什么不同？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2018-03-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/395935626" class="">为什么说陈嘉映是“中国最可能接近哲学家称呼的人”？</a>
+                <a href="https://www.zhihu.com/answer/395935626" class="">为什么说陈嘉映是“中国最可能接近哲学家称呼的人”？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2018-05-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2338135342" class="">觉得人生最大的悲哀是什么？</a>
+                <a href="https://www.zhihu.com/answer/2338135342" class="">觉得人生最大的悲哀是什么？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1332711933" class="">在知乎里，为什么普遍嘲讽民哲？民哲里不可能有真正的哲学家吗？</a>
+                <a href="https://www.zhihu.com/answer/1332711933" class="">在知乎里，为什么普遍嘲讽民哲？民哲里不可能有真正的哲学家吗？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2020-07-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342957471" class="">喜欢上一个人的本质是什么？</a>
+                <a href="https://www.zhihu.com/answer/2342957471" class="">喜欢上一个人的本质是什么？</a>
                 <span class="votes">(1 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/1958419020" class="">什么是「概念专辑」？国内外有哪些代表性的「概念专辑」？</a>
+                <a href="https://www.zhihu.com/answer/1958419020" class="">什么是「概念专辑」？国内外有哪些代表性的「概念专辑」？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2021-06-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888090109" class="">为什么喜欢心理学、哲学的人往往在境界上显得很深邃，在生活当中显得很幼稚？</a>
+                <a href="https://www.zhihu.com/answer/888090109" class="">为什么喜欢心理学、哲学的人往往在境界上显得很深邃，在生活当中显得很幼稚？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/405772076" class="">康德伦理学中假如一个人没有德会怎样。？</a>
+                <a href="https://www.zhihu.com/answer/405772076" class="">康德伦理学中假如一个人没有德会怎样。？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2018-05-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/2342963554" class="">INFP的伴侣最好是什么样的人？</a>
+                <a href="https://www.zhihu.com/answer/2342963554" class="">INFP的伴侣最好是什么样的人？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2022-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/888078801" class="">哲学的衡量标准是什么？</a>
+                <a href="https://www.zhihu.com/answer/888078801" class="">哲学的衡量标准是什么？</a>
                 <span class="votes">(0 赞同)</span>
                 <span class="created_time">(2019-11-09)</span>
             </div>
@@ -498,7 +544,7 @@
             <h2>文章</h2>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/66924488" class="">阿里斯托芬《云》开场绎读</a>
+                <a href="https://zhuanlan.zhihu.com/p/66924488" class="">阿里斯托芬《云》开场绎读</a>
                 <span class="votes">(29 赞同)</span>
                 <span class="created_time">(2019-05-24)</span>
             </div>

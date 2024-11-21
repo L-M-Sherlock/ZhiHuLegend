@@ -39,6 +39,25 @@
             .tab-content.active {
                 display: block;
             }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
         </style>
         <script>
             function openTab(evt, tabName) {
@@ -53,12 +72,39 @@
                 document.getElementById(tabName).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
         </script>
     </head>
     <body>
         <p><a href="./">← 返回封神榜</a></p>
         <hr>
         <h1>李归农的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 (368)</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 (20)</button>
@@ -68,2209 +114,2209 @@
             <h2>回答</h2>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/496393660" class="">为什么现在很多人跟风把贾诩当做三国第一谋士？</a>
+                <a href="https://www.zhihu.com/answer/496393660" class="">为什么现在很多人跟风把贾诩当做三国第一谋士？</a>
                 <span class="votes">(4747 赞同)</span>
                 <span class="created_time">(2018-09-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/605934137" class="">爱学习不爱科研，这是为什么？</a>
+                <a href="https://www.zhihu.com/answer/605934137" class="">爱学习不爱科研，这是为什么？</a>
                 <span class="votes">(4045 赞同)</span>
                 <span class="created_time">(2019-02-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/455478864" class="">为什么在中国有不少物理学研究人员反对弦论？</a>
+                <a href="https://www.zhihu.com/answer/455478864" class="">为什么在中国有不少物理学研究人员反对弦论？</a>
                 <span class="votes">(2691 赞同)</span>
                 <span class="created_time">(2018-07-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/311713674" class="">数学 PhD 一年级感到吃力，是否应退学？</a>
+                <a href="https://www.zhihu.com/answer/311713674" class="">数学 PhD 一年级感到吃力，是否应退学？</a>
                 <span class="votes">(1811 赞同)</span>
                 <span class="created_time">(2018-02-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/177500730" class="">各位大神在大学阶段做了哪些数学方面的努力，或者说达到了什么样的程度？</a>
+                <a href="https://www.zhihu.com/answer/177500730" class="">各位大神在大学阶段做了哪些数学方面的努力，或者说达到了什么样的程度？</a>
                 <span class="votes">(1773 赞同)</span>
                 <span class="created_time">(2017-06-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/497628265" class="">如何看待据称菲尔兹奖得主 Atiyah 所写的五页黎曼猜想证明？</a>
+                <a href="https://www.zhihu.com/answer/497628265" class="">如何看待据称菲尔兹奖得主 Atiyah 所写的五页黎曼猜想证明？</a>
                 <span class="votes">(1696 赞同)</span>
                 <span class="created_time">(2018-09-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/612611636" class="">如何看待知乎数学优秀回答者 @Yuhang Liu 想要退出数学的想法？</a>
+                <a href="https://www.zhihu.com/answer/612611636" class="">如何看待知乎数学优秀回答者 @Yuhang Liu 想要退出数学的想法？</a>
                 <span class="votes">(1451 赞同)</span>
                 <span class="created_time">(2019-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/322181813" class="">导师喜欢招什么学生？</a>
+                <a href="https://www.zhihu.com/answer/322181813" class="">导师喜欢招什么学生？</a>
                 <span class="votes">(1427 赞同)</span>
                 <span class="created_time">(2018-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/147229296" class="">现代数学只有靠天才才能发展吗？</a>
+                <a href="https://www.zhihu.com/answer/147229296" class="">现代数学只有靠天才才能发展吗？</a>
                 <span class="votes">(1161 赞同)</span>
                 <span class="created_time">(2017-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186650225" class="">给即将去读数学专业的学生一点建议吧？</a>
+                <a href="https://www.zhihu.com/answer/186650225" class="">给即将去读数学专业的学生一点建议吧？</a>
                 <span class="votes">(1060 赞同)</span>
                 <span class="created_time">(2017-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/487877940" class="">如何评价王垠入职上海 Intel 担任 Machine Learning Engineer？</a>
+                <a href="https://www.zhihu.com/answer/487877940" class="">如何评价王垠入职上海 Intel 担任 Machine Learning Engineer？</a>
                 <span class="votes">(1038 赞同)</span>
                 <span class="created_time">(2018-09-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/523807520" class="">学习大学数学，如果忽略全部的证明题，数学能学好吗？</a>
+                <a href="https://www.zhihu.com/answer/523807520" class="">学习大学数学，如果忽略全部的证明题，数学能学好吗？</a>
                 <span class="votes">(1021 赞同)</span>
                 <span class="created_time">(2018-11-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/144273259" class="">数学中的错误有大错和小错的区别吗？</a>
+                <a href="https://www.zhihu.com/answer/144273259" class="">数学中的错误有大错和小错的区别吗？</a>
                 <span class="votes">(1021 赞同)</span>
                 <span class="created_time">(2017-02-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/350805616" class="">数学系哪门课最难学？</a>
+                <a href="https://www.zhihu.com/answer/350805616" class="">数学系哪门课最难学？</a>
                 <span class="votes">(991 赞同)</span>
                 <span class="created_time">(2018-03-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/628100776" class="">数学家乌伦贝克获 2019 年度阿贝尔奖，成为该奖首位女性得主，她在现代几何分析等领域有哪些成就？</a>
+                <a href="https://www.zhihu.com/answer/628100776" class="">数学家乌伦贝克获 2019 年度阿贝尔奖，成为该奖首位女性得主，她在现代几何分析等领域有哪些成就？</a>
                 <span class="votes">(987 赞同)</span>
                 <span class="created_time">(2019-03-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/292562968" class="">一个天资平平，数学基础非常差的高一学生，打算日后进行纯数研究，是否应该对其进行劝退？</a>
+                <a href="https://www.zhihu.com/answer/292562968" class="">一个天资平平，数学基础非常差的高一学生，打算日后进行纯数研究，是否应该对其进行劝退？</a>
                 <span class="votes">(924 赞同)</span>
                 <span class="created_time">(2018-01-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/359426103" class="">如何看待杭州这对 19 岁双胞胎姐妹分别被牛津和剑桥录取？</a>
+                <a href="https://www.zhihu.com/answer/359426103" class="">如何看待杭州这对 19 岁双胞胎姐妹分别被牛津和剑桥录取？</a>
                 <span class="votes">(910 赞同)</span>
                 <span class="created_time">(2018-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/589062516" class="">如何在数学研究中高效应对自己某部分基础尚不扎实的现实？</a>
+                <a href="https://www.zhihu.com/answer/589062516" class="">如何在数学研究中高效应对自己某部分基础尚不扎实的现实？</a>
                 <span class="votes">(884 赞同)</span>
                 <span class="created_time">(2019-02-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/518920709" class="">大学数学系的学生应该多刷题吗？</a>
+                <a href="https://www.zhihu.com/answer/518920709" class="">大学数学系的学生应该多刷题吗？</a>
                 <span class="votes">(866 赞同)</span>
                 <span class="created_time">(2018-10-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/296679872" class="">只有历史本科的威腾是怎样进入普林斯顿读数学 Phd 的？</a>
+                <a href="https://www.zhihu.com/answer/296679872" class="">只有历史本科的威腾是怎样进入普林斯顿读数学 Phd 的？</a>
                 <span class="votes">(838 赞同)</span>
                 <span class="created_time">(2018-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/495212464" class="">如何看待菲尔兹和阿贝尔奖双料得主 Michael Atiyah 宣称自己证明了黎曼猜想？</a>
+                <a href="https://www.zhihu.com/answer/495212464" class="">如何看待菲尔兹和阿贝尔奖双料得主 Michael Atiyah 宣称自己证明了黎曼猜想？</a>
                 <span class="votes">(784 赞同)</span>
                 <span class="created_time">(2018-09-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/566646651" class="">当科技发展到就算一个人只选择一个方向，却终其一生无法达到最前沿水平时，会发生什么？</a>
+                <a href="https://www.zhihu.com/answer/566646651" class="">当科技发展到就算一个人只选择一个方向，却终其一生无法达到最前沿水平时，会发生什么？</a>
                 <span class="votes">(740 赞同)</span>
                 <span class="created_time">(2019-01-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/429787580" class="">你是如何走出科研的低谷的？</a>
+                <a href="https://www.zhihu.com/answer/429787580" class="">你是如何走出科研的低谷的？</a>
                 <span class="votes">(724 赞同)</span>
                 <span class="created_time">(2018-06-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/184478705" class="">如何直观理解辛几何？</a>
+                <a href="https://www.zhihu.com/answer/184478705" class="">如何直观理解辛几何？</a>
                 <span class="votes">(721 赞同)</span>
                 <span class="created_time">(2017-06-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/626322073" class="">博士即将毕业或已经毕业的你，做出了哪些科研贡献？</a>
+                <a href="https://www.zhihu.com/answer/626322073" class="">博士即将毕业或已经毕业的你，做出了哪些科研贡献？</a>
                 <span class="votes">(695 赞同)</span>
                 <span class="created_time">(2019-03-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/602162807" class="">James Simons 退出数学学术界转从对冲基金是否为数学界的损失？</a>
+                <a href="https://www.zhihu.com/answer/602162807" class="">James Simons 退出数学学术界转从对冲基金是否为数学界的损失？</a>
                 <span class="votes">(690 赞同)</span>
                 <span class="created_time">(2019-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/308608816" class="">想成为数学家或物理学家应该怎么做？</a>
+                <a href="https://www.zhihu.com/answer/308608816" class="">想成为数学家或物理学家应该怎么做？</a>
                 <span class="votes">(660 赞同)</span>
                 <span class="created_time">(2018-02-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/288741214" class="">如何评价荀彧？</a>
+                <a href="https://www.zhihu.com/answer/288741214" class="">如何评价荀彧？</a>
                 <span class="votes">(634 赞同)</span>
                 <span class="created_time">(2018-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/494563447" class="">为什么越来越多的人痴迷于游戏？</a>
+                <a href="https://www.zhihu.com/answer/494563447" class="">为什么越来越多的人痴迷于游戏？</a>
                 <span class="votes">(616 赞同)</span>
                 <span class="created_time">(2018-09-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/189630470" class="">如何评价刘刚（美国西北大学）的数学工作？</a>
+                <a href="https://www.zhihu.com/answer/189630470" class="">如何评价刘刚（美国西北大学）的数学工作？</a>
                 <span class="votes">(614 赞同)</span>
                 <span class="created_time">(2017-06-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/371138969" class="">数学研究没有进展怎么办？</a>
+                <a href="https://www.zhihu.com/answer/371138969" class="">数学研究没有进展怎么办？</a>
                 <span class="votes">(614 赞同)</span>
                 <span class="created_time">(2018-04-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/419850845" class="">没有天赋一般是不是不适合学数学？我是不是没有天赋？</a>
+                <a href="https://www.zhihu.com/answer/419850845" class="">没有天赋一般是不是不适合学数学？我是不是没有天赋？</a>
                 <span class="votes">(611 赞同)</span>
                 <span class="created_time">(2018-06-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/188217877" class="">数学界如何评价陈景润？</a>
+                <a href="https://www.zhihu.com/answer/188217877" class="">数学界如何评价陈景润？</a>
                 <span class="votes">(596 赞同)</span>
                 <span class="created_time">(2017-06-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/350832785" class="">北京/上海 211 与偏远 985 的数学系选择哪个？</a>
+                <a href="https://www.zhihu.com/answer/350832785" class="">北京/上海 211 与偏远 985 的数学系选择哪个？</a>
                 <span class="votes">(592 赞同)</span>
                 <span class="created_time">(2018-03-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/136254585" class="">代数几何应该怎样学？</a>
+                <a href="https://www.zhihu.com/answer/136254585" class="">代数几何应该怎样学？</a>
                 <span class="votes">(575 赞同)</span>
                 <span class="created_time">(2016-12-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/133778565" class="">是什么让你在数学的道路上坚持下来？</a>
+                <a href="https://www.zhihu.com/answer/133778565" class="">是什么让你在数学的道路上坚持下来？</a>
                 <span class="votes">(558 赞同)</span>
                 <span class="created_time">(2016-12-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/316614867" class="">如何不成为名词党?</a>
+                <a href="https://www.zhihu.com/answer/316614867" class="">如何不成为名词党?</a>
                 <span class="votes">(552 赞同)</span>
                 <span class="created_time">(2018-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/137660930" class="">所谓的数学品位是什么？</a>
+                <a href="https://www.zhihu.com/answer/137660930" class="">所谓的数学品位是什么？</a>
                 <span class="votes">(542 赞同)</span>
                 <span class="created_time">(2016-12-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/410223539" class="">如何直观理解矩阵和线性代数？</a>
+                <a href="https://www.zhihu.com/answer/410223539" class="">如何直观理解矩阵和线性代数？</a>
                 <span class="votes">(528 赞同)</span>
                 <span class="created_time">(2018-06-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/306923917" class="">我们为什么要研究群表示？</a>
+                <a href="https://www.zhihu.com/answer/306923917" class="">我们为什么要研究群表示？</a>
                 <span class="votes">(523 赞同)</span>
                 <span class="created_time">(2018-01-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/191796612" class="">为什么那么多人嫌弃国内各种不好，却不会想去改善它，而老想着移民呢？</a>
+                <a href="https://www.zhihu.com/answer/191796612" class="">为什么那么多人嫌弃国内各种不好，却不会想去改善它，而老想着移民呢？</a>
                 <span class="votes">(520 赞同)</span>
                 <span class="created_time">(2017-07-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/438505362" class="">作为入行数年的专业科研工作者，你每周看几篇 paper ？</a>
+                <a href="https://www.zhihu.com/answer/438505362" class="">作为入行数年的专业科研工作者，你每周看几篇 paper ？</a>
                 <span class="votes">(513 赞同)</span>
                 <span class="created_time">(2018-07-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/502156661" class="">全世界的数学家们大概还需要多久，才能在证明哥德巴赫猜想？</a>
+                <a href="https://www.zhihu.com/answer/502156661" class="">全世界的数学家们大概还需要多久，才能在证明哥德巴赫猜想？</a>
                 <span class="votes">(512 赞同)</span>
                 <span class="created_time">(2018-10-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/496619575" class="">曹操当年为什么不杀了刘备？</a>
+                <a href="https://www.zhihu.com/answer/496619575" class="">曹操当年为什么不杀了刘备？</a>
                 <span class="votes">(508 赞同)</span>
                 <span class="created_time">(2018-09-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/312558158" class="">数学中为什么要定义各种空间？</a>
+                <a href="https://www.zhihu.com/answer/312558158" class="">数学中为什么要定义各种空间？</a>
                 <span class="votes">(505 赞同)</span>
                 <span class="created_time">(2018-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/311702290" class="">当代欧美学术圈有哪些特征？</a>
+                <a href="https://www.zhihu.com/answer/311702290" class="">当代欧美学术圈有哪些特征？</a>
                 <span class="votes">(505 赞同)</span>
                 <span class="created_time">(2018-02-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/315025516" class="">为什么有些学数学的不喜欢晚睡？</a>
+                <a href="https://www.zhihu.com/answer/315025516" class="">为什么有些学数学的不喜欢晚睡？</a>
                 <span class="votes">(499 赞同)</span>
                 <span class="created_time">(2018-02-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/149255026" class="">读基础数学的 Phd，是在国内更好，还是到老牌的国外大学（如美、法、英、俄、日等等）更好？</a>
+                <a href="https://www.zhihu.com/answer/149255026" class="">读基础数学的 Phd，是在国内更好，还是到老牌的国外大学（如美、法、英、俄、日等等）更好？</a>
                 <span class="votes">(489 赞同)</span>
                 <span class="created_time">(2017-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/602180943" class="">柯斯特利金的《代数学引论》写的怎么样？是否值得一看？</a>
+                <a href="https://www.zhihu.com/answer/602180943" class="">柯斯特利金的《代数学引论》写的怎么样？是否值得一看？</a>
                 <span class="votes">(479 赞同)</span>
                 <span class="created_time">(2019-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/142206228" class="">大家学数学时有经常回忆定理证明的倾向吗？这样好还是不好？</a>
+                <a href="https://www.zhihu.com/answer/142206228" class="">大家学数学时有经常回忆定理证明的倾向吗？这样好还是不好？</a>
                 <span class="votes">(475 赞同)</span>
                 <span class="created_time">(2017-01-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/137048130" class="">学术界有哪些大器晚成的例子？</a>
+                <a href="https://www.zhihu.com/answer/137048130" class="">学术界有哪些大器晚成的例子？</a>
                 <span class="votes">(475 赞同)</span>
                 <span class="created_time">(2016-12-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/374604774" class="">如果李归农（李吟）当初考进北大数院或者清华基科班，现在他的学术水平会是什么结果？</a>
+                <a href="https://www.zhihu.com/answer/374604774" class="">如果李归农（李吟）当初考进北大数院或者清华基科班，现在他的学术水平会是什么结果？</a>
                 <span class="votes">(474 赞同)</span>
                 <span class="created_time">(2018-04-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/192228296" class="">如何看待部分海外名牌大学留学生在毕业后不回国效力？</a>
+                <a href="https://www.zhihu.com/answer/192228296" class="">如何看待部分海外名牌大学留学生在毕业后不回国效力？</a>
                 <span class="votes">(471 赞同)</span>
                 <span class="created_time">(2017-07-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/319431883" class="">怎样看出一个人有数学天赋？</a>
+                <a href="https://www.zhihu.com/answer/319431883" class="">怎样看出一个人有数学天赋？</a>
                 <span class="votes">(464 赞同)</span>
                 <span class="created_time">(2018-02-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186108120" class="">数学功底究竟指的是什么？</a>
+                <a href="https://www.zhihu.com/answer/186108120" class="">数学功底究竟指的是什么？</a>
                 <span class="votes">(458 赞同)</span>
                 <span class="created_time">(2017-06-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/609468301" class="">我的情况是否适合转专业到数学系？</a>
+                <a href="https://www.zhihu.com/answer/609468301" class="">我的情况是否适合转专业到数学系？</a>
                 <span class="votes">(451 赞同)</span>
                 <span class="created_time">(2019-02-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/461702209" class="">三国志游戏有哪些有趣的官方空想剧本？</a>
+                <a href="https://www.zhihu.com/answer/461702209" class="">三国志游戏有哪些有趣的官方空想剧本？</a>
                 <span class="votes">(442 赞同)</span>
                 <span class="created_time">(2018-08-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/180468752" class="">如何客观评价丘成桐老师的学术贡献呢？</a>
+                <a href="https://www.zhihu.com/answer/180468752" class="">如何客观评价丘成桐老师的学术贡献呢？</a>
                 <span class="votes">(438 赞同)</span>
                 <span class="created_time">(2017-06-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/371282053" class="">数分书上的证明有哪些可取之处?</a>
+                <a href="https://www.zhihu.com/answer/371282053" class="">数分书上的证明有哪些可取之处?</a>
                 <span class="votes">(436 赞同)</span>
                 <span class="created_time">(2018-04-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/294039831" class="">代数几何是不是被神化了？</a>
+                <a href="https://www.zhihu.com/answer/294039831" class="">代数几何是不是被神化了？</a>
                 <span class="votes">(421 赞同)</span>
                 <span class="created_time">(2018-01-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/303182632" class="">真正厉害的人就一定会表现得谦虚吗？</a>
+                <a href="https://www.zhihu.com/answer/303182632" class="">真正厉害的人就一定会表现得谦虚吗？</a>
                 <span class="votes">(412 赞同)</span>
                 <span class="created_time">(2018-01-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/631589796" class="">读研过程中的「打杂」是必要的锻炼，还是无意义的浪费时间？</a>
+                <a href="https://www.zhihu.com/answer/631589796" class="">读研过程中的「打杂」是必要的锻炼，还是无意义的浪费时间？</a>
                 <span class="votes">(401 赞同)</span>
                 <span class="created_time">(2019-03-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/134983448" class="">作为一个年轻的数学工作者，你们是如何独立于导师选定问题的？</a>
+                <a href="https://www.zhihu.com/answer/134983448" class="">作为一个年轻的数学工作者，你们是如何独立于导师选定问题的？</a>
                 <span class="votes">(397 赞同)</span>
                 <span class="created_time">(2016-12-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/183949637" class="">佩雷尔曼为什么不领菲尔兹奖？</a>
+                <a href="https://www.zhihu.com/answer/183949637" class="">佩雷尔曼为什么不领菲尔兹奖？</a>
                 <span class="votes">(395 赞同)</span>
                 <span class="created_time">(2017-06-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/131280169" class="">几何学（代数几何、微分几何、复几何、辛几何）最核心的问题是什么？</a>
+                <a href="https://www.zhihu.com/answer/131280169" class="">几何学（代数几何、微分几何、复几何、辛几何）最核心的问题是什么？</a>
                 <span class="votes">(394 赞同)</span>
                 <span class="created_time">(2016-11-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/475860348" class="">刘备临终前曾示意孔明如若刘禅不才，可自立为成都之王，如果刘备是真心的，那么他为的是什么呢？大蜀国？</a>
+                <a href="https://www.zhihu.com/answer/475860348" class="">刘备临终前曾示意孔明如若刘禅不才，可自立为成都之王，如果刘备是真心的，那么他为的是什么呢？大蜀国？</a>
                 <span class="votes">(389 赞同)</span>
                 <span class="created_time">(2018-08-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/298087771" class="">孤独是学数学的人的常态吗？</a>
+                <a href="https://www.zhihu.com/answer/298087771" class="">孤独是学数学的人的常态吗？</a>
                 <span class="votes">(388 赞同)</span>
                 <span class="created_time">(2018-01-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/536150087" class="">像刘刚这样的大神，如果早点进 Harvard、Princeton 学习微分几何，现在会是什么成就？</a>
+                <a href="https://www.zhihu.com/answer/536150087" class="">像刘刚这样的大神，如果早点进 Harvard、Princeton 学习微分几何，现在会是什么成就？</a>
                 <span class="votes">(388 赞同)</span>
                 <span class="created_time">(2018-11-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/296639643" class="">对一名科研工作者而言，什么品质是最重要的？</a>
+                <a href="https://www.zhihu.com/answer/296639643" class="">对一名科研工作者而言，什么品质是最重要的？</a>
                 <span class="votes">(387 赞同)</span>
                 <span class="created_time">(2018-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/595344266" class="">如何看待胡 坤猝死事件？</a>
+                <a href="https://www.zhihu.com/answer/595344266" class="">如何看待胡 坤猝死事件？</a>
                 <span class="votes">(384 赞同)</span>
                 <span class="created_time">(2019-02-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/139930200" class="">求推荐黎曼几何，复几何，黎曼曲面经典书。？</a>
+                <a href="https://www.zhihu.com/answer/139930200" class="">求推荐黎曼几何，复几何，黎曼曲面经典书。？</a>
                 <span class="votes">(379 赞同)</span>
                 <span class="created_time">(2017-01-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/306170075" class="">几何学入门的必读书籍有哪些值得推荐？</a>
+                <a href="https://www.zhihu.com/answer/306170075" class="">几何学入门的必读书籍有哪些值得推荐？</a>
                 <span class="votes">(372 赞同)</span>
                 <span class="created_time">(2018-01-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/331955212" class="">遇到不会的数学题应该独立思考多久？</a>
+                <a href="https://www.zhihu.com/answer/331955212" class="">遇到不会的数学题应该独立思考多久？</a>
                 <span class="votes">(371 赞同)</span>
                 <span class="created_time">(2018-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/304734585" class="">现代数学是不是比大学数学中优雅的结论少了很多？</a>
+                <a href="https://www.zhihu.com/answer/304734585" class="">现代数学是不是比大学数学中优雅的结论少了很多？</a>
                 <span class="votes">(364 赞同)</span>
                 <span class="created_time">(2018-01-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/175397193" class="">下一次数学突破会在哪里？</a>
+                <a href="https://www.zhihu.com/answer/175397193" class="">下一次数学突破会在哪里？</a>
                 <span class="votes">(364 赞同)</span>
                 <span class="created_time">(2017-05-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/634399615" class="">北美基础数学 尤其是代数学博士就业前景如何？</a>
+                <a href="https://www.zhihu.com/answer/634399615" class="">北美基础数学 尤其是代数学博士就业前景如何？</a>
                 <span class="votes">(363 赞同)</span>
                 <span class="created_time">(2019-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/313511990" class="">获得两次及以上诺贝尔奖的有哪些人？有什么成就？</a>
+                <a href="https://www.zhihu.com/answer/313511990" class="">获得两次及以上诺贝尔奖的有哪些人？有什么成就？</a>
                 <span class="votes">(363 赞同)</span>
                 <span class="created_time">(2018-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186789500" class="">写东西中英夹杂是什么心态？</a>
+                <a href="https://www.zhihu.com/answer/186789500" class="">写东西中英夹杂是什么心态？</a>
                 <span class="votes">(357 赞同)</span>
                 <span class="created_time">(2017-06-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/303265273" class="">作为数学博士研究生，以什么频率发文章才有在学术界生存的能力/潜力？</a>
+                <a href="https://www.zhihu.com/answer/303265273" class="">作为数学博士研究生，以什么频率发文章才有在学术界生存的能力/潜力？</a>
                 <span class="votes">(342 赞同)</span>
                 <span class="created_time">(2018-01-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/300918377" class="">读数学书应该有怎样的速度？</a>
+                <a href="https://www.zhihu.com/answer/300918377" class="">读数学书应该有怎样的速度？</a>
                 <span class="votes">(336 赞同)</span>
                 <span class="created_time">(2018-01-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/340165719" class="">大二数学本科生想准备一篇好的论文作为毕业论文，应该做些什么啦？</a>
+                <a href="https://www.zhihu.com/answer/340165719" class="">大二数学本科生想准备一篇好的论文作为毕业论文，应该做些什么啦？</a>
                 <span class="votes">(336 赞同)</span>
                 <span class="created_time">(2018-03-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/192610918" class="">如何评价 Bott 和 Tu 写的代数拓扑？</a>
+                <a href="https://www.zhihu.com/answer/192610918" class="">如何评价 Bott 和 Tu 写的代数拓扑？</a>
                 <span class="votes">(333 赞同)</span>
                 <span class="created_time">(2017-07-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/474584148" class="">司马迁被宫刑冤不冤？</a>
+                <a href="https://www.zhihu.com/answer/474584148" class="">司马迁被宫刑冤不冤？</a>
                 <span class="votes">(329 赞同)</span>
                 <span class="created_time">(2018-08-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/642407246" class="">没有导师的指导，研究生如何阅读文献、提出创见、写论文？</a>
+                <a href="https://www.zhihu.com/answer/642407246" class="">没有导师的指导，研究生如何阅读文献、提出创见、写论文？</a>
                 <span class="votes">(327 赞同)</span>
                 <span class="created_time">(2019-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/325827531" class="">有没有人认为代数几何容易学的？</a>
+                <a href="https://www.zhihu.com/answer/325827531" class="">有没有人认为代数几何容易学的？</a>
                 <span class="votes">(325 赞同)</span>
                 <span class="created_time">(2018-02-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/182986166" class="">代数几何和数论的关系？</a>
+                <a href="https://www.zhihu.com/answer/182986166" class="">代数几何和数论的关系？</a>
                 <span class="votes">(324 赞同)</span>
                 <span class="created_time">(2017-06-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/173239768" class="">日本数学水平国际上如何？顶尖水平与中国比如何？</a>
+                <a href="https://www.zhihu.com/answer/173239768" class="">日本数学水平国际上如何？顶尖水平与中国比如何？</a>
                 <span class="votes">(321 赞同)</span>
                 <span class="created_time">(2017-05-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/495897211" class="">除了黎曼猜想，数学界还有哪些至今尚未得到证实的猜想？</a>
+                <a href="https://www.zhihu.com/answer/495897211" class="">除了黎曼猜想，数学界还有哪些至今尚未得到证实的猜想？</a>
                 <span class="votes">(301 赞同)</span>
                 <span class="created_time">(2018-09-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/173707200" class="">复几何的前景如何？</a>
+                <a href="https://www.zhihu.com/answer/173707200" class="">复几何的前景如何？</a>
                 <span class="votes">(300 赞同)</span>
                 <span class="created_time">(2017-05-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/185781039" class="">有专业人士评价一下Strongart和烟花不堪剪的数学水平吗？</a>
+                <a href="https://www.zhihu.com/answer/185781039" class="">有专业人士评价一下Strongart和烟花不堪剪的数学水平吗？</a>
                 <span class="votes">(296 赞同)</span>
                 <span class="created_time">(2017-06-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/144677695" class="">什么叫内蕴几何？</a>
+                <a href="https://www.zhihu.com/answer/144677695" class="">什么叫内蕴几何？</a>
                 <span class="votes">(294 赞同)</span>
                 <span class="created_time">(2017-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/574755140" class="">2019 年 1月 11 日阿蒂亚爵士（Michael Atiyah）去世，如何评价他在数学上的贡献？</a>
+                <a href="https://www.zhihu.com/answer/574755140" class="">2019 年 1月 11 日阿蒂亚爵士（Michael Atiyah）去世，如何评价他在数学上的贡献？</a>
                 <span class="votes">(288 赞同)</span>
                 <span class="created_time">(2019-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/516146856" class="">陶哲轩出版自己的博文精选是不是割韭菜？</a>
+                <a href="https://www.zhihu.com/answer/516146856" class="">陶哲轩出版自己的博文精选是不是割韭菜？</a>
                 <span class="votes">(286 赞同)</span>
                 <span class="created_time">(2018-10-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/148401363" class="">为什么海外的华人感觉好爱国，但是让他回国却是不愿意的？</a>
+                <a href="https://www.zhihu.com/answer/148401363" class="">为什么海外的华人感觉好爱国，但是让他回国却是不愿意的？</a>
                 <span class="votes">(284 赞同)</span>
                 <span class="created_time">(2017-02-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/175025206" class="">纯数学学生在硕士或博士期间的导师选择时有哪些考虑因素？</a>
+                <a href="https://www.zhihu.com/answer/175025206" class="">纯数学学生在硕士或博士期间的导师选择时有哪些考虑因素？</a>
                 <span class="votes">(283 赞同)</span>
                 <span class="created_time">(2017-05-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/334814686" class="">数学专业为什么没有那么多劝退贴？</a>
+                <a href="https://www.zhihu.com/answer/334814686" class="">数学专业为什么没有那么多劝退贴？</a>
                 <span class="votes">(282 赞同)</span>
                 <span class="created_time">(2018-03-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/137218462" class="">数学和物理超出直觉范围后该怎么学习？</a>
+                <a href="https://www.zhihu.com/answer/137218462" class="">数学和物理超出直觉范围后该怎么学习？</a>
                 <span class="votes">(280 赞同)</span>
                 <span class="created_time">(2016-12-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/338051823" class="">老版三国演义电视剧刘馥改作师勖之用意究竟为何？</a>
+                <a href="https://www.zhihu.com/answer/338051823" class="">老版三国演义电视剧刘馥改作师勖之用意究竟为何？</a>
                 <span class="votes">(278 赞同)</span>
                 <span class="created_time">(2018-03-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/179280041" class="">日本数学家sato和kashiwara是怎样风格的数学家？</a>
+                <a href="https://www.zhihu.com/answer/179280041" class="">日本数学家sato和kashiwara是怎样风格的数学家？</a>
                 <span class="votes">(276 赞同)</span>
                 <span class="created_time">(2017-06-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/556413437" class="">为什么辛结构（Symplectic structures）在物理中非常有用？</a>
+                <a href="https://www.zhihu.com/answer/556413437" class="">为什么辛结构（Symplectic structures）在物理中非常有用？</a>
                 <span class="votes">(272 赞同)</span>
                 <span class="created_time">(2018-12-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/188816613" class="">柯洁和吴清源谁更厉害？</a>
+                <a href="https://www.zhihu.com/answer/188816613" class="">柯洁和吴清源谁更厉害？</a>
                 <span class="votes">(267 赞同)</span>
                 <span class="created_time">(2017-06-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/309489495" class="">博士和导师吵架了，想退学了，怎么办？</a>
+                <a href="https://www.zhihu.com/answer/309489495" class="">博士和导师吵架了，想退学了，怎么办？</a>
                 <span class="votes">(262 赞同)</span>
                 <span class="created_time">(2018-02-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/490436715" class="">为什么机器验证的形式化证明没有被数学界广泛采用？</a>
+                <a href="https://www.zhihu.com/answer/490436715" class="">为什么机器验证的形式化证明没有被数学界广泛采用？</a>
                 <span class="votes">(255 赞同)</span>
                 <span class="created_time">(2018-09-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/546202204" class="">关于复结构的书籍推荐？</a>
+                <a href="https://www.zhihu.com/answer/546202204" class="">关于复结构的书籍推荐？</a>
                 <span class="votes">(254 赞同)</span>
                 <span class="created_time">(2018-12-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/367122505" class="">不会PDE影响其他数学领域的研究吗？</a>
+                <a href="https://www.zhihu.com/answer/367122505" class="">不会PDE影响其他数学领域的研究吗？</a>
                 <span class="votes">(250 赞同)</span>
                 <span class="created_time">(2018-04-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/295226177" class="">做数学的人需要记忆很多东西吗？</a>
+                <a href="https://www.zhihu.com/answer/295226177" class="">做数学的人需要记忆很多东西吗？</a>
                 <span class="votes">(249 赞同)</span>
                 <span class="created_time">(2018-01-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/487192417" class="">学习古典代数几何还有意义吗？</a>
+                <a href="https://www.zhihu.com/answer/487192417" class="">学习古典代数几何还有意义吗？</a>
                 <span class="votes">(248 赞同)</span>
                 <span class="created_time">(2018-09-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/286736101" class="">诸葛瞻的能力很弱吗？他为什么不听取黄崇的建议？</a>
+                <a href="https://www.zhihu.com/answer/286736101" class="">诸葛瞻的能力很弱吗？他为什么不听取黄崇的建议？</a>
                 <span class="votes">(245 赞同)</span>
                 <span class="created_time">(2018-01-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/457418827" class="">数学本科暑研失败再去问导师要推荐信是否合适？</a>
+                <a href="https://www.zhihu.com/answer/457418827" class="">数学本科暑研失败再去问导师要推荐信是否合适？</a>
                 <span class="votes">(245 赞同)</span>
                 <span class="created_time">(2018-08-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/573210561" class="">数学中的形变理论是什么？</a>
+                <a href="https://www.zhihu.com/answer/573210561" class="">数学中的形变理论是什么？</a>
                 <span class="votes">(244 赞同)</span>
                 <span class="created_time">(2019-01-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/317306375" class="">孔良老师实力如何？其文章《浅议现代数学物理对数学的影响》指导意义如何？</a>
+                <a href="https://www.zhihu.com/answer/317306375" class="">孔良老师实力如何？其文章《浅议现代数学物理对数学的影响》指导意义如何？</a>
                 <span class="votes">(244 赞同)</span>
                 <span class="created_time">(2018-02-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/336575053" class="">为什么说 Nevanlinna 的值分布理论是复变函数的巅峰？</a>
+                <a href="https://www.zhihu.com/answer/336575053" class="">为什么说 Nevanlinna 的值分布理论是复变函数的巅峰？</a>
                 <span class="votes">(243 赞同)</span>
                 <span class="created_time">(2018-03-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/477494754" class="">诸葛亮是否有取刘禅而代之的野心和实力？</a>
+                <a href="https://www.zhihu.com/answer/477494754" class="">诸葛亮是否有取刘禅而代之的野心和实力？</a>
                 <span class="votes">(241 赞同)</span>
                 <span class="created_time">(2018-08-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/512285000" class="">复几何和代数几何有什么关系？</a>
+                <a href="https://www.zhihu.com/answer/512285000" class="">复几何和代数几何有什么关系？</a>
                 <span class="votes">(237 赞同)</span>
                 <span class="created_time">(2018-10-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/528320357" class="">申请美国数学phd如何套磁？</a>
+                <a href="https://www.zhihu.com/answer/528320357" class="">申请美国数学phd如何套磁？</a>
                 <span class="votes">(237 赞同)</span>
                 <span class="created_time">(2018-11-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/551618682" class="">现代数学的潮流是什么？</a>
+                <a href="https://www.zhihu.com/answer/551618682" class="">现代数学的潮流是什么？</a>
                 <span class="votes">(237 赞同)</span>
                 <span class="created_time">(2018-12-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/303948858" class="">你所在的科研领域有哪些做不动的问题？</a>
+                <a href="https://www.zhihu.com/answer/303948858" class="">你所在的科研领域有哪些做不动的问题？</a>
                 <span class="votes">(236 赞同)</span>
                 <span class="created_time">(2018-01-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/592661090" class="">如今泛函分析方向真的已经没有什么可挖的了吗？当年Grothendieck为什么说泛函分析已经死了？</a>
+                <a href="https://www.zhihu.com/answer/592661090" class="">如今泛函分析方向真的已经没有什么可挖的了吗？当年Grothendieck为什么说泛函分析已经死了？</a>
                 <span class="votes">(231 赞同)</span>
                 <span class="created_time">(2019-02-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/370436048" class="">如何评价俄罗斯数学家 Vladimir Igorevich Arnold 的数学成就？</a>
+                <a href="https://www.zhihu.com/answer/370436048" class="">如何评价俄罗斯数学家 Vladimir Igorevich Arnold 的数学成就？</a>
                 <span class="votes">(230 赞同)</span>
                 <span class="created_time">(2018-04-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/305253966" class="">你在做研究的时候走过哪些弯路，收获和经验是什么？</a>
+                <a href="https://www.zhihu.com/answer/305253966" class="">你在做研究的时候走过哪些弯路，收获和经验是什么？</a>
                 <span class="votes">(225 赞同)</span>
                 <span class="created_time">(2018-01-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/321415728" class="">数学算不算一种创作?</a>
+                <a href="https://www.zhihu.com/answer/321415728" class="">数学算不算一种创作?</a>
                 <span class="votes">(222 赞同)</span>
                 <span class="created_time">(2018-02-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/331089760" class="">高等代数学完后该看的高级代数入门参考书？</a>
+                <a href="https://www.zhihu.com/answer/331089760" class="">高等代数学完后该看的高级代数入门参考书？</a>
                 <span class="votes">(215 赞同)</span>
                 <span class="created_time">(2018-03-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/314241432" class="">北欧哪几所大学数学系比较强？</a>
+                <a href="https://www.zhihu.com/answer/314241432" class="">北欧哪几所大学数学系比较强？</a>
                 <span class="votes">(212 赞同)</span>
                 <span class="created_time">(2018-02-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/301806056" class="">罗素的数学成就有哪些？</a>
+                <a href="https://www.zhihu.com/answer/301806056" class="">罗素的数学成就有哪些？</a>
                 <span class="votes">(211 赞同)</span>
                 <span class="created_time">(2018-01-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/187119591" class="">数学专业硕士可以看些什么课外书充实自己？</a>
+                <a href="https://www.zhihu.com/answer/187119591" class="">数学专业硕士可以看些什么课外书充实自己？</a>
                 <span class="votes">(203 赞同)</span>
                 <span class="created_time">(2017-06-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/361414446" class="">为什么说「复分析理论」是本科所学数学中最漂亮最和谐的理论？</a>
+                <a href="https://www.zhihu.com/answer/361414446" class="">为什么说「复分析理论」是本科所学数学中最漂亮最和谐的理论？</a>
                 <span class="votes">(200 赞同)</span>
                 <span class="created_time">(2018-04-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/611889876" class="">目前中国顶级优秀的数学家有哪些？</a>
+                <a href="https://www.zhihu.com/answer/611889876" class="">目前中国顶级优秀的数学家有哪些？</a>
                 <span class="votes">(200 赞同)</span>
                 <span class="created_time">(2019-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/367861613" class="">如何评价数学家苏步青？</a>
+                <a href="https://www.zhihu.com/answer/367861613" class="">如何评价数学家苏步青？</a>
                 <span class="votes">(194 赞同)</span>
                 <span class="created_time">(2018-04-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/498211706" class="">有没有关于 Michael Atiyah 的数学研究贡献介绍？</a>
+                <a href="https://www.zhihu.com/answer/498211706" class="">有没有关于 Michael Atiyah 的数学研究贡献介绍？</a>
                 <span class="votes">(193 赞同)</span>
                 <span class="created_time">(2018-09-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/526224332" class="">能否详细介绍一下英国的数学强校的各自特点与优势？</a>
+                <a href="https://www.zhihu.com/answer/526224332" class="">能否详细介绍一下英国的数学强校的各自特点与优势？</a>
                 <span class="votes">(192 赞同)</span>
                 <span class="created_time">(2018-11-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/488316005" class="">如何评价河北科技大学发布调查结果：韩春雨团队不存在主观造假？</a>
+                <a href="https://www.zhihu.com/answer/488316005" class="">如何评价河北科技大学发布调查结果：韩春雨团队不存在主观造假？</a>
                 <span class="votes">(191 赞同)</span>
                 <span class="created_time">(2018-09-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/184798434" class="">为什么刘备要发动夷陵之战？</a>
+                <a href="https://www.zhihu.com/answer/184798434" class="">为什么刘备要发动夷陵之战？</a>
                 <span class="votes">(190 赞同)</span>
                 <span class="created_time">(2017-06-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/126472975" class="">如何评价陈省身的数学成就？</a>
+                <a href="https://www.zhihu.com/answer/126472975" class="">如何评价陈省身的数学成就？</a>
                 <span class="votes">(189 赞同)</span>
                 <span class="created_time">(2016-10-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/327514515" class="">如何看待知乎用户李归农已经有女朋友却还觊觎别的女人？</a>
+                <a href="https://www.zhihu.com/answer/327514515" class="">如何看待知乎用户李归农已经有女朋友却还觊觎别的女人？</a>
                 <span class="votes">(187 赞同)</span>
                 <span class="created_time">(2018-02-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/473817585" class="">为什么微分几何感觉很琐碎？</a>
+                <a href="https://www.zhihu.com/answer/473817585" class="">为什么微分几何感觉很琐碎？</a>
                 <span class="votes">(182 赞同)</span>
                 <span class="created_time">(2018-08-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/310131255" class="">数学系的优秀博士一般一年有几个月是在研究数学的？</a>
+                <a href="https://www.zhihu.com/answer/310131255" class="">数学系的优秀博士一般一年有几个月是在研究数学的？</a>
                 <span class="votes">(181 赞同)</span>
                 <span class="created_time">(2018-02-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/295756691" class="">如何评价 StrongArt 在 B 站讲解的代数几何？水平怎么样？</a>
+                <a href="https://www.zhihu.com/answer/295756691" class="">如何评价 StrongArt 在 B 站讲解的代数几何？水平怎么样？</a>
                 <span class="votes">(179 赞同)</span>
                 <span class="created_time">(2018-01-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/140860177" class="">数学报告听不懂，有必要去听吗？如何看待？</a>
+                <a href="https://www.zhihu.com/answer/140860177" class="">数学报告听不懂，有必要去听吗？如何看待？</a>
                 <span class="votes">(178 赞同)</span>
                 <span class="created_time">(2017-01-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/358681222" class="">高校院所研究生（硕士、博士）导师的权力是否过大，是否应该有所限制？</a>
+                <a href="https://www.zhihu.com/answer/358681222" class="">高校院所研究生（硕士、博士）导师的权力是否过大，是否应该有所限制？</a>
                 <span class="votes">(174 赞同)</span>
                 <span class="created_time">(2018-04-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/142043682" class="">如何评价钟会？</a>
+                <a href="https://www.zhihu.com/answer/142043682" class="">如何评价钟会？</a>
                 <span class="votes">(173 赞同)</span>
                 <span class="created_time">(2017-01-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/410552449" class="">纽结理论的前景如何？近年来有什么重要的发展？</a>
+                <a href="https://www.zhihu.com/answer/410552449" class="">纽结理论的前景如何？近年来有什么重要的发展？</a>
                 <span class="votes">(172 赞同)</span>
                 <span class="created_time">(2018-06-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/188319623" class="">如何评价在抽象代数I以模为教学内容？</a>
+                <a href="https://www.zhihu.com/answer/188319623" class="">如何评价在抽象代数I以模为教学内容？</a>
                 <span class="votes">(172 赞同)</span>
                 <span class="created_time">(2017-06-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/185287102" class="">请问代数分析是什么样的领域？在几何学方面有什么应用嘛？</a>
+                <a href="https://www.zhihu.com/answer/185287102" class="">请问代数分析是什么样的领域？在几何学方面有什么应用嘛？</a>
                 <span class="votes">(171 赞同)</span>
                 <span class="created_time">(2017-06-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/415405230" class="">什么限制了你的论文天花板?</a>
+                <a href="https://www.zhihu.com/answer/415405230" class="">什么限制了你的论文天花板?</a>
                 <span class="votes">(171 赞同)</span>
                 <span class="created_time">(2018-06-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/500294607" class="">如果黎曼猜想被证否了，将会产生什么后果？</a>
+                <a href="https://www.zhihu.com/answer/500294607" class="">如果黎曼猜想被证否了，将会产生什么后果？</a>
                 <span class="votes">(171 赞同)</span>
                 <span class="created_time">(2018-09-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/394556426" class="">什么样的数学结果是non-trivial的？</a>
+                <a href="https://www.zhihu.com/answer/394556426" class="">什么样的数学结果是non-trivial的？</a>
                 <span class="votes">(170 赞同)</span>
                 <span class="created_time">(2018-05-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/418440271" class="">北京大学比京都大学差很多吗？</a>
+                <a href="https://www.zhihu.com/answer/418440271" class="">北京大学比京都大学差很多吗？</a>
                 <span class="votes">(170 赞同)</span>
                 <span class="created_time">(2018-06-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/543337371" class="">数学家 Donaldson 是否过誉了？以下评价是否合理？</a>
+                <a href="https://www.zhihu.com/answer/543337371" class="">数学家 Donaldson 是否过誉了？以下评价是否合理？</a>
                 <span class="votes">(169 赞同)</span>
                 <span class="created_time">(2018-12-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/348269848" class="">要学多少数学才能成为合格的花粉？</a>
+                <a href="https://www.zhihu.com/answer/348269848" class="">要学多少数学才能成为合格的花粉？</a>
                 <span class="votes">(168 赞同)</span>
                 <span class="created_time">(2018-03-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/343314362" class="">如何看待知乎用户李归农嘲讽数学家华罗庚被驳斥无回应？</a>
+                <a href="https://www.zhihu.com/answer/343314362" class="">如何看待知乎用户李归农嘲讽数学家华罗庚被驳斥无回应？</a>
                 <span class="votes">(166 赞同)</span>
                 <span class="created_time">(2018-03-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/338044237" class="">科研工作者的男女比例失调吗？原因是什么？情况有没有在好转？</a>
+                <a href="https://www.zhihu.com/answer/338044237" class="">科研工作者的男女比例失调吗？原因是什么？情况有没有在好转？</a>
                 <span class="votes">(166 赞同)</span>
                 <span class="created_time">(2018-03-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/190309098" class="">你所在数学领域的 big picture 是什么？</a>
+                <a href="https://www.zhihu.com/answer/190309098" class="">你所在数学领域的 big picture 是什么？</a>
                 <span class="votes">(165 赞同)</span>
                 <span class="created_time">(2017-06-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/506681399" class="">在几何的学习中如何调整对细节的关注程度？</a>
+                <a href="https://www.zhihu.com/answer/506681399" class="">在几何的学习中如何调整对细节的关注程度？</a>
                 <span class="votes">(165 赞同)</span>
                 <span class="created_time">(2018-10-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/532913166" class="">如何评价上海交通大学数学系不提供就业辅导&要学生走纯数学之路？</a>
+                <a href="https://www.zhihu.com/answer/532913166" class="">如何评价上海交通大学数学系不提供就业辅导&要学生走纯数学之路？</a>
                 <span class="votes">(164 赞同)</span>
                 <span class="created_time">(2018-11-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/588453254" class="">有没有人知道日本青年一代做的比较好的数学家?</a>
+                <a href="https://www.zhihu.com/answer/588453254" class="">有没有人知道日本青年一代做的比较好的数学家?</a>
                 <span class="votes">(163 赞同)</span>
                 <span class="created_time">(2019-02-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/124562192" class="">几何分析是不是一个被普遍公认的独立的学科，如果是，为何AMS的学科分类里面里面找不到几何分析？</a>
+                <a href="https://www.zhihu.com/answer/124562192" class="">几何分析是不是一个被普遍公认的独立的学科，如果是，为何AMS的学科分类里面里面找不到几何分析？</a>
                 <span class="votes">(163 赞同)</span>
                 <span class="created_time">(2016-10-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/611867542" class="">不懂 Type Theory 或 Category Theory 仍称自己学 CS 是否为「民科」？</a>
+                <a href="https://www.zhihu.com/answer/611867542" class="">不懂 Type Theory 或 Category Theory 仍称自己学 CS 是否为「民科」？</a>
                 <span class="votes">(163 赞同)</span>
                 <span class="created_time">(2019-03-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/475495989" class="">历史上真实的刘备，相人之术如何？</a>
+                <a href="https://www.zhihu.com/answer/475495989" class="">历史上真实的刘备，相人之术如何？</a>
                 <span class="votes">(160 赞同)</span>
                 <span class="created_time">(2018-08-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/133612464" class="">Tropical geometry、mirror symmetry 是研究什么？</a>
+                <a href="https://www.zhihu.com/answer/133612464" class="">Tropical geometry、mirror symmetry 是研究什么？</a>
                 <span class="votes">(158 赞同)</span>
                 <span class="created_time">(2016-11-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/347660718" class="">能否介绍一些玻恩大学数学教授尤里-曼宁(manin)的主要数学研究成果？</a>
+                <a href="https://www.zhihu.com/answer/347660718" class="">能否介绍一些玻恩大学数学教授尤里-曼宁(manin)的主要数学研究成果？</a>
                 <span class="votes">(156 赞同)</span>
                 <span class="created_time">(2018-03-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/365346192" class="">美国数学研究生院是不是歧视中国的申请人？</a>
+                <a href="https://www.zhihu.com/answer/365346192" class="">美国数学研究生院是不是歧视中国的申请人？</a>
                 <span class="votes">(155 赞同)</span>
                 <span class="created_time">(2018-04-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/458942718" class="">纯数科研对于本科生是否可能?</a>
+                <a href="https://www.zhihu.com/answer/458942718" class="">纯数科研对于本科生是否可能?</a>
                 <span class="votes">(155 赞同)</span>
                 <span class="created_time">(2018-08-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/629057682" class="">如何理解Atiyah-Bott localization?</a>
+                <a href="https://www.zhihu.com/answer/629057682" class="">如何理解Atiyah-Bott localization?</a>
                 <span class="votes">(155 赞同)</span>
                 <span class="created_time">(2019-03-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/475030052" class="">作为数学Phd或科研人员，你是否对自己的论文成果满意，如果不满意如何克服心理落差？</a>
+                <a href="https://www.zhihu.com/answer/475030052" class="">作为数学Phd或科研人员，你是否对自己的论文成果满意，如果不满意如何克服心理落差？</a>
                 <span class="votes">(152 赞同)</span>
                 <span class="created_time">(2018-08-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/296620870" class="">有哪些篇幅很短却意义重大的论文？</a>
+                <a href="https://www.zhihu.com/answer/296620870" class="">有哪些篇幅很短却意义重大的论文？</a>
                 <span class="votes">(151 赞同)</span>
                 <span class="created_time">(2018-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/142678141" class="">如何看待2017年沃尔夫奖得主Fefferman和Schoen？</a>
+                <a href="https://www.zhihu.com/answer/142678141" class="">如何看待2017年沃尔夫奖得主Fefferman和Schoen？</a>
                 <span class="votes">(151 赞同)</span>
                 <span class="created_time">(2017-01-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/307727235" class="">数学研究者一般需要用到数学软件吗？</a>
+                <a href="https://www.zhihu.com/answer/307727235" class="">数学研究者一般需要用到数学软件吗？</a>
                 <span class="votes">(149 赞同)</span>
                 <span class="created_time">(2018-01-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/470102150" class="">为何这么多人称赞指标定理？</a>
+                <a href="https://www.zhihu.com/answer/470102150" class="">为何这么多人称赞指标定理？</a>
                 <span class="votes">(148 赞同)</span>
                 <span class="created_time">(2018-08-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/642392543" class="">欧氏空间到自身的局部同胚、连续、满映射，是否一定是单射？</a>
+                <a href="https://www.zhihu.com/answer/642392543" class="">欧氏空间到自身的局部同胚、连续、满映射，是否一定是单射？</a>
                 <span class="votes">(145 赞同)</span>
                 <span class="created_time">(2019-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/640618311" class="">为什么前人花了大量时间，用他们的聪明才智发现的定理，后人只要花相对很少的时间就能弄明白？</a>
+                <a href="https://www.zhihu.com/answer/640618311" class="">为什么前人花了大量时间，用他们的聪明才智发现的定理，后人只要花相对很少的时间就能弄明白？</a>
                 <span class="votes">(145 赞同)</span>
                 <span class="created_time">(2019-04-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/606736725" class="">历史上曾经有哪些和李归农一样的人？</a>
+                <a href="https://www.zhihu.com/answer/606736725" class="">历史上曾经有哪些和李归农一样的人？</a>
                 <span class="votes">(144 赞同)</span>
                 <span class="created_time">(2019-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/533095544" class="">群论在数学分析中的应用？</a>
+                <a href="https://www.zhihu.com/answer/533095544" class="">群论在数学分析中的应用？</a>
                 <span class="votes">(144 赞同)</span>
                 <span class="created_time">(2018-11-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/639758861" class="">如何看待中国矿业大学杨小军研究员宣称自己解决黎曼猜想？</a>
+                <a href="https://www.zhihu.com/answer/639758861" class="">如何看待中国矿业大学杨小军研究员宣称自己解决黎曼猜想？</a>
                 <span class="votes">(142 赞同)</span>
                 <span class="created_time">(2019-04-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/451268509" class="">有哪些在你的数学领域里很有用的技巧？</a>
+                <a href="https://www.zhihu.com/answer/451268509" class="">有哪些在你的数学领域里很有用的技巧？</a>
                 <span class="votes">(141 赞同)</span>
                 <span class="created_time">(2018-07-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/504386543" class="">如何看待「30岁男子“啃老”8年　父母一气之下告上法庭」？</a>
+                <a href="https://www.zhihu.com/answer/504386543" class="">如何看待「30岁男子“啃老”8年　父母一气之下告上法庭」？</a>
                 <span class="votes">(141 赞同)</span>
                 <span class="created_time">(2018-10-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/614321362" class="">研究几何拓扑的人是如何研究 moduli space 或者 teichmuller space 的？</a>
+                <a href="https://www.zhihu.com/answer/614321362" class="">研究几何拓扑的人是如何研究 moduli space 或者 teichmuller space 的？</a>
                 <span class="votes">(140 赞同)</span>
                 <span class="created_time">(2019-03-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/175022074" class="">怎样评价Bhargava的学生发表在AMS Blogs上的女权主义大作？</a>
+                <a href="https://www.zhihu.com/answer/175022074" class="">怎样评价Bhargava的学生发表在AMS Blogs上的女权主义大作？</a>
                 <span class="votes">(138 赞同)</span>
                 <span class="created_time">(2017-05-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/134482922" class="">Kenji Fukaya在数学上的主要贡献在哪里？成果和田刚李骏他们相比怎么样？</a>
+                <a href="https://www.zhihu.com/answer/134482922" class="">Kenji Fukaya在数学上的主要贡献在哪里？成果和田刚李骏他们相比怎么样？</a>
                 <span class="votes">(138 赞同)</span>
                 <span class="created_time">(2016-12-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/329433675" class="">学数学的人都有哪些特有的习惯？</a>
+                <a href="https://www.zhihu.com/answer/329433675" class="">学数学的人都有哪些特有的习惯？</a>
                 <span class="votes">(138 赞同)</span>
                 <span class="created_time">(2018-02-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/134083187" class="">homological mirror symmetry是研究什么的？</a>
+                <a href="https://www.zhihu.com/answer/134083187" class="">homological mirror symmetry是研究什么的？</a>
                 <span class="votes">(138 赞同)</span>
                 <span class="created_time">(2016-12-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/189305448" class="">如何理解Maurer-Cartan形式？</a>
+                <a href="https://www.zhihu.com/answer/189305448" class="">如何理解Maurer-Cartan形式？</a>
                 <span class="votes">(137 赞同)</span>
                 <span class="created_time">(2017-06-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/620284245" class="">什么是Arakelov几何？</a>
+                <a href="https://www.zhihu.com/answer/620284245" class="">什么是Arakelov几何？</a>
                 <span class="votes">(137 赞同)</span>
                 <span class="created_time">(2019-03-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/372840564" class="">为什么数学 PhD 们喜欢围棋？</a>
+                <a href="https://www.zhihu.com/answer/372840564" class="">为什么数学 PhD 们喜欢围棋？</a>
                 <span class="votes">(137 赞同)</span>
                 <span class="created_time">(2018-04-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/332754579" class="">博士生们每天科研时间是多久？</a>
+                <a href="https://www.zhihu.com/answer/332754579" class="">博士生们每天科研时间是多久？</a>
                 <span class="votes">(136 赞同)</span>
                 <span class="created_time">(2018-03-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/491969595" class="">为什么比起台湾高雄大学，我的父母更愿意选择末流211？</a>
+                <a href="https://www.zhihu.com/answer/491969595" class="">为什么比起台湾高雄大学，我的父母更愿意选择末流211？</a>
                 <span class="votes">(136 赞同)</span>
                 <span class="created_time">(2018-09-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/507792934" class="">读 PhD 时的课程成绩重不重要？</a>
+                <a href="https://www.zhihu.com/answer/507792934" class="">读 PhD 时的课程成绩重不重要？</a>
                 <span class="votes">(135 赞同)</span>
                 <span class="created_time">(2018-10-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/305567110" class="">孔采维奇的数学工作对现代数学产生了哪些影响?</a>
+                <a href="https://www.zhihu.com/answer/305567110" class="">孔采维奇的数学工作对现代数学产生了哪些影响?</a>
                 <span class="votes">(135 赞同)</span>
                 <span class="created_time">(2018-01-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/467561409" class="">如何评价知乎用户dhchen所举办的知乎live「数学分析第一步：搞懂实数」？</a>
+                <a href="https://www.zhihu.com/answer/467561409" class="">如何评价知乎用户dhchen所举办的知乎live「数学分析第一步：搞懂实数」？</a>
                 <span class="votes">(134 赞同)</span>
                 <span class="created_time">(2018-08-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/130913936" class="">Kahler几何的发展历程及其背景意义是什么</a>
+                <a href="https://www.zhihu.com/answer/130913936" class="">Kahler几何的发展历程及其背景意义是什么</a>
                 <span class="votes">(134 赞同)</span>
                 <span class="created_time">(2016-11-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/326584136" class="">十几岁的小孩，计算能力特别弱，但是逻辑推理能力超强，梦想是成为数学家，有可能么？</a>
+                <a href="https://www.zhihu.com/answer/326584136" class="">十几岁的小孩，计算能力特别弱，但是逻辑推理能力超强，梦想是成为数学家，有可能么？</a>
                 <span class="votes">(131 赞同)</span>
                 <span class="created_time">(2018-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/293413764" class="">做数学不同方向的人各有什么特点？</a>
+                <a href="https://www.zhihu.com/answer/293413764" class="">做数学不同方向的人各有什么特点？</a>
                 <span class="votes">(131 赞同)</span>
                 <span class="created_time">(2018-01-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/594546845" class="">哪些看似毫不相干的事物具有相同的数学原理？</a>
+                <a href="https://www.zhihu.com/answer/594546845" class="">哪些看似毫不相干的事物具有相同的数学原理？</a>
                 <span class="votes">(131 赞同)</span>
                 <span class="created_time">(2019-02-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/313368602" class="">想读调和分析方向的研究生，本科阶段要学哪些课程？</a>
+                <a href="https://www.zhihu.com/answer/313368602" class="">想读调和分析方向的研究生，本科阶段要学哪些课程？</a>
                 <span class="votes">(130 赞同)</span>
                 <span class="created_time">(2018-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/340338925" class="">同样是民科，Strongart 和 bhuztez 有啥异同?</a>
+                <a href="https://www.zhihu.com/answer/340338925" class="">同样是民科，Strongart 和 bhuztez 有啥异同?</a>
                 <span class="votes">(130 赞同)</span>
                 <span class="created_time">(2018-03-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/535744325" class="">关于整体微分几何？</a>
+                <a href="https://www.zhihu.com/answer/535744325" class="">关于整体微分几何？</a>
                 <span class="votes">(129 赞同)</span>
                 <span class="created_time">(2018-11-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/582970172" class="">如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？</a>
+                <a href="https://www.zhihu.com/answer/582970172" class="">如何评价杜克大学生物统计系劝阻中国学生在学系大楼内讲中文？</a>
                 <span class="votes">(129 赞同)</span>
                 <span class="created_time">(2019-01-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/321148551" class="">如何理解庞加莱对偶（Poincare Duality）?</a>
+                <a href="https://www.zhihu.com/answer/321148551" class="">如何理解庞加莱对偶（Poincare Duality）?</a>
                 <span class="votes">(129 赞同)</span>
                 <span class="created_time">(2018-02-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/320043293" class="">可以介绍数学家Carlos Simpson的工作吗？</a>
+                <a href="https://www.zhihu.com/answer/320043293" class="">可以介绍数学家Carlos Simpson的工作吗？</a>
                 <span class="votes">(127 赞同)</span>
                 <span class="created_time">(2018-02-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/315633003" class="">罗格斯大学（Rutgers)的数学系怎么样？</a>
+                <a href="https://www.zhihu.com/answer/315633003" class="">罗格斯大学（Rutgers)的数学系怎么样？</a>
                 <span class="votes">(125 赞同)</span>
                 <span class="created_time">(2018-02-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/315760674" class="">为什么要研究非交换几何？</a>
+                <a href="https://www.zhihu.com/answer/315760674" class="">为什么要研究非交换几何？</a>
                 <span class="votes">(124 赞同)</span>
                 <span class="created_time">(2018-02-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/490995939" class="">有哪些数学上的事实，没有一定数学知识的人不会相信？</a>
+                <a href="https://www.zhihu.com/answer/490995939" class="">有哪些数学上的事实，没有一定数学知识的人不会相信？</a>
                 <span class="votes">(123 赞同)</span>
                 <span class="created_time">(2018-09-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/331072487" class="">Stony Brook或UCSD的数学PhD如何选择？</a>
+                <a href="https://www.zhihu.com/answer/331072487" class="">Stony Brook或UCSD的数学PhD如何选择？</a>
                 <span class="votes">(122 赞同)</span>
                 <span class="created_time">(2018-03-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/641553489" class="">申请美国数学phd，女生是否有优势？</a>
+                <a href="https://www.zhihu.com/answer/641553489" class="">申请美国数学phd，女生是否有优势？</a>
                 <span class="votes">(122 赞同)</span>
                 <span class="created_time">(2019-04-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/295271500" class="">你所在的领域（数学和或物理）有哪些令你觉得新颖理论或工具？</a>
+                <a href="https://www.zhihu.com/answer/295271500" class="">你所在的领域（数学和或物理）有哪些令你觉得新颖理论或工具？</a>
                 <span class="votes">(118 赞同)</span>
                 <span class="created_time">(2018-01-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/136538006" class="">为什么数学中概念的命名和植物名字相同？比如丛，芽，茎，根，族等。</a>
+                <a href="https://www.zhihu.com/answer/136538006" class="">为什么数学中概念的命名和植物名字相同？比如丛，芽，茎，根，族等。</a>
                 <span class="votes">(118 赞同)</span>
                 <span class="created_time">(2016-12-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/401401835" class="">如何评价爱国大 V 染香*（袁小靓）移民美国？</a>
+                <a href="https://www.zhihu.com/answer/401401835" class="">如何评价爱国大 V 染香*（袁小靓）移民美国？</a>
                 <span class="votes">(118 赞同)</span>
                 <span class="created_time">(2018-05-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/439367184" class="">结合代数表示论重要吗？与其他数学或者物理分支有何联系？</a>
+                <a href="https://www.zhihu.com/answer/439367184" class="">结合代数表示论重要吗？与其他数学或者物理分支有何联系？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2018-07-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/350884137" class="">如何评价知乎用户张学军有关Tao教授和菲尔兹奖的言论？是否客观属实？</a>
+                <a href="https://www.zhihu.com/answer/350884137" class="">如何评价知乎用户张学军有关Tao教授和菲尔兹奖的言论？是否客观属实？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2018-03-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/347620732" class="">有哪些构造性强的复变函数题目？</a>
+                <a href="https://www.zhihu.com/answer/347620732" class="">有哪些构造性强的复变函数题目？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2018-03-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/146431424" class="">几何测度论的最重要观点是什么？</a>
+                <a href="https://www.zhihu.com/answer/146431424" class="">几何测度论的最重要观点是什么？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2017-02-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/490650206" class="">什么是 Finsler Geometry？它与 Riemann 几何有什么关系？</a>
+                <a href="https://www.zhihu.com/answer/490650206" class="">什么是 Finsler Geometry？它与 Riemann 几何有什么关系？</a>
                 <span class="votes">(117 赞同)</span>
                 <span class="created_time">(2018-09-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/581977603" class="">李归农是否有望超越 Seidel，成为辛几何第一人？</a>
+                <a href="https://www.zhihu.com/answer/581977603" class="">李归农是否有望超越 Seidel，成为辛几何第一人？</a>
                 <span class="votes">(116 赞同)</span>
                 <span class="created_time">(2019-01-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/642597153" class="">一些自称爱国的人申请美国绿卡的原因是什么？</a>
+                <a href="https://www.zhihu.com/answer/642597153" class="">一些自称爱国的人申请美国绿卡的原因是什么？</a>
                 <span class="votes">(115 赞同)</span>
                 <span class="created_time">(2019-04-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/135938212" class="">数学学习和研究中如何避免伪证？对伪证应持有的态度？</a>
+                <a href="https://www.zhihu.com/answer/135938212" class="">数学学习和研究中如何避免伪证？对伪证应持有的态度？</a>
                 <span class="votes">(114 赞同)</span>
                 <span class="created_time">(2016-12-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/306831018" class="">导出非交换代数几何是做什么？</a>
+                <a href="https://www.zhihu.com/answer/306831018" class="">导出非交换代数几何是做什么？</a>
                 <span class="votes">(114 赞同)</span>
                 <span class="created_time">(2018-01-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/490255201" class="">你认为毛主席最好的一句诗词是什么？</a>
+                <a href="https://www.zhihu.com/answer/490255201" class="">你认为毛主席最好的一句诗词是什么？</a>
                 <span class="votes">(113 赞同)</span>
                 <span class="created_time">(2018-09-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/496052752" class="">如何看待 Peter Scholze 和 Jacob Stix 称望月新一对 ABC 猜想的证明有误？</a>
+                <a href="https://www.zhihu.com/answer/496052752" class="">如何看待 Peter Scholze 和 Jacob Stix 称望月新一对 ABC 猜想的证明有误？</a>
                 <span class="votes">(112 赞同)</span>
                 <span class="created_time">(2018-09-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/570512698" class="">在你所在的专业，有哪些核心期刊？</a>
+                <a href="https://www.zhihu.com/answer/570512698" class="">在你所在的专业，有哪些核心期刊？</a>
                 <span class="votes">(112 赞同)</span>
                 <span class="created_time">(2019-01-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/335639769" class="">数学科研成果的大小是取决于使用的方法还是问题本身的重要性？</a>
+                <a href="https://www.zhihu.com/answer/335639769" class="">数学科研成果的大小是取决于使用的方法还是问题本身的重要性？</a>
                 <span class="votes">(111 赞同)</span>
                 <span class="created_time">(2018-03-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/179448560" class="">为什么Hodge conjecture很重要（为了解决它，不惜重赏100W刀）?</a>
+                <a href="https://www.zhihu.com/answer/179448560" class="">为什么Hodge conjecture很重要（为了解决它，不惜重赏100W刀）?</a>
                 <span class="votes">(110 赞同)</span>
                 <span class="created_time">(2017-06-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/355005679" class="">为什么现在没有全能型数学家？</a>
+                <a href="https://www.zhihu.com/answer/355005679" class="">为什么现在没有全能型数学家？</a>
                 <span class="votes">(110 赞同)</span>
                 <span class="created_time">(2018-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/409563850" class="">如何在这个时代，活出魏晋名士的风范？</a>
+                <a href="https://www.zhihu.com/answer/409563850" class="">如何在这个时代，活出魏晋名士的风范？</a>
                 <span class="votes">(109 赞同)</span>
                 <span class="created_time">(2018-06-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/459191253" class="">诸葛亮对魏延好感如何？为什么？</a>
+                <a href="https://www.zhihu.com/answer/459191253" class="">诸葛亮对魏延好感如何？为什么？</a>
                 <span class="votes">(109 赞同)</span>
                 <span class="created_time">(2018-08-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/333423706" class="">导出范畴如何决定代数簇的结构，类型？</a>
+                <a href="https://www.zhihu.com/answer/333423706" class="">导出范畴如何决定代数簇的结构，类型？</a>
                 <span class="votes">(108 赞同)</span>
                 <span class="created_time">(2018-03-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/407308741" class="">因为老师授课问题而失去学习兴趣了该如何处理？</a>
+                <a href="https://www.zhihu.com/answer/407308741" class="">因为老师授课问题而失去学习兴趣了该如何处理？</a>
                 <span class="votes">(108 赞同)</span>
                 <span class="created_time">(2018-06-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/504631402" class="">数学中有哪些表面没有关系但是内在有深刻联系的问题？</a>
+                <a href="https://www.zhihu.com/answer/504631402" class="">数学中有哪些表面没有关系但是内在有深刻联系的问题？</a>
                 <span class="votes">(108 赞同)</span>
                 <span class="created_time">(2018-10-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/337323900" class="">为什么辛几何领域有这么多的争议？</a>
+                <a href="https://www.zhihu.com/answer/337323900" class="">为什么辛几何领域有这么多的争议？</a>
                 <span class="votes">(108 赞同)</span>
                 <span class="created_time">(2018-03-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/507107804" class="">如何评价北京大学李忠教授宣称证明黎曼猜想？</a>
+                <a href="https://www.zhihu.com/answer/507107804" class="">如何评价北京大学李忠教授宣称证明黎曼猜想？</a>
                 <span class="votes">(107 赞同)</span>
                 <span class="created_time">(2018-10-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/399598175" class="">为什么数学某些领域论文的被引量都很低？</a>
+                <a href="https://www.zhihu.com/answer/399598175" class="">为什么数学某些领域论文的被引量都很低？</a>
                 <span class="votes">(107 赞同)</span>
                 <span class="created_time">(2018-05-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/370417019" class="">大二，某985大二物理专业学生，想做数学物理方向应该如何准备？</a>
+                <a href="https://www.zhihu.com/answer/370417019" class="">大二，某985大二物理专业学生，想做数学物理方向应该如何准备？</a>
                 <span class="votes">(106 赞同)</span>
                 <span class="created_time">(2018-04-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/395388951" class="">如何理解 mathematical maturity？</a>
+                <a href="https://www.zhihu.com/answer/395388951" class="">如何理解 mathematical maturity？</a>
                 <span class="votes">(106 赞同)</span>
                 <span class="created_time">(2018-05-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/641750441" class="">Publications Mathématiques de l'IHÉS 上发表过哪些经典论文？</a>
+                <a href="https://www.zhihu.com/answer/641750441" class="">Publications Mathématiques de l'IHÉS 上发表过哪些经典论文？</a>
                 <span class="votes">(105 赞同)</span>
                 <span class="created_time">(2019-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/530123640" class="">Advance In Mathematics 这个杂志怎么样？</a>
+                <a href="https://www.zhihu.com/answer/530123640" class="">Advance In Mathematics 这个杂志怎么样？</a>
                 <span class="votes">(105 赞同)</span>
                 <span class="created_time">(2018-11-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/347430708" class="">怎么样才能让自己变得成熟，稳重？</a>
+                <a href="https://www.zhihu.com/answer/347430708" class="">怎么样才能让自己变得成熟，稳重？</a>
                 <span class="votes">(105 赞同)</span>
                 <span class="created_time">(2018-03-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/474257097" class="">Gromov-Witten不变量是什么？</a>
+                <a href="https://www.zhihu.com/answer/474257097" class="">Gromov-Witten不变量是什么？</a>
                 <span class="votes">(104 赞同)</span>
                 <span class="created_time">(2018-08-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/312594923" class="">王垠是个怎样的人？</a>
+                <a href="https://www.zhihu.com/answer/312594923" class="">王垠是个怎样的人？</a>
                 <span class="votes">(104 赞同)</span>
                 <span class="created_time">(2018-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/544756245" class="">什么是 Batalin-Vilkovisky formalism？它在量子场论中有哪些应用？</a>
+                <a href="https://www.zhihu.com/answer/544756245" class="">什么是 Batalin-Vilkovisky formalism？它在量子场论中有哪些应用？</a>
                 <span class="votes">(104 赞同)</span>
                 <span class="created_time">(2018-12-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/135579263" class="">大学里转专业是什么样的体验？</a>
+                <a href="https://www.zhihu.com/answer/135579263" class="">大学里转专业是什么样的体验？</a>
                 <span class="votes">(104 赞同)</span>
                 <span class="created_time">(2016-12-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/487767585" class="">hormander的L^2 方法在辛几何中的发展？</a>
+                <a href="https://www.zhihu.com/answer/487767585" class="">hormander的L^2 方法在辛几何中的发展？</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2018-09-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/606724039" class="">如何拿到英国理科博士全额奖学金？</a>
+                <a href="https://www.zhihu.com/answer/606724039" class="">如何拿到英国理科博士全额奖学金？</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2019-02-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/637013864" class="">如何看待辛几何研究人员李归农对于知乎数学“皇帝”的评价?</a>
+                <a href="https://www.zhihu.com/answer/637013864" class="">如何看待辛几何研究人员李归农对于知乎数学“皇帝”的评价?</a>
                 <span class="votes">(101 赞同)</span>
                 <span class="created_time">(2019-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/473782709" class="">关于纯数方向国内高校读研，再申请国外 PhD？</a>
+                <a href="https://www.zhihu.com/answer/473782709" class="">关于纯数方向国内高校读研，再申请国外 PhD？</a>
                 <span class="votes">(101 赞同)</span>
                 <span class="created_time">(2018-08-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/553562280" class="">谁来帮忙细细总结一下 20 世纪几何学的发展进程？</a>
+                <a href="https://www.zhihu.com/answer/553562280" class="">谁来帮忙细细总结一下 20 世纪几何学的发展进程？</a>
                 <span class="votes">(101 赞同)</span>
                 <span class="created_time">(2018-12-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/363811057" class="">数学给你带来了哪些乐趣？</a>
+                <a href="https://www.zhihu.com/answer/363811057" class="">数学给你带来了哪些乐趣？</a>
                 <span class="votes">(100 赞同)</span>
                 <span class="created_time">(2018-04-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/514171775" class="">陈景润证明了「哥德巴赫猜想」的弱化命题，那么到底是陈景润厉害，还是哥德巴赫更胜一筹？</a>
+                <a href="https://www.zhihu.com/answer/514171775" class="">陈景润证明了「哥德巴赫猜想」的弱化命题，那么到底是陈景润厉害，还是哥德巴赫更胜一筹？</a>
                 <span class="votes">(97 赞同)</span>
                 <span class="created_time">(2018-10-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/133267365" class="">流形的概念可以不依赖欧氏空间来定义吗？</a>
+                <a href="https://www.zhihu.com/answer/133267365" class="">流形的概念可以不依赖欧氏空间来定义吗？</a>
                 <span class="votes">(95 赞同)</span>
                 <span class="created_time">(2016-11-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/516041611" class="">为什么绳子一拉就是直线?</a>
+                <a href="https://www.zhihu.com/answer/516041611" class="">为什么绳子一拉就是直线?</a>
                 <span class="votes">(95 赞同)</span>
                 <span class="created_time">(2018-10-22)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/297535605" class="">如何看待知乎用户李吟对诺贝尔经济学奖得主纳什的评论？</a>
+                <a href="https://www.zhihu.com/answer/297535605" class="">如何看待知乎用户李吟对诺贝尔经济学奖得主纳什的评论？</a>
                 <span class="votes">(94 赞同)</span>
                 <span class="created_time">(2018-01-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/498269419" class="">在2017 Google 开发者大会上，李飞飞宣布「谷歌中国 AI 研发中心」成立，会带来什么影响？</a>
+                <a href="https://www.zhihu.com/answer/498269419" class="">在2017 Google 开发者大会上，李飞飞宣布「谷歌中国 AI 研发中心」成立，会带来什么影响？</a>
                 <span class="votes">(94 赞同)</span>
                 <span class="created_time">(2018-09-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/429769711" class="">抽象调和分析可以取代经典调和分析吗？</a>
+                <a href="https://www.zhihu.com/answer/429769711" class="">抽象调和分析可以取代经典调和分析吗？</a>
                 <span class="votes">(94 赞同)</span>
                 <span class="created_time">(2018-06-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/141165552" class="">什么是Minimal model program，森重文的工作与之有什么关联？</a>
+                <a href="https://www.zhihu.com/answer/141165552" class="">什么是Minimal model program，森重文的工作与之有什么关联？</a>
                 <span class="votes">(90 赞同)</span>
                 <span class="created_time">(2017-01-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/334145354" class="">如何评价程晓流？</a>
+                <a href="https://www.zhihu.com/answer/334145354" class="">如何评价程晓流？</a>
                 <span class="votes">(90 赞同)</span>
                 <span class="created_time">(2018-03-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/465118568" class="">如何评价萧荫堂？</a>
+                <a href="https://www.zhihu.com/answer/465118568" class="">如何评价萧荫堂？</a>
                 <span class="votes">(89 赞同)</span>
                 <span class="created_time">(2018-08-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/432095955" class="">数学研究者如何从研究中找到人生的意义？</a>
+                <a href="https://www.zhihu.com/answer/432095955" class="">数学研究者如何从研究中找到人生的意义？</a>
                 <span class="votes">(89 赞同)</span>
                 <span class="created_time">(2018-07-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/369413269" class="">本科物理系学生,想读数学方向研究生,方向介绍及推荐？</a>
+                <a href="https://www.zhihu.com/answer/369413269" class="">本科物理系学生,想读数学方向研究生,方向介绍及推荐？</a>
                 <span class="votes">(89 赞同)</span>
                 <span class="created_time">(2018-04-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/334313102" class="">大家对北大才子柳智宇出家有何看法？</a>
+                <a href="https://www.zhihu.com/answer/334313102" class="">大家对北大才子柳智宇出家有何看法？</a>
                 <span class="votes">(88 赞同)</span>
                 <span class="created_time">(2018-03-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/514340228" class="">John Tate 的研究方向，对数学的贡献和对后世数学的影响？</a>
+                <a href="https://www.zhihu.com/answer/514340228" class="">John Tate 的研究方向，对数学的贡献和对后世数学的影响？</a>
                 <span class="votes">(87 赞同)</span>
                 <span class="created_time">(2018-10-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/315127936" class="">谁可以罗列一下无限维空间具有哪些不同于有限维空间的性质？究竟是什么造成了这些差别?</a>
+                <a href="https://www.zhihu.com/answer/315127936" class="">谁可以罗列一下无限维空间具有哪些不同于有限维空间的性质？究竟是什么造成了这些差别?</a>
                 <span class="votes">(86 赞同)</span>
                 <span class="created_time">(2018-02-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/394587774" class="">如何准备基础数学phd申请过程中的面试？</a>
+                <a href="https://www.zhihu.com/answer/394587774" class="">如何准备基础数学phd申请过程中的面试？</a>
                 <span class="votes">(86 赞同)</span>
                 <span class="created_time">(2018-05-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/173242543" class="">全身麻醉后醒来是怎样的一个感觉？</a>
+                <a href="https://www.zhihu.com/answer/173242543" class="">全身麻醉后醒来是怎样的一个感觉？</a>
                 <span class="votes">(85 赞同)</span>
                 <span class="created_time">(2017-05-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/632509981" class="">数学家对量子场论有哪些新的理解？</a>
+                <a href="https://www.zhihu.com/answer/632509981" class="">数学家对量子场论有哪些新的理解？</a>
                 <span class="votes">(82 赞同)</span>
                 <span class="created_time">(2019-03-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/306797663" class="">普林斯顿，斯坦福，哈佛，麻省，伯克利，芝加哥这些名校的纯数，方程，几何或分析方向哪个学校更强？</a>
+                <a href="https://www.zhihu.com/answer/306797663" class="">普林斯顿，斯坦福，哈佛，麻省，伯克利，芝加哥这些名校的纯数，方程，几何或分析方向哪个学校更强？</a>
                 <span class="votes">(81 赞同)</span>
                 <span class="created_time">(2018-01-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/129433731" class="">如何看待 Atiyah 对六维球面 S^6 上没有复结构的证明？</a>
+                <a href="https://www.zhihu.com/answer/129433731" class="">如何看待 Atiyah 对六维球面 S^6 上没有复结构的证明？</a>
                 <span class="votes">(81 赞同)</span>
                 <span class="created_time">(2016-11-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/302552658" class="">有没有哪一篇经典学术论文让你觉得学到了很多，值得反复阅读？</a>
+                <a href="https://www.zhihu.com/answer/302552658" class="">有没有哪一篇经典学术论文让你觉得学到了很多，值得反复阅读？</a>
                 <span class="votes">(81 赞同)</span>
                 <span class="created_time">(2018-01-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/125755149" class="">数学硕士/博士研究生阶段有哪些定理/论文/理论让你为之振奋？</a>
+                <a href="https://www.zhihu.com/answer/125755149" class="">数学硕士/博士研究生阶段有哪些定理/论文/理论让你为之振奋？</a>
                 <span class="votes">(79 赞同)</span>
                 <span class="created_time">(2016-10-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/361968371" class="">Lurie 的 derived algebraic geometry 有多重要？</a>
+                <a href="https://www.zhihu.com/answer/361968371" class="">Lurie 的 derived algebraic geometry 有多重要？</a>
                 <span class="votes">(79 赞同)</span>
                 <span class="created_time">(2018-04-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/640762426" class="">在NYU Courant做PDE/Analysis方向的研究生/博士是什么体验？</a>
+                <a href="https://www.zhihu.com/answer/640762426" class="">在NYU Courant做PDE/Analysis方向的研究生/博士是什么体验？</a>
                 <span class="votes">(78 赞同)</span>
                 <span class="created_time">(2019-04-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/486691381" class="">读数学专业的女硕士或女博士是一种怎样的体验？</a>
+                <a href="https://www.zhihu.com/answer/486691381" class="">读数学专业的女硕士或女博士是一种怎样的体验？</a>
                 <span class="votes">(78 赞同)</span>
                 <span class="created_time">(2018-09-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/634373354" class="">王垠有实力拿图灵奖吗？</a>
+                <a href="https://www.zhihu.com/answer/634373354" class="">王垠有实力拿图灵奖吗？</a>
                 <span class="votes">(77 赞同)</span>
                 <span class="created_time">(2019-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/415064652" class="">作为数学PhD，你本科时额外学了哪些数学内容？</a>
+                <a href="https://www.zhihu.com/answer/415064652" class="">作为数学PhD，你本科时额外学了哪些数学内容？</a>
                 <span class="votes">(77 赞同)</span>
                 <span class="created_time">(2018-06-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/154497644" class="">有哪些定理在高维情况下与三维情况下培养出来的直觉不符？</a>
+                <a href="https://www.zhihu.com/answer/154497644" class="">有哪些定理在高维情况下与三维情况下培养出来的直觉不符？</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2017-03-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/386990625" class="">怎么评价杨修这个人？个人觉得他也是很有文人傲骨的。为何人们提到他的形象只是自作聪明？ ?</a>
+                <a href="https://www.zhihu.com/answer/386990625" class="">怎么评价杨修这个人？个人觉得他也是很有文人傲骨的。为何人们提到他的形象只是自作聪明？ ?</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2018-05-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/177093493" class="">能介绍一下关于2017年邵逸夫奖中数学获奖者数学教授亚诺什·科拉尔、克莱尔·瓦赞的工作？</a>
+                <a href="https://www.zhihu.com/answer/177093493" class="">能介绍一下关于2017年邵逸夫奖中数学获奖者数学教授亚诺什·科拉尔、克莱尔·瓦赞的工作？</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2017-06-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/453899969" class="">刘备欲东征之时，诸葛亮为何不曾发一言，以劝谏？</a>
+                <a href="https://www.zhihu.com/answer/453899969" class="">刘备欲东征之时，诸葛亮为何不曾发一言，以劝谏？</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2018-07-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/321892607" class="">关于向量场孤立零点的指标和于欧拉示性数的关系 (Poincare-Hopf thm)？</a>
+                <a href="https://www.zhihu.com/answer/321892607" class="">关于向量场孤立零点的指标和于欧拉示性数的关系 (Poincare-Hopf thm)？</a>
                 <span class="votes">(75 赞同)</span>
                 <span class="created_time">(2018-02-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/400474091" class="">李归农，方舟子，王银三人中谁最有骨气？</a>
+                <a href="https://www.zhihu.com/answer/400474091" class="">李归农，方舟子，王银三人中谁最有骨气？</a>
                 <span class="votes">(75 赞同)</span>
                 <span class="created_time">(2018-05-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/408010938" class="">如何评价美国将缩短发放给中国公民的签证期限，限制「中国制造 2025」相关行业留学生？</a>
+                <a href="https://www.zhihu.com/answer/408010938" class="">如何评价美国将缩短发放给中国公民的签证期限，限制「中国制造 2025」相关行业留学生？</a>
                 <span class="votes">(74 赞同)</span>
                 <span class="created_time">(2018-06-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/320710015" class="">有哪些看似没有几何意义的“表示”，实际上却有几何意义？</a>
+                <a href="https://www.zhihu.com/answer/320710015" class="">有哪些看似没有几何意义的“表示”，实际上却有几何意义？</a>
                 <span class="votes">(73 赞同)</span>
                 <span class="created_time">(2018-02-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/126475290" class="">四维流形复杂程度超出其它高维度流形的原因是什么？</a>
+                <a href="https://www.zhihu.com/answer/126475290" class="">四维流形复杂程度超出其它高维度流形的原因是什么？</a>
                 <span class="votes">(73 赞同)</span>
                 <span class="created_time">(2016-10-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/315641465" class="">如何评价浙江大学教授蔡天新？</a>
+                <a href="https://www.zhihu.com/answer/315641465" class="">如何评价浙江大学教授蔡天新？</a>
                 <span class="votes">(73 赞同)</span>
                 <span class="created_time">(2018-02-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/184907108" class="">contact geometry有哪些应用？</a>
+                <a href="https://www.zhihu.com/answer/184907108" class="">contact geometry有哪些应用？</a>
                 <span class="votes">(73 赞同)</span>
                 <span class="created_time">(2017-06-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/544109153" class="">像 Abel、Galois 这种在很年轻就逝去的天才数学家有哪些？</a>
+                <a href="https://www.zhihu.com/answer/544109153" class="">像 Abel、Galois 这种在很年轻就逝去的天才数学家有哪些？</a>
                 <span class="votes">(72 赞同)</span>
                 <span class="created_time">(2018-12-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/470784375" class="">如何看待山东大学在威海校区成立潘承洞数学研究所，并聘张益唐为主任？</a>
+                <a href="https://www.zhihu.com/answer/470784375" class="">如何看待山东大学在威海校区成立潘承洞数学研究所，并聘张益唐为主任？</a>
                 <span class="votes">(72 赞同)</span>
                 <span class="created_time">(2018-08-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/141335415" class="">如何看待野狐 Master（实为 AlphaGo）对井山裕太下出“九饼”愚形仍获胜？</a>
+                <a href="https://www.zhihu.com/answer/141335415" class="">如何看待野狐 Master（实为 AlphaGo）对井山裕太下出“九饼”愚形仍获胜？</a>
                 <span class="votes">(72 赞同)</span>
                 <span class="created_time">(2017-01-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/643445525" class="">为什么Fano varitey的family是bounded？</a>
+                <a href="https://www.zhihu.com/answer/643445525" class="">为什么Fano varitey的family是bounded？</a>
                 <span class="votes">(71 赞同)</span>
                 <span class="created_time">(2019-04-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/299311010" class="">有数学感觉是怎样的体验？</a>
+                <a href="https://www.zhihu.com/answer/299311010" class="">有数学感觉是怎样的体验？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2018-01-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/295833076" class="">可测集多还是不可测集多？ 即一维，直到n维的欧氏空间中，可测集类和不可测集类是否等势？</a>
+                <a href="https://www.zhihu.com/answer/295833076" class="">可测集多还是不可测集多？ 即一维，直到n维的欧氏空间中，可测集类和不可测集类是否等势？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2018-01-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/349097893" class="">为什么很多人都认为做科研就得忍受清贫的生活？</a>
+                <a href="https://www.zhihu.com/answer/349097893" class="">为什么很多人都认为做科研就得忍受清贫的生活？</a>
                 <span class="votes">(70 赞同)</span>
                 <span class="created_time">(2018-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/133193512" class="">为什么有界数列必有收敛的子列叫作致密性定理？</a>
+                <a href="https://www.zhihu.com/answer/133193512" class="">为什么有界数列必有收敛的子列叫作致密性定理？</a>
                 <span class="votes">(69 赞同)</span>
                 <span class="created_time">(2016-11-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/428092277" class="">如何看待 Brian Conrad 声称证明了黎曼猜想？</a>
+                <a href="https://www.zhihu.com/answer/428092277" class="">如何看待 Brian Conrad 声称证明了黎曼猜想？</a>
                 <span class="votes">(68 赞同)</span>
                 <span class="created_time">(2018-06-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/175026948" class="">谁能介绍一下Categorification 以及 Khovanov homology?</a>
+                <a href="https://www.zhihu.com/answer/175026948" class="">谁能介绍一下Categorification 以及 Khovanov homology?</a>
                 <span class="votes">(68 赞同)</span>
                 <span class="created_time">(2017-05-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/389444699" class="">数学家李吟花六天时间学习 C 语言，通过了等级考试，这件事可信度有多高？</a>
+                <a href="https://www.zhihu.com/answer/389444699" class="">数学家李吟花六天时间学习 C 语言，通过了等级考试，这件事可信度有多高？</a>
                 <span class="votes">(67 赞同)</span>
                 <span class="created_time">(2018-05-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/291367051" class="">有哪些数学问题在高维和低维上情况比较简单，唯独在中间某个维数上很复杂？</a>
+                <a href="https://www.zhihu.com/answer/291367051" class="">有哪些数学问题在高维和低维上情况比较简单，唯独在中间某个维数上很复杂？</a>
                 <span class="votes">(67 赞同)</span>
                 <span class="created_time">(2018-01-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/348386643" class="">介绍一下女数学家Dusa Mcduff的数学工作？</a>
+                <a href="https://www.zhihu.com/answer/348386643" class="">介绍一下女数学家Dusa Mcduff的数学工作？</a>
                 <span class="votes">(67 赞同)</span>
                 <span class="created_time">(2018-03-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/132114494" class="">你研究的数学领域有哪些重要但不出名的猜想？</a>
+                <a href="https://www.zhihu.com/answer/132114494" class="">你研究的数学领域有哪些重要但不出名的猜想？</a>
                 <span class="votes">(66 赞同)</span>
                 <span class="created_time">(2016-11-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/371234129" class="">一定条件下可测函数的复合函数可测吗？</a>
+                <a href="https://www.zhihu.com/answer/371234129" class="">一定条件下可测函数的复合函数可测吗？</a>
                 <span class="votes">(65 赞同)</span>
                 <span class="created_time">(2018-04-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186233276" class="">Tropical Geometry是个什么样的学科?</a>
+                <a href="https://www.zhihu.com/answer/186233276" class="">Tropical Geometry是个什么样的学科?</a>
                 <span class="votes">(65 赞同)</span>
                 <span class="created_time">(2017-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/479491907" class="">为什么有些学数学的看不惯甚至鄙视深度学习？</a>
+                <a href="https://www.zhihu.com/answer/479491907" class="">为什么有些学数学的看不惯甚至鄙视深度学习？</a>
                 <span class="votes">(64 赞同)</span>
                 <span class="created_time">(2018-08-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/187766402" class="">什么是Gromov Hyperbolicity？</a>
+                <a href="https://www.zhihu.com/answer/187766402" class="">什么是Gromov Hyperbolicity？</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2017-06-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/365529497" class="">你觉得你立命之本的特质是什么？</a>
+                <a href="https://www.zhihu.com/answer/365529497" class="">你觉得你立命之本的特质是什么？</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2018-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/360451557" class="">拓扑学中有哪些只对低维成立的定理？</a>
+                <a href="https://www.zhihu.com/answer/360451557" class="">拓扑学中有哪些只对低维成立的定理？</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2018-04-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/571245343" class="">你所在的物理或者数学领域有哪些不 trivial 的推广？</a>
+                <a href="https://www.zhihu.com/answer/571245343" class="">你所在的物理或者数学领域有哪些不 trivial 的推广？</a>
                 <span class="votes">(62 赞同)</span>
                 <span class="created_time">(2019-01-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/173239263" class="">是否有可能做到不借助草稿完成复杂的思考？</a>
+                <a href="https://www.zhihu.com/answer/173239263" class="">是否有可能做到不借助草稿完成复杂的思考？</a>
                 <span class="votes">(61 赞同)</span>
                 <span class="created_time">(2017-05-23)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/363789808" class="">Alexander Givental在辛几何与Gromov-Witten theory上有哪些贡献？</a>
+                <a href="https://www.zhihu.com/answer/363789808" class="">Alexander Givental在辛几何与Gromov-Witten theory上有哪些贡献？</a>
                 <span class="votes">(60 赞同)</span>
                 <span class="created_time">(2018-04-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/312474938" class="">若定义"把一个普通智力初生婴儿培养成陶哲轩"的教育水平为100，那么当今世界存在的最优教育能达到多少？</a>
+                <a href="https://www.zhihu.com/answer/312474938" class="">若定义"把一个普通智力初生婴儿培养成陶哲轩"的教育水平为100，那么当今世界存在的最优教育能达到多少？</a>
                 <span class="votes">(59 赞同)</span>
                 <span class="created_time">(2018-02-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/186762598" class="">求点拨下 Hilbert scheme？</a>
+                <a href="https://www.zhihu.com/answer/186762598" class="">求点拨下 Hilbert scheme？</a>
                 <span class="votes">(58 赞同)</span>
                 <span class="created_time">(2017-06-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/344168234" class="">为什么荀彧的粉丝不如诸葛亮多？</a>
+                <a href="https://www.zhihu.com/answer/344168234" class="">为什么荀彧的粉丝不如诸葛亮多？</a>
                 <span class="votes">(58 赞同)</span>
                 <span class="created_time">(2018-03-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/354952012" class="">任取n阶0-1矩阵，是满秩的多还是不满秩的多？</a>
+                <a href="https://www.zhihu.com/answer/354952012" class="">任取n阶0-1矩阵，是满秩的多还是不满秩的多？</a>
                 <span class="votes">(57 赞同)</span>
                 <span class="created_time">(2018-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/185330915" class="">有哪些可以一读的数学会议文集？</a>
+                <a href="https://www.zhihu.com/answer/185330915" class="">有哪些可以一读的数学会议文集？</a>
                 <span class="votes">(56 赞同)</span>
                 <span class="created_time">(2017-06-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/349244212" class="">辛几何在研究 PDE 方面有哪些应用？</a>
+                <a href="https://www.zhihu.com/answer/349244212" class="">辛几何在研究 PDE 方面有哪些应用？</a>
                 <span class="votes">(56 赞同)</span>
                 <span class="created_time">(2018-03-24)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/133430976" class="">为什么Mumford要引入stable bundle？如何理解stable bundle？</a>
+                <a href="https://www.zhihu.com/answer/133430976" class="">为什么Mumford要引入stable bundle？如何理解stable bundle？</a>
                 <span class="votes">(56 赞同)</span>
                 <span class="created_time">(2016-11-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/313454394" class="">如何评价顾险峰最近在赛先生发表的一系列文章？</a>
+                <a href="https://www.zhihu.com/answer/313454394" class="">如何评价顾险峰最近在赛先生发表的一系列文章？</a>
                 <span class="votes">(55 赞同)</span>
                 <span class="created_time">(2018-02-07)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/500957139" class="">高三了，读物理专业去清北华五好还是去国外留学好？</a>
+                <a href="https://www.zhihu.com/answer/500957139" class="">高三了，读物理专业去清北华五好还是去国外留学好？</a>
                 <span class="votes">(54 赞同)</span>
                 <span class="created_time">(2018-09-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/345842744" class="">当你提到数学时，是否默认不包括应用数学？另，你眼里的应用数学是什么？</a>
+                <a href="https://www.zhihu.com/answer/345842744" class="">当你提到数学时，是否默认不包括应用数学？另，你眼里的应用数学是什么？</a>
                 <span class="votes">(53 赞同)</span>
                 <span class="created_time">(2018-03-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/322191662" class="">（非紧或者奇异情况下），Kahler Ricci flat和Calabi Yau之间的关系？</a>
+                <a href="https://www.zhihu.com/answer/322191662" class="">（非紧或者奇异情况下），Kahler Ricci flat和Calabi Yau之间的关系？</a>
                 <span class="votes">(53 赞同)</span>
                 <span class="created_time">(2018-02-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/128982785" class="">二维傅里叶变换是怎么进行的？</a>
+                <a href="https://www.zhihu.com/answer/128982785" class="">二维傅里叶变换是怎么进行的？</a>
                 <span class="votes">(52 赞同)</span>
                 <span class="created_time">(2016-10-29)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/292748377" class="">日本数学家小平邦彦有哪些贡献（学术方面）？</a>
+                <a href="https://www.zhihu.com/answer/292748377" class="">日本数学家小平邦彦有哪些贡献（学术方面）？</a>
                 <span class="votes">(51 赞同)</span>
                 <span class="created_time">(2018-01-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/389450094" class="">读数学教材记不住怎么办?</a>
+                <a href="https://www.zhihu.com/answer/389450094" class="">读数学教材记不住怎么办?</a>
                 <span class="votes">(50 赞同)</span>
                 <span class="created_time">(2018-05-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/540262231" class="">谁能介绍一下Denis Auroux的工作？</a>
+                <a href="https://www.zhihu.com/answer/540262231" class="">谁能介绍一下Denis Auroux的工作？</a>
                 <span class="votes">(50 赞同)</span>
                 <span class="created_time">(2018-11-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/192682651" class="">数学中有哪些条件看似很弱却能推出很强的定理的例子？</a>
+                <a href="https://www.zhihu.com/answer/192682651" class="">数学中有哪些条件看似很弱却能推出很强的定理的例子？</a>
                 <span class="votes">(47 赞同)</span>
                 <span class="created_time">(2017-07-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/182862069" class="">Cosumi 这个日本人做的线上围棋 AI 还有没有同学跟它对弈过，它水平如何？</a>
+                <a href="https://www.zhihu.com/answer/182862069" class="">Cosumi 这个日本人做的线上围棋 AI 还有没有同学跟它对弈过，它水平如何？</a>
                 <span class="votes">(47 赞同)</span>
                 <span class="created_time">(2017-06-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/328147915" class="">Kahler-Einstein 度量的存在性？</a>
+                <a href="https://www.zhihu.com/answer/328147915" class="">Kahler-Einstein 度量的存在性？</a>
                 <span class="votes">(47 赞同)</span>
                 <span class="created_time">(2018-02-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/641729875" class="">有哪些人品很差而个人成就很高的名人？</a>
+                <a href="https://www.zhihu.com/answer/641729875" class="">有哪些人品很差而个人成就很高的名人？</a>
                 <span class="votes">(46 赞同)</span>
                 <span class="created_time">(2019-04-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/296548226" class="">现代学纯数学还能够游学吗？</a>
+                <a href="https://www.zhihu.com/answer/296548226" class="">现代学纯数学还能够游学吗？</a>
                 <span class="votes">(45 赞同)</span>
                 <span class="created_time">(2018-01-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/383592629" class="">如何评价今年ICM两个辛几何相关的发言人Ivan Smith 和 Emmy Murphy?</a>
+                <a href="https://www.zhihu.com/answer/383592629" class="">如何评价今年ICM两个辛几何相关的发言人Ivan Smith 和 Emmy Murphy?</a>
                 <span class="votes">(45 赞同)</span>
                 <span class="created_time">(2018-05-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/407787318" class="">您好   我是一位美本数学学生。 我对几何表示论很感兴趣，想请教一下相关的领域内强的研究生院有哪些。？</a>
+                <a href="https://www.zhihu.com/answer/407787318" class="">您好   我是一位美本数学学生。 我对几何表示论很感兴趣，想请教一下相关的领域内强的研究生院有哪些。？</a>
                 <span class="votes">(43 赞同)</span>
                 <span class="created_time">(2018-06-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/421489211" class="">如何评价strongart教授成80后提前退休的第一人？</a>
+                <a href="https://www.zhihu.com/answer/421489211" class="">如何评价strongart教授成80后提前退休的第一人？</a>
                 <span class="votes">(42 赞同)</span>
                 <span class="created_time">(2018-06-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/372035879" class="">威斯康辛麦迪逊的数学水平如何？</a>
+                <a href="https://www.zhihu.com/answer/372035879" class="">威斯康辛麦迪逊的数学水平如何？</a>
                 <span class="votes">(42 赞同)</span>
                 <span class="created_time">(2018-04-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/506500156" class="">清北里面有多少像李归农，王垠一样这么有骨气的人？</a>
+                <a href="https://www.zhihu.com/answer/506500156" class="">清北里面有多少像李归农，王垠一样这么有骨气的人？</a>
                 <span class="votes">(42 赞同)</span>
                 <span class="created_time">(2018-10-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/358684893" class="">“名词党”有哪些表现？</a>
+                <a href="https://www.zhihu.com/answer/358684893" class="">“名词党”有哪些表现？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2018-04-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/390186041" class="">同调理论能否拓展到一般的 Banach 空间？</a>
+                <a href="https://www.zhihu.com/answer/390186041" class="">同调理论能否拓展到一般的 Banach 空间？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2018-05-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/522880659" class="">如何评价《宾克斯的美酒》这首单曲？</a>
+                <a href="https://www.zhihu.com/answer/522880659" class="">如何评价《宾克斯的美酒》这首单曲？</a>
                 <span class="votes">(41 赞同)</span>
                 <span class="created_time">(2018-11-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/319361355" class="">想读代数数论，欧洲哪个学校是比较可推荐的？</a>
+                <a href="https://www.zhihu.com/answer/319361355" class="">想读代数数论，欧洲哪个学校是比较可推荐的？</a>
                 <span class="votes">(39 赞同)</span>
                 <span class="created_time">(2018-02-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/192071034" class="">Gaussian Curvature和Euler Class的关系是什么？</a>
+                <a href="https://www.zhihu.com/answer/192071034" class="">Gaussian Curvature和Euler Class的关系是什么？</a>
                 <span class="votes">(38 赞同)</span>
                 <span class="created_time">(2017-07-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/387782134" class="">如何评价指标定理创始人之一，MIT教授Isadore.Singer的贡献？</a>
+                <a href="https://www.zhihu.com/answer/387782134" class="">如何评价指标定理创始人之一，MIT教授Isadore.Singer的贡献？</a>
                 <span class="votes">(38 赞同)</span>
                 <span class="created_time">(2018-05-10)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/609279477" class="">如果李世民附身于刘禅，蜀汉可能翻盘吗？</a>
+                <a href="https://www.zhihu.com/answer/609279477" class="">如果李世民附身于刘禅，蜀汉可能翻盘吗？</a>
                 <span class="votes">(38 赞同)</span>
                 <span class="created_time">(2019-02-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/502560861" class="">导师如果知道自己学生天天关注Strongart会怎样？</a>
+                <a href="https://www.zhihu.com/answer/502560861" class="">导师如果知道自己学生天天关注Strongart会怎样？</a>
                 <span class="votes">(37 赞同)</span>
                 <span class="created_time">(2018-10-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/177097304" class="">如何看待Hironaka声称证明了正特征下的代数簇奇点解消？</a>
+                <a href="https://www.zhihu.com/answer/177097304" class="">如何看待Hironaka声称证明了正特征下的代数簇奇点解消？</a>
                 <span class="votes">(36 赞同)</span>
                 <span class="created_time">(2017-06-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/492698505" class="">历史上有哪些人可以称的上满门忠烈？他们的故事又是怎样的呢？</a>
+                <a href="https://www.zhihu.com/answer/492698505" class="">历史上有哪些人可以称的上满门忠烈？他们的故事又是怎样的呢？</a>
                 <span class="votes">(35 赞同)</span>
                 <span class="created_time">(2018-09-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/376230296" class="">王勃的《滕王阁序》中「落霞与孤鹜齐飞，秋水共长天一色」好在哪里？</a>
+                <a href="https://www.zhihu.com/answer/376230296" class="">王勃的《滕王阁序》中「落霞与孤鹜齐飞，秋水共长天一色」好在哪里？</a>
                 <span class="votes">(35 赞同)</span>
                 <span class="created_time">(2018-04-26)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/308840836" class="">去英国学辛几何phd有什么选择？</a>
+                <a href="https://www.zhihu.com/answer/308840836" class="">去英国学辛几何phd有什么选择？</a>
                 <span class="votes">(34 赞同)</span>
                 <span class="created_time">(2018-02-01)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/140502404" class="">“分类型”课题在数学中是否是最核心的课题？如果是，如何看待这种现象？</a>
+                <a href="https://www.zhihu.com/answer/140502404" class="">“分类型”课题在数学中是否是最核心的课题？如果是，如何看待这种现象？</a>
                 <span class="votes">(33 赞同)</span>
                 <span class="created_time">(2017-01-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/184432906" class="">是否存在复平面C上的非零解析函数f，使得f在整点处为0？</a>
+                <a href="https://www.zhihu.com/answer/184432906" class="">是否存在复平面C上的非零解析函数f，使得f在整点处为0？</a>
                 <span class="votes">(32 赞同)</span>
                 <span class="created_time">(2017-06-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/365551174" class="">从哪一刻起，你认识到此生找到了自己的事业？</a>
+                <a href="https://www.zhihu.com/answer/365551174" class="">从哪一刻起，你认识到此生找到了自己的事业？</a>
                 <span class="votes">(31 赞同)</span>
                 <span class="created_time">(2018-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/354835201" class="">我很喜欢数学，但并非数学专业，我如何看待数学与我自己的专业？</a>
+                <a href="https://www.zhihu.com/answer/354835201" class="">我很喜欢数学，但并非数学专业，我如何看待数学与我自己的专业？</a>
                 <span class="votes">(31 赞同)</span>
                 <span class="created_time">(2018-03-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/389443294" class="">西塔潘猜想的难度如何？有什么意义？</a>
+                <a href="https://www.zhihu.com/answer/389443294" class="">西塔潘猜想的难度如何？有什么意义？</a>
                 <span class="votes">(31 赞同)</span>
                 <span class="created_time">(2018-05-12)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/565955157" class="">如何看待台湾高雄新任市长韩国瑜？</a>
+                <a href="https://www.zhihu.com/answer/565955157" class="">如何看待台湾高雄新任市长韩国瑜？</a>
                 <span class="votes">(30 赞同)</span>
                 <span class="created_time">(2019-01-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/369543316" class="">你领教过最水的水货教授是怎样的？水到什么程度？</a>
+                <a href="https://www.zhihu.com/answer/369543316" class="">你领教过最水的水货教授是怎样的？水到什么程度？</a>
                 <span class="votes">(29 赞同)</span>
                 <span class="created_time">(2018-04-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/310929785" class="">历史上是否有「近乎完人」的低估名人？</a>
+                <a href="https://www.zhihu.com/answer/310929785" class="">历史上是否有「近乎完人」的低估名人？</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2018-02-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/299308896" class="">像Smale这样级别的数学家中国能有几个？</a>
+                <a href="https://www.zhihu.com/answer/299308896" class="">像Smale这样级别的数学家中国能有几个？</a>
                 <span class="votes">(28 赞同)</span>
                 <span class="created_time">(2018-01-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/365549878" class="">微分几何方向硕士研究生萌新求各位大佬给点建议？？</a>
+                <a href="https://www.zhihu.com/answer/365549878" class="">微分几何方向硕士研究生萌新求各位大佬给点建议？？</a>
                 <span class="votes">(27 赞同)</span>
                 <span class="created_time">(2018-04-13)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/500111475" class="">有个懂辛几何的女朋友是怎样一番体验？</a>
+                <a href="https://www.zhihu.com/answer/500111475" class="">有个懂辛几何的女朋友是怎样一番体验？</a>
                 <span class="votes">(26 赞同)</span>
                 <span class="created_time">(2018-09-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/352528613" class="">知乎上有哪些不学无术水平下流的知名数学骗子？</a>
+                <a href="https://www.zhihu.com/answer/352528613" class="">知乎上有哪些不学无术水平下流的知名数学骗子？</a>
                 <span class="votes">(25 赞同)</span>
                 <span class="created_time">(2018-03-28)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/531724492" class="">Cambridge Journal of Mathematics的口碑如何？</a>
+                <a href="https://www.zhihu.com/answer/531724492" class="">Cambridge Journal of Mathematics的口碑如何？</a>
                 <span class="votes">(24 赞同)</span>
                 <span class="created_time">(2018-11-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/329312719" class="">什么样的拓扑群存在不连续的自同态？</a>
+                <a href="https://www.zhihu.com/answer/329312719" class="">什么样的拓扑群存在不连续的自同态？</a>
                 <span class="votes">(23 赞同)</span>
                 <span class="created_time">(2018-02-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/394603308" class="">写数学论文中如果发现引用论文有误你一般怎么做？</a>
+                <a href="https://www.zhihu.com/answer/394603308" class="">写数学论文中如果发现引用论文有误你一般怎么做？</a>
                 <span class="votes">(23 赞同)</span>
                 <span class="created_time">(2018-05-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/575469029" class="">三国志上记载的史料其实是很少的。基于现有的史实，如果让你推测一件发生过，但没记载过的史料，它会是什么？</a>
+                <a href="https://www.zhihu.com/answer/575469029" class="">三国志上记载的史料其实是很少的。基于现有的史实，如果让你推测一件发生过，但没记载过的史料，它会是什么？</a>
                 <span class="votes">(22 赞同)</span>
                 <span class="created_time">(2019-01-17)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/354188847" class="">复变函数值分布的复几何化方面的书有哪些？</a>
+                <a href="https://www.zhihu.com/answer/354188847" class="">复变函数值分布的复几何化方面的书有哪些？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2018-03-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/494017637" class="">为何中国在义务教育阶段推崇《钢铁是怎样炼成的》？</a>
+                <a href="https://www.zhihu.com/answer/494017637" class="">为何中国在义务教育阶段推崇《钢铁是怎样炼成的》？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2018-09-18)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/147589414" class="">选择去香港的清华北大本科生都是怎么样的考虑？</a>
+                <a href="https://www.zhihu.com/answer/147589414" class="">选择去香港的清华北大本科生都是怎么样的考虑？</a>
                 <span class="votes">(21 赞同)</span>
                 <span class="created_time">(2017-02-21)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/388599639" class="">求用解析方法研究代数几何教材？</a>
+                <a href="https://www.zhihu.com/answer/388599639" class="">求用解析方法研究代数几何教材？</a>
                 <span class="votes">(20 赞同)</span>
                 <span class="created_time">(2018-05-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/191604484" class="">Paul Seidel的手写讲义是如何写成的？</a>
+                <a href="https://www.zhihu.com/answer/191604484" class="">Paul Seidel的手写讲义是如何写成的？</a>
                 <span class="votes">(20 赞同)</span>
                 <span class="created_time">(2017-06-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/418410539" class="">研究生为什么需要当助教?</a>
+                <a href="https://www.zhihu.com/answer/418410539" class="">研究生为什么需要当助教?</a>
                 <span class="votes">(19 赞同)</span>
                 <span class="created_time">(2018-06-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/299340975" class="">Kahler form的局部表示怎么从hermitian内积得出？</a>
+                <a href="https://www.zhihu.com/answer/299340975" class="">Kahler form的局部表示怎么从hermitian内积得出？</a>
                 <span class="votes">(18 赞同)</span>
                 <span class="created_time">(2018-01-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/341909923" class="">这是篇关于作者对数学的见解的贴子，其中的观点 数学品味、参考价值 如何？</a>
+                <a href="https://www.zhihu.com/answer/341909923" class="">这是篇关于作者对数学的见解的贴子，其中的观点 数学品味、参考价值 如何？</a>
                 <span class="votes">(13 赞同)</span>
                 <span class="created_time">(2018-03-15)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/129139884" class="">某种S^2-bundle over S^2的构造方式是否平凡？</a>
+                <a href="https://www.zhihu.com/answer/129139884" class="">某种S^2-bundle over S^2的构造方式是否平凡？</a>
                 <span class="votes">(8 赞同)</span>
                 <span class="created_time">(2016-10-31)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/128336085" class="">为什么有理数一定能看成是两个整数的商？为什么有理数一定等价于有限位或者无限循环小数？</a>
+                <a href="https://www.zhihu.com/answer/128336085" class="">为什么有理数一定能看成是两个整数的商？为什么有理数一定等价于有限位或者无限循环小数？</a>
                 <span class="votes">(7 赞同)</span>
                 <span class="created_time">(2016-10-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://www.fxzhihu.com/answer/130317915" class="">哪些学术期刊/会议是向读者公开审稿人意见的？如scipost physics？</a>
+                <a href="https://www.zhihu.com/answer/130317915" class="">哪些学术期刊/会议是向读者公开审稿人意见的？如scipost physics？</a>
                 <span class="votes">(2 赞同)</span>
                 <span class="created_time">(2016-11-08)</span>
             </div>
@@ -2280,121 +2326,121 @@
             <h2>文章</h2>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/27589483" class="">哪些人值得我尊重？</a>
+                <a href="https://zhuanlan.zhihu.com/p/27589483" class="">哪些人值得我尊重？</a>
                 <span class="votes">(477 赞同)</span>
                 <span class="created_time">(2017-06-27)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/61671076" class="">弃乎声明</a>
+                <a href="https://zhuanlan.zhihu.com/p/61671076" class="">弃乎声明</a>
                 <span class="votes">(380 赞同)</span>
                 <span class="created_time">(2019-04-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/32677480" class="">做数学一定要东拼西凑</a>
+                <a href="https://zhuanlan.zhihu.com/p/32677480" class="">做数学一定要东拼西凑</a>
                 <span class="votes">(376 赞同)</span>
                 <span class="created_time">(2018-01-06)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/27553855" class="">三流大学或层次更低</a>
+                <a href="https://zhuanlan.zhihu.com/p/27553855" class="">三流大学或层次更低</a>
                 <span class="votes">(212 赞同)</span>
                 <span class="created_time">(2017-06-25)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/27346884" class="">6维欧几里得空间</a>
+                <a href="https://zhuanlan.zhihu.com/p/27346884" class="">6维欧几里得空间</a>
                 <span class="votes">(207 赞同)</span>
                 <span class="created_time">(2017-06-11)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/32755855" class="">声明</a>
+                <a href="https://zhuanlan.zhihu.com/p/32755855" class="">声明</a>
                 <span class="votes">(206 赞同)</span>
                 <span class="created_time">(2018-01-09)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/60857879" class="">Relative Calabi-Yau completion</a>
+                <a href="https://zhuanlan.zhihu.com/p/60857879" class="">Relative Calabi-Yau completion</a>
                 <span class="votes">(132 赞同)</span>
                 <span class="created_time">(2019-03-30)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/27221951" class="">为什么有些人的素质这么差？</a>
+                <a href="https://zhuanlan.zhihu.com/p/27221951" class="">为什么有些人的素质这么差？</a>
                 <span class="votes">(122 赞同)</span>
                 <span class="created_time">(2017-06-02)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/43725146" class="">Affine line相关的辛几何</a>
+                <a href="https://zhuanlan.zhihu.com/p/43725146" class="">Affine line相关的辛几何</a>
                 <span class="votes">(116 赞同)</span>
                 <span class="created_time">(2018-09-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/38145268" class="">Kaledin-Lehn猜想</a>
+                <a href="https://zhuanlan.zhihu.com/p/38145268" class="">Kaledin-Lehn猜想</a>
                 <span class="votes">(102 赞同)</span>
                 <span class="created_time">(2018-06-16)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/50254735" class="">Quasi-dilations</a>
+                <a href="https://zhuanlan.zhihu.com/p/50254735" class="">Quasi-dilations</a>
                 <span class="votes">(90 赞同)</span>
                 <span class="created_time">(2018-11-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/37649747" class="">Formality of Fukaya A_\infty algebras</a>
+                <a href="https://zhuanlan.zhihu.com/p/37649747" class="">Formality of Fukaya A_\infty algebras</a>
                 <span class="votes">(84 赞同)</span>
                 <span class="created_time">(2018-06-04)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/32641888" class="">Nilpotent Fukaya categories</a>
+                <a href="https://zhuanlan.zhihu.com/p/32641888" class="">Nilpotent Fukaya categories</a>
                 <span class="votes">(76 赞同)</span>
                 <span class="created_time">(2018-01-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/27451345" class="">Intrinsic formality</a>
+                <a href="https://zhuanlan.zhihu.com/p/27451345" class="">Intrinsic formality</a>
                 <span class="votes">(64 赞同)</span>
                 <span class="created_time">(2017-06-19)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/59795890" class="">Notes on GPS II</a>
+                <a href="https://zhuanlan.zhihu.com/p/59795890" class="">Notes on GPS II</a>
                 <span class="votes">(63 赞同)</span>
                 <span class="created_time">(2019-03-20)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/56657383" class="">老版《三国演义》的几处改编</a>
+                <a href="https://zhuanlan.zhihu.com/p/56657383" class="">老版《三国演义》的几处改编</a>
                 <span class="votes">(57 赞同)</span>
                 <span class="created_time">(2019-02-14)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/34187801" class="">Kontsevich-Rosenberg principle的一个例子？</a>
+                <a href="https://zhuanlan.zhihu.com/p/34187801" class="">Kontsevich-Rosenberg principle的一个例子？</a>
                 <span class="votes">(51 赞同)</span>
                 <span class="created_time">(2018-03-03)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/43795563" class="">李如珪（2015年10月）</a>
+                <a href="https://zhuanlan.zhihu.com/p/43795563" class="">李如珪（2015年10月）</a>
                 <span class="votes">(48 赞同)</span>
                 <span class="created_time">(2018-09-05)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/32723732" class="">Augmentations are sheaves</a>
+                <a href="https://zhuanlan.zhihu.com/p/32723732" class="">Augmentations are sheaves</a>
                 <span class="votes">(48 赞同)</span>
                 <span class="created_time">(2018-01-08)</span>
             </div>
     
             <div class="item">
-                <a href="https://zhuanlan.fxzhihu.com/p/33457839" class="">Fiberwise compactifications of Lefschetz fibrations</a>
+                <a href="https://zhuanlan.zhihu.com/p/33457839" class="">Fiberwise compactifications of Lefschetz fibrations</a>
                 <span class="votes">(39 赞同)</span>
                 <span class="created_time">(2018-01-31)</span>
             </div>
