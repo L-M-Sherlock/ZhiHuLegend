@@ -29,6 +29,7 @@ nicknames = {
     "shinianhanshuang": "十年寒霜",
     "zhijiangchuan": "松平信纲",
     "hun-luan-feng-bao-33": "弗兰德斯",
+    "wo-bu-zuo-lian-dao-hen-duo-nian": "我不做镰刀很多年",
 }
 
 
