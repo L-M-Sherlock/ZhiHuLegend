@@ -32,6 +32,7 @@ nicknames = {
     "wo-bu-zuo-lian-dao-hen-duo-nian": "我不做镰刀很多年",
     "an-guo-da-jiang-jun": "安国大将军",
     "shengjingjianke": "盛京剑客",
+    "pandamalone": "Long Yu"
 }
 
 
