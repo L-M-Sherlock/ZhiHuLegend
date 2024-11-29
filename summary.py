@@ -71,6 +71,7 @@ def generate_summary(username: str):
     <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{nicknames[username]}的知乎索引</title>
         <meta property="og:type" content="website">
         <meta property="og:title" content="{nicknames[username]}的知乎索引">
@@ -244,6 +245,7 @@ def generate_index_html():
     <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ZhiHu Legend</title>
         <meta property="og:type" content="website">
         <meta property="og:title" content="知乎封神榜">
