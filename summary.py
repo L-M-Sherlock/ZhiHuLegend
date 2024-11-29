@@ -132,16 +132,14 @@ def generate_summary(username: str):
         </style>
         <script>
             function openTab(evt, tabName) {
-                var tabContents = document.getElementsByClassName("tab-content");
-                for (var i = 0; i < tabContents.length; i++) {
-                    tabContents[i].classList.remove("active");
-                }
-                var tabButtons = document.getElementsByClassName("tab-button");
-                for (var i = 0; i < tabButtons.length; i++) {
-                    tabButtons[i].classList.remove("active");
-                }
-                document.getElementById(tabName).classList.add("active");
-                evt.currentTarget.classList.add("active");
+                const activeTab = document.querySelector('.tab-content.active');
+                const activeButton = document.querySelector('.tab-button.active');
+                
+                if (activeTab) activeTab.classList.remove('active');
+                if (activeButton) activeButton.classList.remove('active');
+                
+                document.getElementById(tabName).classList.add('active');
+                evt.currentTarget.classList.add('active');
             }
 
             function toggleDomain() {
