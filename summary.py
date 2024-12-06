@@ -192,13 +192,10 @@ def generate_summary(username: str):
             if "question" in answer and "title" in answer["question"]
             else "Untitled"
         )
-        is_censored = answer.get("censored", False)
-        censored_class = "censored" if is_censored else ""
-        censored_text = " (censored)" if is_censored else ""
 
         html_content += f"""
             <div class="item">
-                <a href="https://www.zhihu.com/answer/{answer['file_stem']}" class="{censored_class}">{question_title}{censored_text}</a>
+                <a href="https://www.zhihu.com/answer/{answer['file_stem']}" target="_blank">{question_title}</a>
                 <span class="votes">({answer['voteup_count']} 赞同)</span>
                 <span class="created_time">({datetime.fromtimestamp(answer['created_time']).strftime('%Y-%m-%d')})</span>
             </div>
@@ -212,12 +209,9 @@ def generate_summary(username: str):
 
     # Add articles
     for article in articles:
-        is_censored = article.get("censored", False)
-        censored_class = "censored" if is_censored else ""
-        censored_text = " (censored)" if is_censored else ""
         html_content += f"""
             <div class="item">
-                <a href="https://zhuanlan.zhihu.com/p/{article['file_stem']}" class="{censored_class}">{article['title']}{censored_text}</a>
+                <a href="https://zhuanlan.zhihu.com/p/{article['file_stem']}" target="_blank">{article['title']}</a>
                 <span class="votes">({article['voteup_count']} 赞同)</span>
                 <span class="created_time">({datetime.fromtimestamp(article['created']).strftime('%Y-%m-%d')})</span>
             </div>
