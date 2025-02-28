@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>00后富一代的知乎索引</title>
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="00后富一代的知乎索引">
+        <meta property="og:site_name" content="ZhiHu Legend">
+        <meta property="og:url" content="https://l-m-sherlock.github.io/ZhiHuLegend/mei-hao-wei-lai-9-78-87.html">
+        <meta name="description" property="og:description" content="00后富一代的知乎文章和回答索引">
+        <meta name="google-site-verification" content="U7ZAFUgGNK60mmMqaRygg5vy-k8pwbPbDFXNjDCu7Xk" />
+        <meta property="twitter:card" content="summary">
+        <meta name="twitter:title" property="og:title" itemprop="name" content="00后富一代的知乎索引">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="00后富一代的知乎文章和回答索引">
+    
+        <style>
+            body { max-width: 800px; margin: 0 auto; padding: 20px; }
+            .item { margin: 10px 0; }
+            .votes { color: #666; font-size: 0.9em; }
+            .created_time { color: #999; font-size: 0.9em; }
+            .censored { background-color: #ffeb3b; }
+
+            /* Tab styles */
+            .tabs { margin-bottom: 20px; }
+            .tab-button {
+                padding: 10px 20px;
+                border: none;
+                background: #f0f0f0;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .tab-button.active {
+                background: #007bff;
+                color: white;
+            }
+            .tab-content {
+                display: none;
+            }
+            .tab-content.active {
+                display: block;
+            }
+            /* Add styles for domain switcher */
+            .domain-switcher {
+                margin: 20px 0;
+            }
+            .domain-switcher label {
+                margin-right: 10px;
+            }
+            .domain-explanation {
+                margin: 15px 0;
+                font-size: 0.9em;
+                color: #666;
+            }
+            .domain-explanation ul {
+                margin: 5px 0;
+                padding-left: 20px;
+            }
+            .domain-explanation li {
+                margin: 3px 0;
+            }
+        </style>
+        <script>
+            function openTab(evt, tabName) {
+                const activeTab = document.querySelector('.tab-content.active');
+                const activeButton = document.querySelector('.tab-button.active');
+                
+                if (activeTab) activeTab.classList.remove('active');
+                if (activeButton) activeButton.classList.remove('active');
+                
+                document.getElementById(tabName).classList.add('active');
+                evt.currentTarget.classList.add('active');
+            }
+
+            function toggleDomain() {
+                const useZhihu = document.getElementById('useZhihu').checked;
+                const links = document.getElementsByTagName('a');
+                for (let link of links) {
+                    if (link.href.includes('fxzhihu.com')) {
+                        link.href = link.href.replace('fxzhihu.com', 'zhihu.com');
+                    } else if (link.href.includes('zhihu.com')) {
+                        link.href = link.href.replace('zhihu.com', 'fxzhihu.com');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p><a href="./">← 返回封神榜</a></p>
+        <hr>
+        <h1>00后富一代的知乎索引</h1>
+        <div class="domain-switcher">
+            <div class="domain-explanation">是否已登录知乎账号</div>
+            <label>
+                <input type="radio" name="domain" id="useZhihu" checked onclick="toggleDomain()"> 是
+            </label>
+            <label>
+                <input type="radio" name="domain" id="useFxzhihu" onclick="toggleDomain()"> 否
+            </label>
+        </div>
+        <div class="domain-explanation">
+            <ul>
+                <li>是：跳转到知乎访问（推荐）</li>
+                <li>否：无需登录，但有时候不稳定</li>
+            </ul>
+        </div>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 (88)</button>
+            <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 (28)</button>
+        </div>
+
+        <div id="answers-tab" class="tab-content active">
+            <h2>回答</h2>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2638590017" target="_blank">关于创业有什么建议？</a>
+                <span class="votes">(2541 赞同)</span>
+                <span class="created_time">(2022-08-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1745335386" target="_blank">如何看待2022年金融危机？</a>
+                <span class="votes">(2216 赞同)</span>
+                <span class="created_time">(2021-02-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3502861456" target="_blank">普通人怎样才能一步步走向成功？</a>
+                <span class="votes">(1954 赞同)</span>
+                <span class="created_time">(2024-05-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/79222973825" target="_blank">年轻真好，具有无限的可能。真的就有无限的可能吗？</a>
+                <span class="votes">(1160 赞同)</span>
+                <span class="created_time">(2025-01-14)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3288815653" target="_blank">有什么技能值得花时间学习？</a>
+                <span class="votes">(1095 赞同)</span>
+                <span class="created_time">(2023-11-14)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3569905798" target="_blank">为什么勤劳不一定能致富？</a>
+                <span class="votes">(1036 赞同)</span>
+                <span class="created_time">(2024-07-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3365635880" target="_blank">为什么周围做生意的人都开始说相比以前，生意越来越难做？</a>
+                <span class="votes">(841 赞同)</span>
+                <span class="created_time">(2024-01-17)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3502831548" target="_blank">为什么现在越来越多人讨厌美国了？</a>
+                <span class="votes">(810 赞同)</span>
+                <span class="created_time">(2024-05-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/78314034032" target="_blank">去泰国或者东南亚国家旅行还安全吗？你还敢去吗？</a>
+                <span class="votes">(794 赞同)</span>
+                <span class="created_time">(2025-01-13)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3242965421" target="_blank">如果有条件，你最想去哪个国家生活？</a>
+                <span class="votes">(726 赞同)</span>
+                <span class="created_time">(2023-10-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/33151548357" target="_blank">如何从逻辑上辩驳：做空最多赚100%，做多却可赚无限多？</a>
+                <span class="votes">(619 赞同)</span>
+                <span class="created_time">(2024-11-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/107236063362" target="_blank">如何看待bybit被黑客攻击盗取15亿美元资产?</a>
+                <span class="votes">(605 赞同)</span>
+                <span class="created_time">(2025-02-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3276017872" target="_blank">如何判断自己是否有商业头脑？所谓有商业头脑的人应该具备哪些素质？</a>
+                <span class="votes">(587 赞同)</span>
+                <span class="created_time">(2023-11-04)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3491656031" target="_blank">有的人赌博上瘾，为什么有的人不会？</a>
+                <span class="votes">(563 赞同)</span>
+                <span class="created_time">(2024-05-08)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1890847298" target="_blank">如何评价马斯克近期搅动币圈的系列举动？反映了哪些问题？</a>
+                <span class="votes">(532 赞同)</span>
+                <span class="created_time">(2021-05-17)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3176034193" target="_blank">如何看待“少年得志大不幸”这句话？</a>
+                <span class="votes">(504 赞同)</span>
+                <span class="created_time">(2023-08-21)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3197310484" target="_blank">您能说出自己的开仓条件吗？</a>
+                <span class="votes">(503 赞同)</span>
+                <span class="created_time">(2023-09-05)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2853037120" target="_blank">您有哪些个人的交易经验？</a>
+                <span class="votes">(496 赞同)</span>
+                <span class="created_time">(2023-01-20)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1751808893" target="_blank">手里有四千万怎么稳定利益最大化？</a>
+                <span class="votes">(490 赞同)</span>
+                <span class="created_time">(2021-02-26)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2878644615" target="_blank">有钱人有什么特点?</a>
+                <span class="votes">(467 赞同)</span>
+                <span class="created_time">(2023-02-06)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2809386693" target="_blank">能否用一个现实的例子解释一下做市商是如何具体赚钱和亏钱的？</a>
+                <span class="votes">(452 赞同)</span>
+                <span class="created_time">(2022-12-20)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/66024665351" target="_blank">为什么在有钱人的圈子里，会相信玄学？</a>
+                <span class="votes">(445 赞同)</span>
+                <span class="created_time">(2024-12-28)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3492244302" target="_blank">资产上亿的富人会担心被歹徒绑架吗?</a>
+                <span class="votes">(438 赞同)</span>
+                <span class="created_time">(2024-05-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1943172729" target="_blank">赚钱的逻辑是什么？什么规律或观念使人与人赚的钱产生了巨大差别？</a>
+                <span class="votes">(429 赞同)</span>
+                <span class="created_time">(2021-06-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1917201863" target="_blank">有1000万怎么理财?</a>
+                <span class="votes">(418 赞同)</span>
+                <span class="created_time">(2021-06-01)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/16381735675" target="_blank">出国给你最大的感受是什么？</a>
+                <span class="votes">(401 赞同)</span>
+                <span class="created_time">(2024-10-28)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3475553528" target="_blank">如何看待有钱人都往国外跑?</a>
+                <span class="votes">(401 赞同)</span>
+                <span class="created_time">(2024-04-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/105002650041" target="_blank">做一名白手起家赚到10亿人民币的00后是什么体验？</a>
+                <span class="votes">(391 赞同)</span>
+                <span class="created_time">(2025-02-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/70841615472" target="_blank">如何评价「马斯克改网名引爆 Meme 币市场」？</a>
+                <span class="votes">(357 赞同)</span>
+                <span class="created_time">(2025-01-03)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3492278647" target="_blank">币圈用什么手机?</a>
+                <span class="votes">(346 赞同)</span>
+                <span class="created_time">(2024-05-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3528048646" target="_blank">当前我们处于通缩还是通胀，或是滞胀？</a>
+                <span class="votes">(344 赞同)</span>
+                <span class="created_time">(2024-06-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1890004512" target="_blank">如何评价马斯克暗示要卖出特斯拉持有的比特币？</a>
+                <span class="votes">(314 赞同)</span>
+                <span class="created_time">(2021-05-17)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/17011387434" target="_blank">你怎么看待“木秀于林，风必摧之”这句话？</a>
+                <span class="votes">(302 赞同)</span>
+                <span class="created_time">(2024-10-28)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3285666378" target="_blank">被老师打，是一种什么体验？</a>
+                <span class="votes">(282 赞同)</span>
+                <span class="created_time">(2023-11-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3491649240" target="_blank">怎么样才能真正戒赌?</a>
+                <span class="votes">(280 赞同)</span>
+                <span class="created_time">(2024-05-08)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1757407881" target="_blank">A股现在有哪些严重被低估的股票？</a>
+                <span class="votes">(264 赞同)</span>
+                <span class="created_time">(2021-03-02)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2452692352" target="_blank">就高频量化交易系统而言，据说rust作为主要面向安全的高性能计算编程语言，比c++要强，这个是真的吗？</a>
+                <span class="votes">(257 赞同)</span>
+                <span class="created_time">(2022-04-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1728529356" target="_blank">现在没有上比特币的，是不是要等下一轮了？</a>
+                <span class="votes">(251 赞同)</span>
+                <span class="created_time">(2021-02-13)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/19837122058" target="_blank">量化交易会将散户赶尽杀绝吗？</a>
+                <span class="votes">(246 赞同)</span>
+                <span class="created_time">(2024-10-31)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1767467663" target="_blank">作为00后，年入百万是什么体会？</a>
+                <span class="votes">(242 赞同)</span>
+                <span class="created_time">(2021-03-07)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1700399979" target="_blank">想靠炒股成为有钱人，靠谱吗？</a>
+                <span class="votes">(241 赞同)</span>
+                <span class="created_time">(2021-01-27)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3365900117" target="_blank">为什么基金经理和股票交易员等金融从业者工作时需要同时使用数个电脑屏幕？</a>
+                <span class="votes">(235 赞同)</span>
+                <span class="created_time">(2024-01-17)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3566349618" target="_blank">什么样的人是世界上最危险的人？</a>
+                <span class="votes">(231 赞同)</span>
+                <span class="created_time">(2024-07-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3252371003" target="_blank">奋斗逼的内心世界是什么样的？</a>
+                <span class="votes">(217 赞同)</span>
+                <span class="created_time">(2023-10-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1841243019" target="_blank">如何看待比特币 4 月 18 日暴跌？是否意味着击鼓传花的游戏已经结束？</a>
+                <span class="votes">(217 赞同)</span>
+                <span class="created_time">(2021-04-18)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1781394391" target="_blank">九零后和零零后喜欢为什么东西花钱或者付费?</a>
+                <span class="votes">(206 赞同)</span>
+                <span class="created_time">(2021-03-15)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1883077382" target="_blank">SHIB 会是下一个狗狗币吗？</a>
+                <span class="votes">(174 赞同)</span>
+                <span class="created_time">(2021-05-13)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1791992964" target="_blank">巴菲特说，一旦你有省钱的脑子，就不会有精力培养一个赚钱的脑子！大家对这句话怎么看？</a>
+                <span class="votes">(173 赞同)</span>
+                <span class="created_time">(2021-03-21)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1938973987" target="_blank">如何看待年轻人「躺平」的现象？</a>
+                <span class="votes">(168 赞同)</span>
+                <span class="created_time">(2021-06-14)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2211525568" target="_blank">如何看待马斯克发投票征询是否出售 10% 特斯拉股票， 并称将遵守投票结果？</a>
+                <span class="votes">(153 赞同)</span>
+                <span class="created_time">(2021-11-07)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/98478827586" target="_blank">你身边有被“做局”的人吗？</a>
+                <span class="votes">(142 赞同)</span>
+                <span class="created_time">(2025-02-11)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3595316202" target="_blank">最近电脑很奇怪，Chrome频繁页面崩溃，求高手看下什么问题？</a>
+                <span class="votes">(137 赞同)</span>
+                <span class="created_time">(2024-08-15)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/112050534277" target="_blank">如何看待特朗普发行500万美元一张的金卡，规格高于绿卡？</a>
+                <span class="votes">(131 赞同)</span>
+                <span class="created_time">(2025-02-27)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2895396272" target="_blank">你会看不起哪种人？</a>
+                <span class="votes">(124 赞同)</span>
+                <span class="created_time">(2023-02-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/85029795436" target="_blank">为什么有人会崇拜希特勒和纳粹德国？</a>
+                <span class="votes">(122 赞同)</span>
+                <span class="created_time">(2025-01-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2840308500" target="_blank">高频交易最看重什么？</a>
+                <span class="votes">(116 赞同)</span>
+                <span class="created_time">(2023-01-11)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3315582243" target="_blank">在知乎上回答了一个问题，被隐藏了，不是折叠，为何？</a>
+                <span class="votes">(110 赞同)</span>
+                <span class="created_time">(2023-12-06)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3541963541" target="_blank">为什么现如今网络上那么多人如此的评判所谓的“资本家”?</a>
+                <span class="votes">(108 赞同)</span>
+                <span class="created_time">(2024-06-25)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1745329112" target="_blank">现在2021年的股市行情会成为15年的复刻嘛？</a>
+                <span class="votes">(102 赞同)</span>
+                <span class="created_time">(2021-02-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1919768003" target="_blank">越南市场值得投资吗？</a>
+                <span class="votes">(100 赞同)</span>
+                <span class="created_time">(2021-06-03)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2807483282" target="_blank">新手司机刚刚拿证能开跑车吗?</a>
+                <span class="votes">(97 赞同)</span>
+                <span class="created_time">(2022-12-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1946829148" target="_blank">作为一名00后白手起家千万富翁是什么体验？</a>
+                <span class="votes">(96 赞同)</span>
+                <span class="created_time">(2021-06-18)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1768042761" target="_blank">你在大学生活中最美好的一个瞬间是什么？</a>
+                <span class="votes">(85 赞同)</span>
+                <span class="created_time">(2021-03-08)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2852658754" target="_blank">开车路怒症是一种怎样的体验？</a>
+                <span class="votes">(81 赞同)</span>
+                <span class="created_time">(2023-01-19)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/3286206793" target="_blank">如何看待AngelaBaby杨颖和张嘉倪因为看了lisa的疯马秀被封杀？</a>
+                <span class="votes">(74 赞同)</span>
+                <span class="created_time">(2023-11-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1761030869" target="_blank">对做股票投资朋友的建议有哪些？</a>
+                <span class="votes">(72 赞同)</span>
+                <span class="created_time">(2021-03-04)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2453152298" target="_blank">形容少年得志的诗句或者成语的有哪些？</a>
+                <span class="votes">(61 赞同)</span>
+                <span class="created_time">(2022-04-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2812866626" target="_blank">疫情防控放开了，你们的想法有没有发生改变？</a>
+                <span class="votes">(57 赞同)</span>
+                <span class="created_time">(2022-12-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1892682487" target="_blank">如何看待最近一批新人涌入币圈？</a>
+                <span class="votes">(54 赞同)</span>
+                <span class="created_time">(2021-05-18)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1944022589" target="_blank">证券行业有哪些具影响力的人物？</a>
+                <span class="votes">(48 赞同)</span>
+                <span class="created_time">(2021-06-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1622401110" target="_blank">为什么有钱会变坏？</a>
+                <span class="votes">(45 赞同)</span>
+                <span class="created_time">(2020-12-11)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1597103024" target="_blank">陌生人，你们上进的动力是什么？</a>
+                <span class="votes">(44 赞同)</span>
+                <span class="created_time">(2020-11-26)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1677346260" target="_blank">25岁应该存款多少？</a>
+                <span class="votes">(43 赞同)</span>
+                <span class="created_time">(2021-01-14)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2310740357" target="_blank">电子音乐《送给未来的你》-阳山伟伟是原创吗？</a>
+                <span class="votes">(43 赞同)</span>
+                <span class="created_time">(2022-01-14)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/2010263009" target="_blank">为什么现在美元通胀严重，却挺着不敢加息？</a>
+                <span class="votes">(42 赞同)</span>
+                <span class="created_time">(2021-07-21)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1895413538" target="_blank">如何看待 5 月 19 日比特币跌至 3.85 万美元，较一月前高点近乎腰斩，又一轮熊市开始了吗？</a>
+                <span class="votes">(39 赞同)</span>
+                <span class="created_time">(2021-05-20)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1954868883" target="_blank">用内幕消息交易加密货币是否违法？</a>
+                <span class="votes">(38 赞同)</span>
+                <span class="created_time">(2021-06-22)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1775148234" target="_blank">为什么有些中国人不买 A 股，而是去买美股？</a>
+                <span class="votes">(35 赞同)</span>
+                <span class="created_time">(2021-03-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1754677494" target="_blank">比特币今年大牛市能持续到几月份 ?</a>
+                <span class="votes">(28 赞同)</span>
+                <span class="created_time">(2021-02-28)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1668409024" target="_blank">比特币和黄金的投资逻辑有什么不同吗？</a>
+                <span class="votes">(26 赞同)</span>
+                <span class="created_time">(2021-01-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1758174439" target="_blank">2021 年 3 月 2 号 A 股为何大跳水？</a>
+                <span class="votes">(26 赞同)</span>
+                <span class="created_time">(2021-03-02)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1599526665" target="_blank">财富自由后你是选择退休还是继续奋斗？</a>
+                <span class="votes">(25 赞同)</span>
+                <span class="created_time">(2020-11-28)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1664599811" target="_blank">比特币能站上35000美元吗？</a>
+                <span class="votes">(22 赞同)</span>
+                <span class="created_time">(2021-01-06)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1700441698" target="_blank">你们觉得比特币在这波牛市能突破到多少万？评论区留下你们的答案。☀☀?</a>
+                <span class="votes">(20 赞同)</span>
+                <span class="created_time">(2021-01-27)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1750114017" target="_blank">普通散户具体如何做空港股个股？</a>
+                <span class="votes">(18 赞同)</span>
+                <span class="created_time">(2021-02-26)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1668444756" target="_blank">比特币可以分割成更小单位可以理解为某种程度上的无限吗？</a>
+                <span class="votes">(14 赞同)</span>
+                <span class="created_time">(2021-01-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1748128022" target="_blank">如何看待2021年2月24号A股大跌？</a>
+                <span class="votes">(13 赞同)</span>
+                <span class="created_time">(2021-02-24)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://www.zhihu.com/answer/1748068943" target="_blank">如何看待2月22日机构抱团股大跌，是否代表着抱团行情的结束？</a>
+                <span class="votes">(13 赞同)</span>
+                <span class="created_time">(2021-02-24)</span>
+            </div>
+    
+        </div>
+        <div id="articles-tab" class="tab-content">
+            <h2>文章</h2>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/705014500" target="_blank">给00后们的话</a>
+                <span class="votes">(2371 赞同)</span>
+                <span class="created_time">(2024-06-24)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/404169902" target="_blank">我爸的A股投资思维</a>
+                <span class="votes">(1950 赞同)</span>
+                <span class="created_time">(2021-08-27)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/671039236" target="_blank">币圈到底是谁一直在赚钱？</a>
+                <span class="votes">(1243 赞同)</span>
+                <span class="created_time">(2023-12-08)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/665809598" target="_blank">高质量英文CT信息源列表</a>
+                <span class="votes">(856 赞同)</span>
+                <span class="created_time">(2023-11-08)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/560161882" target="_blank">为什么我要开这个知乎账户？</a>
+                <span class="votes">(851 赞同)</span>
+                <span class="created_time">(2022-09-01)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/20075613681" target="_blank">2025我的1000万刀美股战略布局</a>
+                <span class="votes">(803 赞同)</span>
+                <span class="created_time">(2025-01-24)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/367090849" target="_blank">我的致富思维</a>
+                <span class="votes">(533 赞同)</span>
+                <span class="created_time">(2021-04-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/719648377" target="_blank">写给黑粉的话</a>
+                <span class="votes">(532 赞同)</span>
+                <span class="created_time">(2024-09-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/16288309339" target="_blank">我的精英主义的强化</a>
+                <span class="votes">(418 赞同)</span>
+                <span class="created_time">(2025-01-04)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/597748595" target="_blank">市场投机心得:论驱动市场的叙事</a>
+                <span class="votes">(386 赞同)</span>
+                <span class="created_time">(2023-01-09)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/708167331" target="_blank">当然是爱国的</a>
+                <span class="votes">(358 赞同)</span>
+                <span class="created_time">(2024-07-11)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/371835576" target="_blank">资本市场接盘韭菜的共同特征</a>
+                <span class="votes">(254 赞同)</span>
+                <span class="created_time">(2021-05-12)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/346547699" target="_blank">论新时代如何实现阶级跨越</a>
+                <span class="votes">(246 赞同)</span>
+                <span class="created_time">(2021-01-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/345025938" target="_blank">患得患失：金融投资与情场之大忌</a>
+                <span class="votes">(242 赞同)</span>
+                <span class="created_time">(2021-01-18)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/530453797" target="_blank">经济周期：从历史看到今天</a>
+                <span class="votes">(208 赞同)</span>
+                <span class="created_time">(2022-06-18)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/366189120" target="_blank">2021.4.20 谈谈我在未来几个月内的投资动作</a>
+                <span class="votes">(185 赞同)</span>
+                <span class="created_time">(2021-04-20)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/320831990" target="_blank">谈新时代消费主义</a>
+                <span class="votes">(177 赞同)</span>
+                <span class="created_time">(2020-11-30)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/352361174" target="_blank">对2021-2022年股票市场的预测</a>
+                <span class="votes">(158 赞同)</span>
+                <span class="created_time">(2021-02-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/425295649" target="_blank">加密资产配置战略核心要义</a>
+                <span class="votes">(130 赞同)</span>
+                <span class="created_time">(2021-10-25)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/307734917" target="_blank">好胜心</a>
+                <span class="votes">(116 赞同)</span>
+                <span class="created_time">(2020-11-23)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/347822033" target="_blank">高估值资产泡沫：一个迟早要爆炸的定时炸弹</a>
+                <span class="votes">(97 赞同)</span>
+                <span class="created_time">(2021-01-29)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/405567446" target="_blank">为什么我现在不再看空中国股市</a>
+                <span class="votes">(92 赞同)</span>
+                <span class="created_time">(2021-09-01)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/370256841" target="_blank">为什么我一直不喜欢公募基金</a>
+                <span class="votes">(92 赞同)</span>
+                <span class="created_time">(2021-05-07)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/311652719" target="_blank">正向反馈带领我们走向光明人生</a>
+                <span class="votes">(80 赞同)</span>
+                <span class="created_time">(2020-11-25)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/344795044" target="_blank">左与右：学院派与社会派</a>
+                <span class="votes">(61 赞同)</span>
+                <span class="created_time">(2021-01-16)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/358632729" target="_blank">简谈当前美联储面临的困境</a>
+                <span class="votes">(55 赞同)</span>
+                <span class="created_time">(2021-03-20)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/354259886" target="_blank">2021,我的投资策略</a>
+                <span class="votes">(46 赞同)</span>
+                <span class="created_time">(2021-03-03)</span>
+            </div>
+    
+            <div class="item">
+                <a href="https://zhuanlan.zhihu.com/p/393437819" target="_blank">当下最想买的中概股名单</a>
+                <span class="votes">(42 赞同)</span>
+                <span class="created_time">(2021-07-27)</span>
+            </div>
+    
+        </div>
+    </body>
+    </html>
+    

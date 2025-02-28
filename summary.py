@@ -34,6 +34,7 @@ nicknames = {
     "shengjingjianke": "盛京剑客",
     "pandamalone": "Long Yu",
     "gmqsunliancheng": "宇宙区长孙连城",
+    "mei-hao-wei-lai-9-78-87": "00后富一代",
 }
 
 
