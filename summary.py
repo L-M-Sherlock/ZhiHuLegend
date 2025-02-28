@@ -62,9 +62,18 @@ def generate_summary(username: str):
             except json.JSONDecodeError:
                 print(file.stem, "is not a valid json file")
 
+    # Collect all pins
+    pins = []
+    for file in Path(f"{username}/pin").glob("*.json"):
+        with open(file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            data["file_stem"] = file.stem
+            pins.append(data)
+
     # Sort by voteup_count
     articles.sort(key=lambda x: x["voteup_count"], reverse=True)
     answers.sort(key=lambda x: x["voteup_count"], reverse=True)
+    pins.sort(key=lambda x: x["reaction_count"], reverse=True)
 
     # Generate HTML content with tabs
     html_content = (
@@ -179,6 +188,7 @@ def generate_summary(username: str):
         <div class="tabs">
             <button class="tab-button active" onclick="openTab(event, 'answers-tab')">回答 ({len(answers)})</button>
             <button class="tab-button" onclick="openTab(event, 'articles-tab')">文章 ({len(articles)})</button>
+            <button class="tab-button" onclick="openTab(event, 'pins-tab')">想法 ({len(pins)})</button>
         </div>
 
         <div id="answers-tab" class="tab-content active">
@@ -220,7 +230,28 @@ def generate_summary(username: str):
 
     html_content += """
         </div>
-    </body>
+        <div id="pins-tab" class="tab-content">
+            <h2>想法</h2>
+    """
+
+    # Add pins
+    for pin in pins:
+        title = pin["excerpt_title"].replace("<br>", "|")[:16]
+        if title == "":
+            title = "[图片]"
+        if title.startswith("<a"):
+            title = "[链接]"
+        html_content += f"""
+            <div class="item">
+                <a href="https://www.zhihu.com/pin/{pin['file_stem']}" target="_blank">{title}</a>
+                <span class="votes">({pin['reaction_count']} 赞同)</span>
+                <span class="created_time">({datetime.fromtimestamp(pin['created']).strftime('%Y-%m-%d')})</span>
+            </div>
+        """
+
+    html_content += """
+
+        </body>
     </html>
     """
 
